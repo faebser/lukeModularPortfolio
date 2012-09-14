@@ -1,33 +1,72 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-        <![endif]-->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/main.css">
+		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+			<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+		<![endif]-->
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+		<!-- Add your site or application content here -->
+		<div id="map">
+		</div>
+		<div id="menuContainer" class="clearfix">
+			<ul id="menuMain" class="menu">
+				<li>Arbeiten</li>
+				<li>Statement</li>
+				<li>Bio</li>
+				<li>Links</li>
+				<li>English</li>
+			</ul>
+			<ul id="menuSub" class="menu">
+				<li>Vertonung</li>
+				<li>Objekte</li>
+				<li>Live</li>
+				<li>Musik</li>
+			</ul>
+		</div>
+		<div id="info">
+			<ul>
+				<li class="dark">Lukas Truniger</li>
+				<li>Klanggestaltung</li>
+				<li>Komposition</li>
+				<li>Medienkunsthandwerk</li>
+			</ul>
+		</div>
+		<div id="controls">
+			<button id="zoomIn">+</button>
+			<button id="zoomOut">-</button>
+		</div>
+		<article id="test">
+			<img class="articleImg" src="img/test.jpg">
+			<h1>Improvisation with Prepared Konsumer Elektronics (2012)</h1>
+			<p>Live Elektronik
+				Frei improvisierte, audiovisuelle Performance mit Visuals von Jan
+				Steinbach (Designer und Verleger, Stuttgart). Als Instrumente kommen
+				gefundene und präparierte Unterhaltungselektronikartikel zum Ein-
+				satz, für die Visual wurden einfache graphische Algorithmen verwen-
+				det. Freies Spiel mit LoFi-Technik, bugs are features.
+			</p>
+		</article>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.1.min.js"><\/script>')</script>
+		<script src="js/plugins.js"></script>
+		<script src="js/main.js"></script>
 
-    </body>
+	</body>
 </html>

@@ -94,6 +94,62 @@ textarea {
    ========================================================================== */
 
 
+@grau1: #b4b4b4;
+@grau2: #787878;
+@gelb: #FFF000;
+@schwarz: #000000;
+
+body {
+	font-size: 0.7em;
+	h1, p {
+		font-size: 100%;
+		padding: 0px;
+		margin: 0px;
+	}
+	article {
+		display:none;
+		width: 400px;
+		background-color: @grau1;
+		text-align: justify;
+		position: absolute;
+		img {
+			width: 400px;
+		}
+	}
+	#menuContainer {
+		background-color: @grau1;
+		margin: 13.5% auto 0 auto;
+		width: 150px;
+		height: 200px;
+		.menu {
+			width: 150px;
+			height: 100px;
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+			li {
+				margin: 0px;
+				padding: 0px;
+			}
+		}
+		#menuMain {
+			text-align: right;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+	#info {
+		position: absolute;
+		left: 0px;
+		bottom: 0px;
+	}
+	#controls {
+		position: absolute;
+		right: 0px;
+		bottom: 0px;
+	}
+}
 
 
 
