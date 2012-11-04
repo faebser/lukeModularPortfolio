@@ -41,6 +41,10 @@ function lukeVector(inputX, inputY) {
 			else {
 				return false;
 			}
+		},
+		set: function (externalX, externalY) {
+			this.pos.x = externalX;
+			this.pos.y = externalY;
 		}
 	};
 }
@@ -51,13 +55,17 @@ var luke = {
 	directionVector : new lukeVector(0, 0),
 	currentElementIndex : 0,
 	currentElement : null,
+	currentVector : new lukeVector(0, 0),
 
 	/*
 	 * The init function gets called after dom.ready and is used
 	 * to setup all the vars for further coding pleasure.
 	 */
 	init : function () {
-
+		luke.currentElement = $('#' + luke.currentElementIndex);
+		luke.currentVector.pos.x = luke.currentElement.offset().top + luke.currentElement.height() / 2;
+		luke.currentVector.pos.y = luke.currentElement.offset().left + luke.currentElement.height() / 2;
+		luke.updateVector();
 	},
 	/**
 	 * The update function is a meta-function and should set up
@@ -65,7 +73,7 @@ var luke = {
 	 * article is requested and needs to be positioned and displayed
 	 */
 	update: function () {
-
+			
 	},
 	/** 
 	 * The nextRound function is where the fukkking work is done.
@@ -75,6 +83,13 @@ var luke = {
 	 */
 	nextRound : function () {
 
+	},
+	updateVector : function() {
+		var y = Math.random() - 0.5;
+		var x = Math.random() - 0.5;
+		luke.directionVector.set(x, y);
+		console.log(luke.directionVector.pos.x);
+		console.log(luke.directionVector.pos.y);
 	}
 };
 /*
@@ -84,6 +99,7 @@ var luke = {
  */
 
 $(document).ready(function () {
+	luke.init();
 
 	var lastPos = { x : 0, y : 0 },
 		it = 0,
