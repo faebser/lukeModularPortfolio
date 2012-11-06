@@ -51,7 +51,6 @@ function lukeVector(inputX, inputY) {
 
 
 var luke = {
-
 	directionVector : new lukeVector(0, 0),
 	currentElementIndex : 0,
 	currentElement : null,
@@ -63,8 +62,10 @@ var luke = {
 	 */
 	init : function () {
 		luke.currentElement = $('#' + luke.currentElementIndex);
-		luke.currentVector.pos.x = luke.currentElement.offset().top + luke.currentElement.height() / 2;
-		luke.currentVector.pos.y = luke.currentElement.offset().left + luke.currentElement.height() / 2;
+		luke.currentVector.pos.x = $("#menuContainer").offset().top + $("#menuContainer").outerHeight() / 2;
+		luke.currentVector.pos.y = $("#menuContainer").offset().left + $("#menuContainer").outerWidth() / 2;
+		console.log($("#menuContainer").offset().top);
+		console.log(luke.currentVector.pos.y);
 		luke.updateVector();
 	},
 	/**
@@ -73,16 +74,19 @@ var luke = {
 	 * article is requested and needs to be positioned and displayed
 	 */
 	update: function () {
-			
+			var newArticle = luke.getNewArticle();
+			var newPosX, newPosY;
+			$('body').prepend(newArticle);
+			newArticle.css({ display : "block", visibility : "hidden"});
+			console.log((luke.currentVector.pos.x + newArticle.outerHeight() * luke.directionVector.pos.x) - newArticle.outerHeight() / 2);
+			newPosX = (luke.currentVector.pos.x + newArticle.outerHeight() * luke.directionVector.pos.x) - newArticle.outerHeight() / 2;
+			newPosY = (luke.currentVector.pos.y + newArticle.outerWidth() * luke.directionVector.pos.y) - newArticle.outerWidth() / 2;
+			luke.updateVector();
+			newArticle.css({ display : "none", visibility : "visible"});
+			newArticle.css({ top : newPosX, left : newPosY }).fadeIn();
 	},
-	/** 
-	 * The nextRound function is where the fukkking work is done.
-	 * comparing vectors and shit, doing some super fanzzzy math with
-	 * my own farcking vector-object and shit. have fun reading my code
-	 * bastard.
-	 */
-	nextRound : function () {
-
+	getNewArticle : function () {
+		return luke.currentElement.clone();
 	},
 	updateVector : function() {
 		var y = Math.random() - 0.5;
@@ -100,44 +104,8 @@ var luke = {
 
 $(document).ready(function () {
 	luke.init();
-
-	var lastPos = { x : 0, y : 0 },
-		it = 0,
-		windowWidth = $(window).width(),
-		windowHeight = $(window).height(),
-		halfWindowWith = windowWidth * 0.5;
 	$('#menuMain').click(function(event) {
 		event.preventDefault();
-		//var elementOffset = $(this).offset();
-		var mouse = {x : event.clientX, y : event.clientY},
-			newArt = $('article#test').clone(),
-			newPos = { x : null, y : null};
-		console.log(event);
-		
-		newArt.attr('id', it);
-		newArt.attr('z-index', it++);
-		if(lastPos.x == 0 && lastPos.y == 0) {
-			console.log("0");
-			newPos.x = mouse.x + newArt.outerWidth();
-			newPos.y = mouse.y;
-		}
-		else {
-			if(mouse.x + newArt.outerWidth() > windowWidth) {
-				newPos.x = lastPos.x - (windowWidth - mouse.x);
-			}
-			else {
-				newPos.x = lastPos.x + mouse.x;
-			}
-			if(mouse.y + newArt.outerHeight() > windowHeight) {
-				newPos.y = lastPos.y - (windowHeight - mouse.y);
-			}
-			else {
-				newPos.y = lastPos.y + mouse.y;
-			}
-		}
-		$('body').prepend(newArt);
-		lastPos = newPos;
-		newArt.css({ top : newPos.y, left : newPos.x});
-		newArt.show();
+		luke.update();
 	});
 });
