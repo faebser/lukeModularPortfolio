@@ -61,11 +61,11 @@ var luke = {
 	 * to setup all the vars for further coding pleasure.
 	 */
 	init : function () {
-		luke.currentElement = $('#' + luke.currentElementIndex);
-		luke.currentVector.pos.x = $("#menuContainer").offset().top + $("#menuContainer").outerHeight() / 2;
-		luke.currentVector.pos.y = $("#menuContainer").offset().left + $("#menuContainer").outerWidth() / 2;
+		luke.currentElement = $("#menuContainer");
+		luke.currentVector.pos.x = $("#menuContainer").offset().left;
+		luke.currentVector.pos.y = $("#menuContainer").offset().top;
 		console.log($("#menuContainer").offset().top);
-		console.log(luke.currentVector.pos.y);
+		console.log(luke.currentVector.pos.x);
 		luke.updateVector();
 	},
 	/**
@@ -78,22 +78,48 @@ var luke = {
 			var newPosX, newPosY;
 			$('body').prepend(newArticle);
 			newArticle.css({ display : "block", visibility : "hidden"});
-			console.log((luke.currentVector.pos.x + newArticle.outerHeight() * luke.directionVector.pos.x) - newArticle.outerHeight() / 2);
-			newPosX = (luke.currentVector.pos.x + newArticle.outerHeight() * luke.directionVector.pos.x) - newArticle.outerHeight() / 2;
-			newPosY = (luke.currentVector.pos.y + newArticle.outerWidth() * luke.directionVector.pos.y) - newArticle.outerWidth() / 2;
+			if(luke.directionVector.pos.y === -1) {
+				newPosY = luke.currentVector.pos.y + newArticle.outerHeight() * luke.directionVector.pos.y;
+			}
+			else if(luke.directionVector.pos.y === 1) {
+				newPosY = luke.currentVector.pos.y + luke.currentElement.outerHeight() * luke.directionVector.pos.y;
+			}
+			else if(luke.directionVector.pos.y === 0) {
+				newPosY = 0;
+			}
+			if(luke.directionVector.pos.x >= 0) {
+				newPosX = luke.currentVector.pos.x + luke.currentElement.outerWidth() * luke.directionVector.pos.x;
+			}
+			else if (luke.directionVector.pos.x < 0) {
+				newPosX = luke.currentVector.pos.x + newArticle.outerWidth() * luke.directionVector.pos.x;
+			};
+			console.log("abstand y = " + (newPosY - luke.currentVector.pos.y));
+			console.log("abstand x = " + (newPosX - luke.currentVector.pos.x));
 			luke.updateVector();
 			newArticle.css({ display : "none", visibility : "visible"});
-			newArticle.css({ top : newPosX, left : newPosY }).fadeIn();
+			newArticle.css({ top : newPosY, left : newPosX }).fadeIn();
 	},
 	getNewArticle : function () {
-		return luke.currentElement.clone();
+		return $("#"+luke.currentElementIndex).clone();
 	},
 	updateVector : function() {
-		var y = Math.random() - 0.5;
-		var x = Math.random() - 0.5;
+		var x = (Math.random() * 2) - 1;
+		var y = Math.random();
+		if(x === -1) {
+			y *= 0.5;
+		}
+		else if(x > -1 && x < 1) {
+			y = 0;
+			while (y === 0) {
+				y = Math.floor(Math.random() * 3) - 1;
+			}
+		}
+		else if(x === 1) {
+			y = (y * 0.5) + 0.5; 
+		}
+		console.log( "x = " + x);
+		console.log( "y = " + y);
 		luke.directionVector.set(x, y);
-		console.log(luke.directionVector.pos.x);
-		console.log(luke.directionVector.pos.y);
 	}
 };
 /*
