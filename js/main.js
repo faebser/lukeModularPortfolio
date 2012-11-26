@@ -56,6 +56,14 @@ var luke = {
 	currentElement : null,
 	currentVector : new lukeVector(0, 0),
 
+	//vars for endless scrolling
+	endlessScrollingVars : {
+		origin : null, // the original p-element
+		scrollHeight : null, // how much the user has to scroll down
+		endlessArticle : null, // the parent
+		originHeight: null
+	},
+
 	/*
 	 * The init function gets called after dom.ready and is used
 	 * to setup all the vars for further coding pleasure.
@@ -67,6 +75,7 @@ var luke = {
 		console.log($("#menuContainer").offset().top);
 		console.log(luke.currentVector.pos.x);
 		luke.updateVector();
+		luke.endlessScrolling();
 	},
 	/**
 	 * The update function is a meta-function and should set up
@@ -120,10 +129,26 @@ var luke = {
 		console.log( "x = " + x);
 		console.log( "y = " + y);
 		luke.directionVector.set(x, y);
+	},
+	endlessScrolling : function () {
+		// set up vars and attach eventhandler for endless scrolling
+		var vars = luke.endlessScrollingVars;
+
+		vars.endlessArticle = $("#endlessText");
+		vars.origin = vars.endlessArticle.find("#origin");
+		vars.originHeight = vars.origin.outerHeight() - vars.endlessArticle.outerHeight();
+		vars.scrollHeight = vars.originHeight * 0.9;
+
+		vars.endlessArticle.scroll(function() {
+			if($(this).scrollTop() >= vars.scrollHeight) {
+				$(this).append(vars.origin.clone().attr("id", ''));
+				vars.scrollHeight = ($(this).find("p").length * vars.originHeight) * 0.9;
+			}
+		});
 	}
 };
 /*
- * Konzept muss umgeacht werden, mouse.AltePosition -> mouse.neuePosition gibt
+ * Konzept muss umgedacht werden, mouse.AltePosition -> mouse.neuePosition gibt
  * Vektor, dieser Vektor kann dann modifziert werden durch begrenzung oder zufällige
  * Einflüsse.
  */
