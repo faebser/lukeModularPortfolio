@@ -137,12 +137,12 @@ var luke = {
 		vars.endlessArticle = $("#endlessText");
 		vars.origin = vars.endlessArticle.find("#origin");
 		vars.originHeight = vars.origin.outerHeight() - vars.endlessArticle.outerHeight();
-		vars.scrollHeight = vars.originHeight * 0.9;
+		vars.scrollHeight = vars.originHeight;
 
 		vars.endlessArticle.scroll(function() {
 			if($(this).scrollTop() >= vars.scrollHeight) {
 				$(this).append(vars.origin.clone().attr("id", ''));
-				vars.scrollHeight = ($(this).find("p").length * vars.originHeight) * 0.9;
+				vars.scrollHeight = ($(this).find("p").length * vars.originHeight);
 			}
 		});
 	}
