@@ -107,7 +107,7 @@ body {
 		margin: 0px;
 	}
 	article {
-		display:none;
+		display: none;
 		width: 400px;
 		background-color: @grau1;
 		text-align: justify;
@@ -116,6 +116,18 @@ body {
 			width: 400px;
 		}
 	}
+    #endlessText {
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        padding: 5px;
+        height: 200px;
+        overflow-y: scroll;
+        p {
+            width: 95%;
+        }
+    }
 	#menuContainer {
 		background-color: @grau1;
 		margin: 13.5% auto 0 auto;
