@@ -55,6 +55,9 @@ var luke = {
 	currentElementIndex : 0,
 	currentElement : null,
 	currentVector : new lukeVector(0, 0),
+	menuContainer : $("#menuContainer"),
+	menuContainerX : menuContainer.offset().left,
+	menuContainerY : menuContainer.offset().top,
 
 	//vars for endless scrolling
 	endlessScrollingVars : {
@@ -146,6 +149,30 @@ var luke = {
 			}
 		});
 	},
+	returnMessyVector : function (var articleHeight, var articleWidth, var margin) {
+		// siehe skizze1
+		// 0,0 = linke ecke von menu
+		// alles darüber ist mit margin, menugrösse und article-grösse
+		// margin wird immer entfernt/hinzugefügt
+		// wenn value > 0 dann -articleHeight/Width
+		// wenn value < 0 dann +menuHeight/Width
+		var max = 2, min = -2,
+		range = max + (min * -1),
+		returnVector = new lukeVector( Math.random() * range - (range / 2), Math.random() * range - (range / 2) ),
+		returnPos = { x : null, y : null };
+		if(returnVector.pos.x > 0) {
+			returnPos.x = (returnVector.pos.x * articleWidth) + margin + menuContainerX;
+		}
+		else {
+			returnPos.x = (returnVector.pos.x * articleWidth) - margin - articleWidth;
+		}
+		if(returnVector.pos.y > 0) {
+			returnPos.y = (returnVector.pos.y * articleHeight) + margin + menuContainerY;
+		}
+		else {
+			returnPos.y = (returnVector.pos.y * articleHeight) - margin - articleHeight;
+		}
+	} ,
 	firstClickMess : function () {
 		// take all the articles and place them around the menu
 		// define some margin around the menu
