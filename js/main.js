@@ -145,13 +145,20 @@ var luke = {
 				vars.scrollHeight = ($(this).find("p").length * vars.originHeight);
 			}
 		});
+	},
+	firstClickMess : function () {
+		// take all the articles and place them around the menu
+		// define some margin around the menu
+		// define some shadow class and tell luke about it
+		// tell luke about how he has to organize his content
+		var articles = $("article.content"),
+		margin = 20;
+		// write a function where given the height and width of an element
+		// and the size of the menu it responds with a random vector
+		// positioned around the center and leave some space to
+		// manipulate the order
 	}
 };
-/*
- * Konzept muss umgedacht werden, mouse.AltePosition -> mouse.neuePosition gibt
- * Vektor, dieser Vektor kann dann modifziert werden durch begrenzung oder zufällige
- * Einflüsse.
- */
 
 $(document).ready(function () {
 	luke.init();
