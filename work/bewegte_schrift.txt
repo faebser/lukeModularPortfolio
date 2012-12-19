@@ -1,4 +1,4 @@
-<article>
+<article class="kategorie" lang="en">
 <h1>Bewegte Schrift (2012)</h1>
 <p>Musik und Sounddesign</p>
 <br>

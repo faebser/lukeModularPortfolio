@@ -55,9 +55,11 @@ var luke = {
 	currentElementIndex : 0,
 	currentElement : null,
 	currentVector : new lukeVector(0, 0),
-	menuContainer : $("#menuContainer"),
-	menuContainerX : menuContainer.offset().left,
-	menuContainerY : menuContainer.offset().top,
+	menuContainer : null,
+	menuContainerX : null,
+	menuContainerY : null,
+	menuContainerWidth : null,
+	menuContainerHeight : null,
 
 	//vars for endless scrolling
 	endlessScrollingVars : {
@@ -75,10 +77,20 @@ var luke = {
 		luke.currentElement = $("#menuContainer");
 		luke.currentVector.pos.x = $("#menuContainer").offset().left;
 		luke.currentVector.pos.y = $("#menuContainer").offset().top;
-		console.log($("#menuContainer").offset().top);
+		
 		console.log(luke.currentVector.pos.x);
 		luke.updateVector();
 		luke.endlessScrolling();
+		luke.menuContainer = $("#menuContainer");
+		luke.menuContainerX = luke.currentVector.pos.x;
+		luke.menuContainerY = luke.currentVector.pos.y;
+		luke.menuContainerWidth = luke.menuContainer.outerWidth();
+		luke.menuContainerHeight = luke.menuContainer.outerHeight();
+		console.log($("#menuContainer").offset().top);
+		console.log($("#menuContainer").offset().left);
+		console.log(luke.menuContainerY);
+		console.log(luke.menuContainerX);
+
 	},
 	/**
 	 * The update function is a meta-function and should set up
@@ -149,29 +161,38 @@ var luke = {
 			}
 		});
 	},
-	returnMessyVector : function (var articleHeight, var articleWidth, var margin) {
+	returnMessyVector : function (articleHeight, articleWidth, margin) {
 		// siehe skizze1
 		// 0,0 = linke ecke von menu
 		// alles darüber ist mit margin, menugrösse und article-grösse
 		// margin wird immer entfernt/hinzugefügt
 		// wenn value > 0 dann -articleHeight/Width
 		// wenn value < 0 dann +menuHeight/Width
-		var max = 2, min = -2,
+		var max = 1, min = -1,
 		range = max + (min * -1),
 		returnVector = new lukeVector( Math.random() * range - (range / 2), Math.random() * range - (range / 2) ),
 		returnPos = { x : null, y : null };
 		if(returnVector.pos.x > 0) {
-			returnPos.x = (returnVector.pos.x * articleWidth) + margin + menuContainerX;
+			returnPos.x = luke.menuContainerX + ((returnVector.pos.x * articleWidth) + margin + luke.menuContainerWidth);
 		}
 		else {
-			returnPos.x = (returnVector.pos.x * articleWidth) - margin - articleWidth;
+			returnPos.x = luke.menuContainerX + ((returnVector.pos.x * articleWidth) - margin - articleWidth);
 		}
 		if(returnVector.pos.y > 0) {
-			returnPos.y = (returnVector.pos.y * articleHeight) + margin + menuContainerY;
+			returnPos.y = luke.menuContainerY + ((returnVector.pos.y * articleHeight) + margin + luke.menuContainerHeight);
 		}
 		else {
-			returnPos.y = (returnVector.pos.y * articleHeight) - margin - articleHeight;
+			returnPos.y = luke.menuContainerY + ((returnVector.pos.y * articleHeight) - margin - articleHeight);
 		}
+		// console.log("X -> " + returnVector.pos.x);
+		// console.log("articleWidth -> " + articleWidth);
+		// console.log("menuContainerX -> " + luke.menuContainerX);
+		// console.log("Y -> " + returnVector.pos.y);
+		// console.log("articleHeight -> " + articleHeight);
+		// console.log("menuContainerY -> " + luke.menuContainerY); 
+		// console.log(returnPos);
+
+		return returnPos;
 	} ,
 	firstClickMess : function () {
 		// take all the articles and place them around the menu
@@ -184,6 +205,14 @@ var luke = {
 		// and the size of the menu it responds with a random vector
 		// positioned around the center and leave some space to
 		// manipulate the order
+		articles.each(function(index, element){
+			var tempPos = luke.returnMessyVector($(element).outerHeight(), $(element).outerWidth(), margin);
+			$(element).css({
+				top : tempPos.y,
+				left : tempPos.x
+			});
+		});
+		articles.show();
 	}
 };
 
@@ -191,6 +220,6 @@ $(document).ready(function () {
 	luke.init();
 	$('#menuMain').click(function(event) {
 		event.preventDefault();
-		luke.update();
+		luke.firstClickMess();
 	});
 });
