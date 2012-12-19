@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 <article class="kategorie" lang="en">
-<h1>Bewegte Schrift (2012)</h1>
-=======
-
-<article>
 <a href="https://vimeo.com/36332485">Bewegte Schrift</a>
 <h1>Bewegte Schrift (2012)</h1>
 <p>Musik und Sounddesign</p>
