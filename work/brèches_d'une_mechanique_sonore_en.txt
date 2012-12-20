@@ -1,0 +1,24 @@
+<<<<<<< HEAD
+<article class="objekt" lang="en">
+<h1>Breaches in a sonic Mechanism (2012)</h1>
+=======
+
+<article>
+<a href="https://vimeo.com/54603114">Breaches in a sonic Mechanism</a>
+<h1>Breaches in a sonic Mechanism (2012)</h1>
+<p>audiovisual installation</p>
+<br>
+<p>This installation is an absurd sonic machine. It is a machine with a body, living
+thanks to programmed rules, a life of function and production. The machine
+produces different kinds of information: sonic, visual, digital and textual, passing
+them between its organs. And it discharges them through its different
+outputs. In this stream of information, it generates errors. It is an efficient error-machine with a
+desire for errors. The machine is a desiring machine.</p>
+<br>
+<p>The installation was developped together with Ali Tnani (TU).</p>
+<br>
+<p>Exhibition:
+<br>
+11/2012 Objets son, e-fest exhibition, Palais Ebdellia, La Marsa, Tunisia
+</p>
+</article>

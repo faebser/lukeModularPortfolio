@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+<article class="vertonung" lang="en">
+<h1>AtypI Trailer (2012)</h1>
+=======
+
+<article>
+<a href="https://vimeo.com/51858951">AtypI Trailer</a>
+<h1>AtypI Trailer (2012)</h1>
+<p>music/sound design</p>
+<br>
+<p>Fractal particles that do not match together. Sequences are following bluntly. Like the consequences of a story. Time brings elucidation, exchange and consistancy. Latin and Chinese script worlds blend into new forms and gestures. A notion?</p>
+<br>
+<p>This clip was developed as an opening trailer for the AtypI Converence 2012 in Honkong. Animation by Svenja Voss.</p>
+</article>

@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+<article class="vertonung" lang="en">
+<h1>Hemisphere (2011)</h1>
+=======
+
+<article>
+<a href="https://vimeo.com/24955353">Hemisphere</a>
+<h1>Hemisphere (2011)</h1>
+<p>Musik/Sounddesign</p>
+<br>
+<p>Der Kurzfilm von Stephan Telaar setzt sich mit dem Konflikt zwischen Emotionen und logischem Denken auseinander. Grundlegendes Gestaltungsprinzip des Bildes, der goldenen Schnitt, wurde für das Sounddesign adaptiert. WAS BEDEUTET DAS FÜR DEN TON?</p>
+<br>
+<p>Bild und Ton entstanden im Studienbereich Visual Music am Institut für Musik und Medien.</p>
+</article>

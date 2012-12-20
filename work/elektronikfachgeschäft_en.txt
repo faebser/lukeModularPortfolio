@@ -1,0 +1,21 @@
+<<<<<<< HEAD
+<article class="live" lang="en">
+<h1>Elektronikfachgesch&auml;ft (2009)</h1>
+=======
+
+<article>
+<a href="http://www.elektronikfachgeschaeft.com/">Elektronikfachgesch&auml;ft</a>
+<h1>Elektronikfachgesch&auml;ft (2009)</h1>
+<p>live elektronics</p>
+<br>
+<p>80ies trash, minimal techno and outdated club music band proudly performing since 2009.
+Collaboration with Florian Breuer and Michael Hohnstock. </p>
+<br>
+<p>concerts:
+<br>
+01/2010 Tanzhaus NRW, D&uuml;sseldorf
+<br>
+11/2012 Salon des Amateurs, D&uuml;sseldorf
+<br>
+01/2011 Cologne Music Week, Cologne</p>
+</article>
