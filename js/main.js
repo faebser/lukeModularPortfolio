@@ -60,6 +60,8 @@ var luke = {
 	menuContainerY : null,
 	menuContainerWidth : null,
 	menuContainerHeight : null,
+	lastMousePos : { x : null, y : null },
+	articleContent : null,
 
 	//vars for endless scrolling
 	endlessScrollingVars : {
@@ -86,10 +88,14 @@ var luke = {
 		luke.menuContainerY = luke.currentVector.pos.y;
 		luke.menuContainerWidth = luke.menuContainer.outerWidth();
 		luke.menuContainerHeight = luke.menuContainer.outerHeight();
-		console.log($("#menuContainer").offset().top);
-		console.log($("#menuContainer").offset().left);
-		console.log(luke.menuContainerY);
-		console.log(luke.menuContainerX);
+		// console.log($("#menuContainer").offset().top);
+		// console.log($("#menuContainer").offset().left);
+		// console.log(luke.menuContainerY);
+		// console.log(luke.menuContainerX);
+
+		luke.articleContent = $("#articleContent");
+		$(window).mousedown(luke.onMouseDown);
+		$(window).mouseup(luke.onMouseUp);
 
 	},
 	/**
@@ -168,7 +174,7 @@ var luke = {
 		// margin wird immer entfernt/hinzugefügt
 		// wenn value > 0 dann -articleHeight/Width
 		// wenn value < 0 dann +menuHeight/Width
-		var max = 1, min = -1,
+		var max = 0.5, min = -0.5,
 		range = max + (min * -1),
 		returnVector = new lukeVector( Math.random() * range - (range / 2), Math.random() * range - (range / 2) ),
 		returnPos = { x : null, y : null };
@@ -213,6 +219,18 @@ var luke = {
 			});
 		});
 		articles.show();
+	},
+	onMouseDown : function (event) {
+		$(window).mousemove(luke.mouseMove);
+		luke.lastMousePos.x = event.pageX;
+		luke.lastMousePos.y = event.pageY;
+	},
+	onMouseUp : function (event) {
+		$(window).unbind("mousemove", luke.mouseMove);
+	},
+	mouseMove : function (event) {
+		luke.articleContent.offset({top : event.pageY - luke.lastMousePos.y, left : event.pageX - luke.lastMousePos.x});
+		
 	}
 };
 
