@@ -1,0 +1,22 @@
+<<<<<<< HEAD
+<article class="objekt" lang="en">
+<h1>synthOlele (2012)</h1>
+=======
+
+<article>
+<a href="https://vimeo.com/39540396">synthOlele</a>
+<h1>synthOlele (2012)</h1>
+<p>manufacturing of instrument and electronic live music</p>
+<br>
+<p>The synthOlele is a digital instrument. 
+<br>
+It combines several elements for the control of synthesized sound hence working as an interface. There is a certain resemblance when you look at it next to a traditional ukulele. This is not a coincidence but strict plagiarism aiming for the synthOlele to become the ukuleles' electronic cover version.</p>
+<br>
+<p>The synthOlele was developed in collaboration with Dominik Noli. Und als Projekt am Institut Fuer Musik und Medien...</p>
+<br>
+<p>Concerts:
+<br>
+02/2012 Monkey's Club, D&uuml;sseldorf (club version) 
+<br>
+02/2012 Cit&eacute; International des Arts, Paris (experimental version)  </p>
+</article>

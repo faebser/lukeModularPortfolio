@@ -1,0 +1,18 @@
+<<<<<<< HEAD
+<article class="live" lang="de">
+<h1>Serious Sirius – Improvisation Game (2011)</h1>
+=======
+
+<article>
+<a href="">Serious Sirius – Improvisation Game (2011)</a>
+<h1>Serious Sirius – Improvisation Game (2011)</h1>
+<p>Live Elektronik</p>
+<br>
+<p>Das Improvisationsspiel folgt einem einfachen Regelwerk. Die Methoden stammen von John Zorn, der von Anthony Braxton beeinflusst war, der wiederum Philipp Schulze lehrte, der schlie&szlig;lich das Projekt am Institut Fuer Musik Und Medien angesto&szlig;en hat.</p>
+<br>
+<p>Es spielen: Violine (Mischa Tangian), Kontrabass (Richard Eisenach), Schlagzeug (Stephan Vester) und Elektronik (Lukas Truniger).</p>
+<br>
+<p>Konzert:
+<br>
+06/2011 Vernissage der Ausstellung Monte Verit&agrave;, Kunstverein Familie Montez, Frankfurt</p>
+</article>

@@ -1,0 +1,25 @@
+<<<<<<< HEAD
+<article class="objekt" lang="de">
+<h1>Paketzentrum47 (2011)</h1>
+=======
+
+<article>
+<a href="https://vimeo.com/33299790">Paketzentrum47</a>
+<h1>Paketzentrum47 (2011)</h1>
+<p>Audiovisuelle Installation</p>
+<br>
+<p>Die Klangskulptur thematisiert Transportwege und -verpackungen von Unterhaltungs-Elektronik-Artikeln.
+<br>
+Ton- und Video-Material speisen sich aus einer 12-st&uuml;ndigen audiovisuellen Aufzeichnung von Aufnahmeger&auml;ten, die &uuml;ber eben diesen Zeitraum verschickt wurden. Es wird erg&auml;nzt durch digitale Bilder, die Rohstoffe der Elektroger&auml;te zeigen. 
+Die jeweils verwendeten Verpackungen werden nicht zum Ausstellungsort transportiert, da sie schon dort sind. Dieses site-specific feature der Installation ist gleichzeitig ein whichever-site-feature, es befasst sich mit den Transportmaterialien als allgegenw&auml;rtigen, quasi-unsichtbaren H&uuml;llen jedes Gegenstands.
+<br>
+Boxen aus Pappe und andere Verpackungen dienen als Projektionsfl&auml;chen f&uuml;r die Bilder ihres eigenen Transports. Analog dazu werden die 8 Kan&auml;le Ton durch die zu Lautsprechern umfunktionierten Kartons hindurch wiedergegeben, die so den Sound pr&auml;gen und seine R&auml;umlichkeit entstehen lassen.</p>
+<br>
+<p>Das Paketzentrum47 entstand im Rahmen meines Studiums am Institut f&uuml;r Musik und Medien und wurde von Hannes H&ouml;lzl, Andreas Kolinski, Prof. Julian Rohrhuber und Prof. Dr. Heike Sperling betreut.</p>
+<br>
+<p>Ausstellungen:
+<br>
+11/2011 Raum13 &ndash; Deutzer Zentralwerk der Sch&ouml;nen K&uuml;nste, K&ouml;ln 
+<br>
+07/2011 festival for applied acustics, K&ouml;ln</p>
+</article>
