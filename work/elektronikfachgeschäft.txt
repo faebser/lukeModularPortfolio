@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 <article class="live" lang="de">
-<h1>Elektronikfachgesch&auml;ft (2009)</h1>
-=======
-
-<article>
 <a href="http://www.elektronikfachgeschaeft.com/">Elektronikfachgesch&auml;ft</a>
 <h1>Elektronikfachgesch&auml;ft (2009)</h1>
 <p>Live Elektronik</p>

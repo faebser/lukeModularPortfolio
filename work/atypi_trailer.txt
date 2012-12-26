@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 <article class="vertonung" lang="de">
 <h1>AtypI Trailer (2012)</h1>
-=======
-
-<article>
 <a href="https://vimeo.com/51858951">AtypI Trailer</a>
 <h1>AtypI Trailer (2012)</h1>
 <p>Musik/Sounddesign</p>

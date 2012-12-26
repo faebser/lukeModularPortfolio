@@ -61,6 +61,7 @@ var luke = {
 	menuContainerWidth : null,
 	menuContainerHeight : null,
 	lastMousePos : { x : null, y : null },
+	lastCssPos : { x : null, y : null },
 	articleContent : null,
 
 	//vars for endless scrolling
@@ -97,6 +98,8 @@ var luke = {
 		$(window).mousedown(luke.onMouseDown);
 		$(window).mouseup(luke.onMouseUp);
 
+		$('article.content').hover(luke.articleHoverZindexIn, luke.articleHoverZindexOut);
+
 	},
 	/**
 	 * The update function is a meta-function and should set up
@@ -132,6 +135,12 @@ var luke = {
 	getNewArticle : function () {
 		return $("#"+luke.currentElementIndex).clone();
 	},
+	articleHoverZindexIn : function (event) {
+		$(this).css({ "z-index" : 10 });
+	},
+	articleHoverZindexOut : function (event) {
+		$(this).css({ "z-index" : "" });
+	},
 	updateVector : function() {
 		var x = (Math.random() * 2) - 1;
 		var y = Math.random();
@@ -147,8 +156,6 @@ var luke = {
 		else if(x === 1) {
 			y = (y * 0.5) + 0.5; 
 		}
-		console.log( "x = " + x);
-		console.log( "y = " + y);
 		luke.directionVector.set(x, y);
 	},
 	endlessScrolling : function () {
@@ -174,7 +181,7 @@ var luke = {
 		// margin wird immer entfernt/hinzugefügt
 		// wenn value > 0 dann -articleHeight/Width
 		// wenn value < 0 dann +menuHeight/Width
-		var max = 0.5, min = -0.5,
+		var max = 0.2, min = -0.2,
 		range = max + (min * -1),
 		returnVector = new lukeVector( Math.random() * range - (range / 2), Math.random() * range - (range / 2) ),
 		returnPos = { x : null, y : null };
@@ -206,7 +213,8 @@ var luke = {
 		// define some shadow class and tell luke about it
 		// tell luke about how he has to organize his content
 		var articles = $("article.content"),
-		margin = 20;
+		margin = 5;
+		luke.articleContent.offset({ top : 0, left : 0 });
 		// write a function where given the height and width of an element
 		// and the size of the menu it responds with a random vector
 		// positioned around the center and leave some space to
@@ -221,16 +229,19 @@ var luke = {
 		articles.show();
 	},
 	onMouseDown : function (event) {
-		$(window).mousemove(luke.mouseMove);
 		luke.lastMousePos.x = event.pageX;
 		luke.lastMousePos.y = event.pageY;
+		luke.lastCssPos.x = luke.articleContent.offset().left;
+		luke.lastCssPos.y = luke.articleContent.offset().top;
+		console.log("x " + luke.lastCssPos.x);
+		console.log("y " + luke.lastCssPos.y);
+		$(window).mousemove(luke.mouseMove);
 	},
 	onMouseUp : function (event) {
 		$(window).unbind("mousemove", luke.mouseMove);
 	},
 	mouseMove : function (event) {
-		luke.articleContent.offset({top : event.pageY - luke.lastMousePos.y, left : event.pageX - luke.lastMousePos.x});
-		
+		luke.articleContent.offset({top : luke.lastCssPos.y + (event.pageY - luke.lastMousePos.y), left : luke.lastCssPos.x + (event.pageX - luke.lastMousePos.x) });
 	}
 };
 
