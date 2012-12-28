@@ -25,22 +25,12 @@ function lukeVector(inputX, inputY) {
 			this.pos.y = this.pos.y / this.mag;
 		},
 		addTo: function(externalVector) {
-			if(object === typeof externalVector) {
-				externalVector.pos.x += this.pos.x;
-				externalVector.pos.y += this.pos.y;
-			}
-			else {
-				return false;
-			}
+			externalVector.pos.x += this.pos.x;
+			externalVector.pos.y += this.pos.y;
 		},
 		add: function (externalVector) {
-			if(object === typeof externalVector) {
-				this.pos.x += externalVector.pos.x; 
-				this.pos.y += externalVector.pos.y; 
-			}
-			else {
-				return false;
-			}
+			this.pos.x += externalVector.pos.x; 
+			this.pos.y += externalVector.pos.y;
 		},
 		set: function (externalX, externalY) {
 			this.pos.x = externalX;
@@ -99,6 +89,7 @@ var luke = {
 		$(window).mouseup(luke.onMouseUp);
 
 		$('article.content').hover(luke.articleHoverZindexIn, luke.articleHoverZindexOut);
+		$('#menuSub a').click(luke.subMenuClick);
 
 	},
 	/**
@@ -183,8 +174,9 @@ var luke = {
 		// wenn value < 0 dann +menuHeight/Width
 		var max = 0.2, min = -0.2,
 		range = max + (min * -1),
-		returnVector = new lukeVector( Math.random() * range - (range / 2), Math.random() * range - (range / 2) ),
+		returnVector = new lukeVector( Math.random() * range - (range * 0.5), Math.random() * range - (range * 0.5) ),
 		returnPos = { x : null, y : null };
+
 		if(returnVector.pos.x > 0) {
 			returnPos.x = luke.menuContainerX + ((returnVector.pos.x * articleWidth) + margin + luke.menuContainerWidth);
 		}
@@ -233,8 +225,6 @@ var luke = {
 		luke.lastMousePos.y = event.pageY;
 		luke.lastCssPos.x = luke.articleContent.offset().left;
 		luke.lastCssPos.y = luke.articleContent.offset().top;
-		console.log("x " + luke.lastCssPos.x);
-		console.log("y " + luke.lastCssPos.y);
 		$(window).mousemove(luke.mouseMove);
 	},
 	onMouseUp : function (event) {
@@ -242,6 +232,34 @@ var luke = {
 	},
 	mouseMove : function (event) {
 		luke.articleContent.offset({top : luke.lastCssPos.y + (event.pageY - luke.lastMousePos.y), left : luke.lastCssPos.x + (event.pageX - luke.lastMousePos.x) });
+	},
+	rightArticlesOrder : function (articles) {
+		var offset = luke.menuContainer.offset(),
+		tempVec = new lukeVector(offset.left + 200, offset.top - 50),
+		movement = new lukeVector(20, 20);
+		$(articles).each(function (index, element) {
+			$(element).offset( {top : tempVec.pos.y, left : tempVec.pos.x} );
+			tempVec.add(movement);
+		});
+	},
+	wrongArticlesMess : function (articles) {
+		var offset = luke.menuContainer.offset(),
+		tempVec = new lukeVector(offset.left - 600, offset.top - 50),
+		max = 20, min = -20,
+		range = max + (min * -1),
+		movement = new lukeVector( Math.random() * range - (range * 0.5), Math.random() * range - (range * 0.5) );
+		$(articles).each(function (index, element) {
+			$(element).offset( {top : tempVec.pos.y, left : tempVec.pos.x} );
+			movement.set( Math.random() * range - (range * 0.5), Math.random() * range - (range * 0.5) );
+			tempVec.add(movement);
+		});
+	},
+	subMenuClick : function (event) {
+		event.preventDefault();
+		var rightArticles = $('article.content.' + $(this).attr("href").substring(1)),
+		wrongArticles = $('article.content').not("." +  $(this).attr("href").substring(1));
+		luke.wrongArticlesMess(wrongArticles);
+		luke.rightArticlesOrder(rightArticles);
 	}
 };
 
