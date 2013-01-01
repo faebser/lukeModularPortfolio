@@ -53,6 +53,8 @@ var luke = {
 	lastMousePos : { x : null, y : null },
 	lastCssPos : { x : null, y : null },
 	articleContent : null,
+	articles : null,
+	mapArticles : null,
 
 	//vars for endless scrolling
 	endlessScrollingVars : {
@@ -60,6 +62,13 @@ var luke = {
 		scrollHeight : null, // how much the user has to scroll down
 		endlessArticle : null, // the parent
 		originHeight: null
+	},
+	mapVars : {
+		mapElement: null,
+		heightRatio : null,
+		widthRatio : null,
+		offsetY : null,
+		offsetX : null
 	},
 
 	/*
@@ -85,11 +94,17 @@ var luke = {
 		// console.log(luke.menuContainerX);
 
 		luke.articleContent = $("#articleContent");
-		$(window).mousedown(luke.onMouseDown);
-		$(window).mouseup(luke.onMouseUp);
+		luke.articles = $('#articleContent article');
+		
+
+		luke.initMap();
+		luke.updateMap();
 
 		$('article.content').hover(luke.articleHoverZindexIn, luke.articleHoverZindexOut);
 		$('#menuSub a').click(luke.subMenuClick);
+
+		$(window).mousedown(luke.onMouseDown);
+		$(window).mouseup(luke.onMouseUp);
 
 	},
 	/**
@@ -219,6 +234,7 @@ var luke = {
 			});
 		});
 		articles.show();
+		luke.updateMap();
 	},
 	onMouseDown : function (event) {
 		luke.lastMousePos.x = event.pageX;
@@ -229,6 +245,7 @@ var luke = {
 	},
 	onMouseUp : function (event) {
 		$(window).unbind("mousemove", luke.mouseMove);
+		luke.updateMap();
 	},
 	mouseMove : function (event) {
 		luke.articleContent.offset({top : luke.lastCssPos.y + (event.pageY - luke.lastMousePos.y), left : luke.lastCssPos.x + (event.pageX - luke.lastMousePos.x) });
@@ -245,7 +262,7 @@ var luke = {
 	wrongArticlesMess : function (articles) {
 		var offset = luke.menuContainer.offset(),
 		tempVec = new lukeVector(offset.left - 600, offset.top - 50),
-		max = 20, min = -20,
+		max = 100, min = -100,
 		range = max + (min * -1),
 		movement = new lukeVector( Math.random() * range - (range * 0.5), Math.random() * range - (range * 0.5) );
 		$(articles).each(function (index, element) {
@@ -260,6 +277,34 @@ var luke = {
 		wrongArticles = $('article.content').not("." +  $(this).attr("href").substring(1));
 		luke.wrongArticlesMess(wrongArticles);
 		luke.rightArticlesOrder(rightArticles);
+		luke.updateMap();
+	},
+	initMap : function () {
+		luke.mapVars.heightRatio = 5;
+		luke.mapVars.widthRatio = 5;
+		luke.mapVars.offsetX = 400 / luke.mapVars.widthRatio;
+		luke.mapVars.offsetY = 400 / luke.mapVars.heightRatio;
+		luke.map = Raphael("map", 1000, 1000);
+		luke.articles.each(function (index, element) {
+			console.log($(element).css("backgroundColor"));
+			luke.map.rect(1, 1, 1, 1).attr("fill", Raphael.color($(element).css("backgroundColor"))).attr("stroke", "1px black");
+		});
+		luke.map.rect(luke.menuContainer.offset().left / luke.mapVars.widthRatio + luke.mapVars.offsetX, luke.menuContainer.offset().top / luke.mapVars.widthRatio + luke.mapVars.offsetY,
+			luke.menuContainer.outerWidth() / luke.mapVars.widthRatio, luke.menuContainer.outerHeight() / luke.mapVars.heightRatio
+			).attr("fill", Raphael.color(luke.menuContainer.css("backgroundColor"))).attr("stroke", "none");
+	},
+	updateMap : function () {
+		luke.articles.each(function (index, element) {
+			var offset = $(element).offset();
+			if($(element).css("display") !== "none") {
+				luke.map.getById(index).attr({ 
+					x : offset.left / luke.mapVars.widthRatio + luke.mapVars.offsetX,
+					y : offset.top / luke.mapVars.heightRatio + luke.mapVars.offsetY,
+					width : $(element).outerWidth() / luke.mapVars.widthRatio,
+					height : $(element).outerHeight() / luke.mapVars.heightRatio
+				});
+			}
+		});
 	}
 };
 
