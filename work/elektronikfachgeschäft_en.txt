@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 <article class="live" lang="en">
 <h1>Elektronikfachgesch&auml;ft (2009)</h1>
-=======
-
-<article>
 <a href="http://www.elektronikfachgeschaeft.com/">Elektronikfachgesch&auml;ft</a>
-<h1>Elektronikfachgesch&auml;ft (2009)</h1>
 <p>live elektronics</p>
 <br>
 <p>80ies trash, minimal techno and outdated club music band proudly performing since 2009.

@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 <article class="live" lang="de">
 <h1>I never wrote a sound (2012)</h1>
-=======
-
-<article>
 <a href="https://vimeo.com/45126212">I never wrote a sound</a>
-<h1>I never wrote a sound (2012)</h1>
 <p>Live Coding Music</p>
 <br>
 <p>Die Klang-Performance bringt die &uuml;berholte Schreib-Maschine Schreibmaschine in einen Dialog mit der aktuellen Schreib-Maschine Computer. Die veraltete Technik, nutzlos geworden durch neue Technologien, wird durch eben diese unsterblich: die Schreibmethode der Maschine gebiert die Steuerung des Computers, die Schreibmethode des Computers den Mythos Schreibmaschine.</p>

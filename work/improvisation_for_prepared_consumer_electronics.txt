@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 <article class="live" lang="de">
 <h1>Improvisation with Prepared Consumer Electronics (2012)</h1>
-=======
-
-<article>
 <a href="https://vimeo.com/41116911">Improvisation with Prepared Consumer Electronics</a>
-<h1>Improvisation with Prepared Consumer Electronics (2012)</h1>
 <p>Live Elektronik</p>
 <br>
 <p>Gefundene Unterhaltungs-Elektronik-Artikel werden pr&auml;pariert und als Instrumente eingesetzt. Die aus einer &Uuml;berfluss-&Ouml;konimie produzierte LoFi-Technik erlaubt Improvisation nach dem Motto &quot;bugs are features&quot;. Die Visuals von Jan Steinbach arbeiten dazu kontrastierend mit klaren, grafischen Algorithmen.</p>

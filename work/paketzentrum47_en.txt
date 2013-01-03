@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 <article class="objekt" lang="en">
 <h1>Paketzentrum47 (2011)</h1>
-=======
-
-<article>
 <a href="https://vimeo.com/33299790">Paketzentrum47</a>
-<h1>Paketzentrum47 (2011)</h1>
 <p>audiovisual installation</p>
 <br>
 <p>This sound sculpture broaches the issue of transportation routes, distances and packaging of electrical entertainment goods.
