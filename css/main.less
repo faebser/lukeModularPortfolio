@@ -195,12 +195,10 @@ body {
         }
     }
 	#menuContainer {
-		background-color: @schwarz;
-		margin: 13.5% auto 0 auto;
-		width: 150px;
-        height: 150px;
+		position: absolute;
+        padding: 0px 2px;
+        background-color: #000;
 		.menu {
-			height: 50%;
 			margin: 0px;
 			padding: 0px;
 			list-style: none;
@@ -208,27 +206,31 @@ body {
 				margin: 0px;
 				padding: px;
                 color: @schriftGrau;
-                line-height: 1.1;
-                span {
+                line-height: 0.9;
+                a {
                     background-color: #fff;
-                }
-                &:hover {
-                    color: #000;
-                    span {
+                    padding: 2px 4px;
+                    color: #787878;
+                    text-decoration: none;
+                    display: inline-block;
+                    padding: 0px 2px 4px 2px;
+                    &:hover {
+                        color: #000;
                         background-color: @schriftGrau;
+
                     }
                 }
 			}
 		}
 		#menuMain {
-            margin-left: 57%;
-            width: 43%;
+            margin: 0 5px 0 57%;
+            width: 100%;
 			&:hover {
 				cursor: pointer;
 			}
 		}
         #menuSub {
-            width: 41%;
+            margin: -14px 61% 0 0;
             text-align: right;
         }
 	}

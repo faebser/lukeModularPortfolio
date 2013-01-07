@@ -88,14 +88,9 @@ var luke = {
 		luke.menuContainerY = luke.currentVector.pos.y;
 		luke.menuContainerWidth = luke.menuContainer.outerWidth();
 		luke.menuContainerHeight = luke.menuContainer.outerHeight();
-		// console.log($("#menuContainer").offset().top);
-		// console.log($("#menuContainer").offset().left);
-		// console.log(luke.menuContainerY);
-		// console.log(luke.menuContainerX);
 
 		luke.articleContent = $("#articleContent");
 		luke.articles = $('#articleContent article');
-		
 
 		luke.initMap();
 		luke.updateMap();
@@ -280,8 +275,8 @@ var luke = {
 		luke.updateMap();
 	},
 	initMap : function () {
-		luke.mapVars.heightRatio = 5;
-		luke.mapVars.widthRatio = 5;
+		luke.mapVars.heightRatio = 10;
+		luke.mapVars.widthRatio = 10;
 		luke.mapVars.offsetX = 400 / luke.mapVars.widthRatio;
 		luke.mapVars.offsetY = 400 / luke.mapVars.heightRatio;
 		luke.map = Raphael("map", 1000, 1000);
