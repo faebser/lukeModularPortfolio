@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 <article class="objekt" lang="de">
 <h1>Paketzentrum47 (2011)</h1>
-=======
-
-<article>
 <a href="https://vimeo.com/33299790">Paketzentrum47</a>
-<h1>Paketzentrum47 (2011)</h1>
 <p>Audiovisuelle Installation</p>
 <br>
 <p>Die Klangskulptur thematisiert Transportwege und -verpackungen von Unterhaltungs-Elektronik-Artikeln.

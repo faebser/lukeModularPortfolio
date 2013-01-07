@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 <article class="objekt" lang="en">
 <h1>Breaches in a sonic Mechanism (2012)</h1>
-=======
-
-<article>
 <a href="https://vimeo.com/54603114">Breaches in a sonic Mechanism</a>
-<h1>Breaches in a sonic Mechanism (2012)</h1>
 <p>audiovisual installation</p>
 <br>
 <p>This installation is an absurd sonic machine. It is a machine with a body, living

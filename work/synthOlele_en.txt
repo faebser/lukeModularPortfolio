@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 <article class="objekt" lang="en">
 <h1>synthOlele (2012)</h1>
-=======
-
-<article>
 <a href="https://vimeo.com/39540396">synthOlele</a>
-<h1>synthOlele (2012)</h1>
 <p>manufacturing of instrument and electronic live music</p>
 <br>
 <p>The synthOlele is a digital instrument. 

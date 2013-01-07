@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 <article class="live" lang="en">
 <h1>I never wrote a sound (2012)</h1>
-=======
-
-<article>
 <a href="https://vimeo.com/45126212">I never wrote a sound</a>
-<h1>I never wrote a sound (2012)</h1>
 <p>live Coding Music</p>
 <br>
 <p>Creating a dialog between an out-dated type writer and an up-to-date typing machine (computer), this sound performance brings together two machines for textual in- and output, thereby presenting their dependent relation regarding their derivation, extinction and resurrection.</p>

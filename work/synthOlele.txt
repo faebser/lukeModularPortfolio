@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 <article class="objekt" lang="de">
 <h1>synthOlele (2012)</h1>
-=======
-
-<article>
 <a href="https://vimeo.com/39540396">synthOlele</a>
-<h1>synthOlele (2012)</h1>
 <p>Instrumentenbau und Elektronische Live Musik</p>
 <br>
 <p>Die synthOlele ist ein digitales Instrument.

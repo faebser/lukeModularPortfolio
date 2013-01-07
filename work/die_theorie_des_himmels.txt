@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 <article class="live" lang="de">
 <h1>Die Theorie des Himmels (2011)</h1>
-=======
-
-<article>
 <a href="https://soundcloud.com/lukemodular/theorie-of-the-sky-1">Die Theorie des Himmels</a>
-<h1>Die Theorie des Himmels (2011)</h1>
 <p>Live Elektronik und Klangkonzept</p>
 <br>
 <p>Die Musikperformance arbeitet mit dem Klang der klassischen Instrumente und der Elektronik innerhalb der r&auml;umlichen und materiellen Gegebenheiten des KIT (Kunst im Tunnel), dem neubelebten Relikts eines Stra&szlig;entunnels.</p>
