@@ -52,6 +52,7 @@ var luke = {
 	menuContainerHeight : null,
 	lastMousePos : { x : null, y : null },
 	lastCssPos : { x : null, y : null },
+	lastMenuPos : { x : null, y : null },
 	articleContent : null,
 	articles : null,
 	mapArticles : null,
@@ -76,14 +77,14 @@ var luke = {
 	 * to setup all the vars for further coding pleasure.
 	 */
 	init : function () {
+		luke.menuContainer = $("#menuContainer");
+		luke.menuContainer.css({top: $(window).height() * 0.5 - luke.menuContainer.outerHeight() * 0.5 ,left: $(window).width() * 0.5 - luke.menuContainer.outerWidth() * 0.5});
 		luke.currentElement = $("#menuContainer");
 		luke.currentVector.pos.x = $("#menuContainer").offset().left;
 		luke.currentVector.pos.y = $("#menuContainer").offset().top;
 		
-		console.log(luke.currentVector.pos.x);
 		luke.updateVector();
 		luke.endlessScrolling();
-		luke.menuContainer = $("#menuContainer");
 		luke.menuContainerX = luke.currentVector.pos.x;
 		luke.menuContainerY = luke.currentVector.pos.y;
 		luke.menuContainerWidth = luke.menuContainer.outerWidth();
@@ -101,40 +102,6 @@ var luke = {
 		$(window).mousedown(luke.onMouseDown);
 		$(window).mouseup(luke.onMouseUp);
 
-	},
-	/**
-	 * The update function is a meta-function and should set up
-	 * the vars and describe the overall flow of the code when a new
-	 * article is requested and needs to be positioned and displayed
-	 */
-	update: function () {
-			var newArticle = luke.getNewArticle();
-			var newPosX, newPosY;
-			$('body').prepend(newArticle);
-			newArticle.css({ display : "block", visibility : "hidden"});
-			if(luke.directionVector.pos.y === -1) {
-				newPosY = luke.currentVector.pos.y + newArticle.outerHeight() * luke.directionVector.pos.y;
-			}
-			else if(luke.directionVector.pos.y === 1) {
-				newPosY = luke.currentVector.pos.y + luke.currentElement.outerHeight() * luke.directionVector.pos.y;
-			}
-			else if(luke.directionVector.pos.y === 0) {
-				newPosY = 0;
-			}
-			if(luke.directionVector.pos.x >= 0) {
-				newPosX = luke.currentVector.pos.x + luke.currentElement.outerWidth() * luke.directionVector.pos.x;
-			}
-			else if (luke.directionVector.pos.x < 0) {
-				newPosX = luke.currentVector.pos.x + newArticle.outerWidth() * luke.directionVector.pos.x;
-			};
-			console.log("abstand y = " + (newPosY - luke.currentVector.pos.y));
-			console.log("abstand x = " + (newPosX - luke.currentVector.pos.x));
-			luke.updateVector();
-			newArticle.css({ display : "none", visibility : "visible"});
-			newArticle.css({ top : newPosY, left : newPosX }).fadeIn();
-	},
-	getNewArticle : function () {
-		return $("#"+luke.currentElementIndex).clone();
 	},
 	articleHoverZindexIn : function (event) {
 		$(this).css({ "z-index" : 10 });
@@ -236,6 +203,8 @@ var luke = {
 		luke.lastMousePos.y = event.pageY;
 		luke.lastCssPos.x = luke.articleContent.offset().left;
 		luke.lastCssPos.y = luke.articleContent.offset().top;
+		luke.lastMenuPos.x = luke.menuContainer.offset().left;
+		luke.lastMenuPos.y = luke.menuContainer.offset().top;
 		$(window).mousemove(luke.mouseMove);
 	},
 	onMouseUp : function (event) {
@@ -243,6 +212,9 @@ var luke = {
 		luke.updateMap();
 	},
 	mouseMove : function (event) {
+		luke.menuContainerX = luke.menuContainer.offset().left;
+		luke.menuContainerY = luke.menuContainer.offset().top;
+		luke.menuContainer.offset({top : luke.lastMenuPos.y + (event.pageY - luke.lastMousePos.y), left : luke.lastMenuPos.x + (event.pageX - luke.lastMousePos.x) });
 		luke.articleContent.offset({top : luke.lastCssPos.y + (event.pageY - luke.lastMousePos.y), left : luke.lastCssPos.x + (event.pageX - luke.lastMousePos.x) });
 	},
 	rightArticlesOrder : function (articles) {
@@ -261,9 +233,9 @@ var luke = {
 		range = max + (min * -1),
 		movement = new lukeVector( Math.random() * range - (range * 0.5), Math.random() * range - (range * 0.5) );
 		$(articles).each(function (index, element) {
-			$(element).offset( {top : tempVec.pos.y, left : tempVec.pos.x} );
 			movement.set( Math.random() * range - (range * 0.5), Math.random() * range - (range * 0.5) );
 			tempVec.add(movement);
+			$(element).offset( {top : tempVec.pos.y, left : tempVec.pos.x} );
 		});
 	},
 	subMenuClick : function (event) {
@@ -281,14 +253,14 @@ var luke = {
 		luke.mapVars.offsetY = 400 / luke.mapVars.heightRatio;
 		luke.map = Raphael("map", 1000, 1000);
 		luke.articles.each(function (index, element) {
-			console.log($(element).css("backgroundColor"));
-			luke.map.rect(1, 1, 1, 1).attr("fill", Raphael.color($(element).css("backgroundColor"))).attr("stroke", "1px black");
+			luke.map.rect(1, 1, 1, 1).attr("fill", Raphael.color($(element).css("backgroundColor"))).attr("stroke", "none");
 		});
 		luke.map.rect(luke.menuContainer.offset().left / luke.mapVars.widthRatio + luke.mapVars.offsetX, luke.menuContainer.offset().top / luke.mapVars.widthRatio + luke.mapVars.offsetY,
 			luke.menuContainer.outerWidth() / luke.mapVars.widthRatio, luke.menuContainer.outerHeight() / luke.mapVars.heightRatio
 			).attr("fill", Raphael.color(luke.menuContainer.css("backgroundColor"))).attr("stroke", "none");
 	},
 	updateMap : function () {
+		var elementIndex = 0;
 		luke.articles.each(function (index, element) {
 			var offset = $(element).offset();
 			if($(element).css("display") !== "none") {
@@ -299,6 +271,14 @@ var luke = {
 					height : $(element).outerHeight() / luke.mapVars.heightRatio
 				});
 			}
+			elementIndex = index;
+		});
+		var offset = luke.menuContainer.offset();
+		luke.map.getById(elementIndex + 1).attr({ 
+			x : offset.left / luke.mapVars.widthRatio + luke.mapVars.offsetX,
+			y : offset.top / luke.mapVars.heightRatio + luke.mapVars.offsetY,
+			width : $(luke.menuContainer).outerWidth() / luke.mapVars.widthRatio,
+			height : $(luke.menuContainer).outerHeight() / luke.mapVars.heightRatio
 		});
 	}
 };
