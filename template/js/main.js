@@ -253,18 +253,18 @@ var luke = {
 		luke.mapVars.offsetY = 400 / luke.mapVars.heightRatio;
 		luke.map = Raphael("map", 1000, 1000);
 		luke.articles.each(function (index, element) {
-			luke.map.rect(1, 1, 1, 1).attr("fill", Raphael.color($(element).css("backgroundColor"))).attr("stroke", "none");
+			luke.map.rect(1, 1, 1, 1).attr("fill", Raphael.color($(element).css("backgroundColor"))).attr("stroke", "none").id = $(element).attr("id");
 		});
 		luke.map.rect(luke.menuContainer.offset().left / luke.mapVars.widthRatio + luke.mapVars.offsetX, luke.menuContainer.offset().top / luke.mapVars.widthRatio + luke.mapVars.offsetY,
 			luke.menuContainer.outerWidth() / luke.mapVars.widthRatio, luke.menuContainer.outerHeight() / luke.mapVars.heightRatio
-			).attr("fill", Raphael.color(luke.menuContainer.css("backgroundColor"))).attr("stroke", "none");
+			).attr("fill", Raphael.color(luke.menuContainer.css("backgroundColor"))).attr("stroke", "none").id = luke.menuContainer.attr("id");
 	},
 	updateMap : function () {
 		var elementIndex = 0;
 		luke.articles.each(function (index, element) {
 			var offset = $(element).offset();
 			if($(element).css("display") !== "none") {
-				luke.map.getById(index).attr({ 
+				luke.map.getById($(element).attr("id")).attr({ 
 					x : offset.left / luke.mapVars.widthRatio + luke.mapVars.offsetX,
 					y : offset.top / luke.mapVars.heightRatio + luke.mapVars.offsetY,
 					width : $(element).outerWidth() / luke.mapVars.widthRatio,
@@ -274,7 +274,7 @@ var luke = {
 			elementIndex = index;
 		});
 		var offset = luke.menuContainer.offset();
-		luke.map.getById(elementIndex + 1).attr({ 
+		luke.map.getById(luke.menuContainer.attr("id")).attr({ 
 			x : offset.left / luke.mapVars.widthRatio + luke.mapVars.offsetX,
 			y : offset.top / luke.mapVars.heightRatio + luke.mapVars.offsetY,
 			width : $(luke.menuContainer).outerWidth() / luke.mapVars.widthRatio,
