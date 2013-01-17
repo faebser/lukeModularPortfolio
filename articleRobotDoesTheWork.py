@@ -1,6 +1,6 @@
-import os
 import os.path as path
 import lxml.html as html
+import shutil.copytree as copy
 
 templatePath = None
 germanPath = None
@@ -17,18 +17,16 @@ if path.exists("en"):
 	print "please remove english directory, exiting"
 	exit()
 else:
-	os.mkdir("en")
 	englishPath = "en"
+	copy(templatePath, englishPath)
 
 if path.exists("de"):
 	print "please remove english directory, exiting"
 	exit()
 else:
-	os.mkdir("de")
 	germanPath = "de"
+	copy(templatePath, germanPath)
 
 print "templatePath => " + templatePath
 print "Path for german folder => " + germanPath
 print "Path for english folder => " + englishPath
-
-
