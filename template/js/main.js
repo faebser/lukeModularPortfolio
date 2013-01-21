@@ -77,6 +77,8 @@ var luke = {
 	 * to setup all the vars for further coding pleasure.
 	 */
 	init : function () {
+		
+		
 		luke.menuContainer = $("#menuContainer");
 		luke.menuContainer.css({top: $(window).height() * 0.5 - luke.menuContainer.outerHeight() * 0.5 ,left: $(window).width() * 0.5 - luke.menuContainer.outerWidth() * 0.5});
 		luke.currentElement = $("#menuContainer");
@@ -99,8 +101,8 @@ var luke = {
 		$('article.content').hover(luke.articleHoverZindexIn, luke.articleHoverZindexOut);
 		$('#menuSub a').click(luke.subMenuClick);
 
-		$(window).mousedown(luke.onMouseDown);
-		$(window).mouseup(luke.onMouseUp);
+		$("#scroller").mousedown(luke.onMouseDown);
+		$("#scroller").mouseup(luke.onMouseUp);
 
 	},
 	articleHoverZindexIn : function (event) {
