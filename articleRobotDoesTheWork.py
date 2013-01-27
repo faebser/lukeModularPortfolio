@@ -47,4 +47,5 @@ for pathName, directories, files in walk(boxesFolder):
 
 targetFile = open(path.join(websiteFolder, "index.html"), "w")
 targetFile.write(str(targetHtml))
+targetFile.close()
 templateFile.close()
