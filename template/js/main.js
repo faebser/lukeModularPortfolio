@@ -77,8 +77,6 @@ var luke = {
 	 * to setup all the vars for further coding pleasure.
 	 */
 	init : function () {
-		
-		
 		luke.menuContainer = $("#menuContainer");
 		luke.menuContainer.css({top: $(window).height() * 0.5 - luke.menuContainer.outerHeight() * 0.5 ,left: $(window).width() * 0.5 - luke.menuContainer.outerWidth() * 0.5});
 		luke.currentElement = $("#menuContainer");
@@ -98,7 +96,20 @@ var luke = {
 		luke.initMap();
 		luke.updateMap();
 
-		$('article.content').hover(luke.articleHoverZindexIn, luke.articleHoverZindexOut);
+		luke.articles.each(function (index, element) {
+			var max = 7, min = 1,
+			range = max - min,
+			shadow = Math.ceil(Math.random() * range),
+			color = Math.ceil(Math.random() * range);
+			$(element).addClass("backGroundColor-" + color).addClass("boxShadow-" + shadow);
+		});
+
+		$('#menuMain').click(function(event) {
+			event.preventDefault();
+			luke.firstClickMess();
+		});
+
+		$('#articleContent article').hover(luke.articleHoverZindexIn, luke.articleHoverZindexOut);
 		$('#menuSub a').click(luke.subMenuClick);
 
 		$("#scroller").mousedown(luke.onMouseDown);
@@ -183,7 +194,7 @@ var luke = {
 		// define some margin around the menu
 		// define some shadow class and tell luke about it
 		// tell luke about how he has to organize his content
-		var articles = $("article.content"),
+		var articles = $("#articleContent article"),
 		margin = 5;
 		luke.articleContent.offset({ top : 0, left : 0 });
 		// write a function where given the height and width of an element
@@ -242,8 +253,8 @@ var luke = {
 	},
 	subMenuClick : function (event) {
 		event.preventDefault();
-		var rightArticles = $('article.content.' + $(this).attr("href").substring(1)),
-		wrongArticles = $('article.content').not("." +  $(this).attr("href").substring(1));
+		var rightArticles = $('#articleContent article.' + $(this).attr("href").substring(1)),
+		wrongArticles = $('#articleContent article').not("." +  $(this).attr("href").substring(1));
 		luke.wrongArticlesMess(wrongArticles);
 		luke.rightArticlesOrder(rightArticles);
 		luke.updateMap();
@@ -287,8 +298,4 @@ var luke = {
 
 $(document).ready(function () {
 	luke.init();
-	$('#menuMain').click(function(event) {
-		event.preventDefault();
-		luke.firstClickMess();
-	});
 });
