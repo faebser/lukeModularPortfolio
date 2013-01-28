@@ -1,9 +1,0 @@
-<article class="vertonung" lang="de">
-<h1>Bewegte Schrift (2012)</h1>
-<a href="https://vimeo.com/36332485">Bewegte Schrift</a>
-<p>Musik/Sounddesign</p>
-<br>
-<p>Vertonung von 33 abstrakten Kurzfilmen zur experimentellen Animation von Typografie. Ton und Bild arbeiten zu einer breiten Auswahl verschiedener Konzepte und nicht-Konzepte mit den unterschiedlichsten analogen/manuellen und digitalen Techniken und Materialien. Das Sounddesign orientiert sich am Bild, dabei reicht die Bandbreite von assoziativ vertonten Filmen &uuml;ber Zufallsprodukte und O-T&ouml;ne bis hin zu Bewegtbild, dessen Daten, gemessen oder gesch&auml;tzt, direkt in Sound &uuml;bersetzt werden. Zu den verwendeten Kl&auml;ngen geh&ouml;ren selbst eingespielte echte und virtuelle Instrumente, generativ erzeugter Sound sowie Fieldrecordings.</p>
-<br>
-<p>Die Filme entstanden im Rahmen der Bachelorarbeit von Svenja Vo&szlig;. Svenja lebt und arbeitet als Gestalterin in D&uuml;sseldorf.</p>
-</article>
