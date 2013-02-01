@@ -35,6 +35,18 @@ function lukeVector(inputX, inputY) {
 		set: function (externalX, externalY) {
 			this.pos.x = externalX;
 			this.pos.y = externalY;
+		},
+		addY : function (y) {
+			this.pos.y += y;
+		},
+		addX : function (x) {
+			this.pos.x += x;
+		},
+		setX : function (x) {
+			this.pos.x = x;
+		},
+		setY : function (y) {
+			this.pos.y = y;
 		}
 	};
 }
@@ -231,20 +243,56 @@ var luke = {
 		luke.articleContent.offset({top : luke.lastCssPos.y + (event.pageY - luke.lastMousePos.y), left : luke.lastCssPos.x + (event.pageX - luke.lastMousePos.x) });
 	},
 	rightArticlesOrder : function (articles) {
-		var offset = luke.menuContainer.offset(),
-		tempVec = new lukeVector(offset.left + 200, offset.top - 50),
-		movement = new lukeVector(20, 20);
-		$(articles).each(function (index, element) {
-			$(element).offset( {top : tempVec.pos.y, left : tempVec.pos.x} );
-			tempVec.add(movement);
-		});
+		if(articles.length != 0) {
+			var offset = luke.menuContainer.offset(),
+			startVec = new lukeVector(offset.left + 200, offset.top - luke.menuContainer.height() * 0.5),
+			tempVec = new lukeVector(startVec.pos.x, startVec.pos.y),
+			max = 35, min = -10,
+			range = max - min,
+			halfRange = range * 0.5,
+			movement = new lukeVector(Math.random() * range - halfRange, Math.random() * range - halfRange),
+			amountPerColumn = 3;
+
+			for(var i = 6; i >= 2; i--) {
+				if(articles.length % i === 0 && articles.length != i) {
+					amountPerColumn = i;
+					break;
+				}
+			}
+
+			console.log(articles);
+			console.log("length: " + articles.length);
+			console.log("amountPerColumn: " + amountPerColumn);
+
+			var size = $(articles[0]).outerWidth();
+
+			console.log("size = " + size);
+
+			$(articles).each(function (index, element) {
+				console.log("amount % i: " + (index  % amountPerColumn));
+				cur = $(element);
+				if(size < cur.outerWidth()) {
+					size = cur.outerWidth();
+				}
+				cur.offset( {top : tempVec.pos.y, left : tempVec.pos.x} );
+				movement.set(Math.random() * range - halfRange, (cur.outerHeight() * 1.5) + Math.random() * range - halfRange );
+				tempVec.add(movement);
+				if(amountPerColumn % index === 0) {
+					console.log("reset");
+					startVec.addX(size + 30);
+					tempVec.set(startVec.pos.x, startVec.pos.y);
+					size = 0;
+				}
+			});
+		}
 	},
 	wrongArticlesMess : function (articles) {
 		var offset = luke.menuContainer.offset(),
-		tempVec = new lukeVector(offset.left - 600, offset.top - 50),
+		tempVec = new lukeVector(offset.left - 700, offset.top - 50),
 		max = 100, min = -100,
 		range = max + (min * -1),
 		movement = new lukeVector( Math.random() * range - (range * 0.5), Math.random() * range - (range * 0.5) );
+
 		$(articles).each(function (index, element) {
 			movement.set( Math.random() * range - (range * 0.5), Math.random() * range - (range * 0.5) );
 			tempVec.add(movement);

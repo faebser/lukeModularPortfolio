@@ -1,2 +1,4 @@
 # ignore compiled website
 website/
+#ignore working branch
+working/*

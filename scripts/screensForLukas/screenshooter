@@ -1,6 +1,6 @@
 #!/bin/bash
 
-i=0
+i=32
 file=00000001.png
 
 while true;
