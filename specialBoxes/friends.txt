@@ -1,0 +1,11 @@
+<article id="friends" class="friends">
+<a href="???">Fabian Frei</a><br>
+<a href="www.bandcamp.grandbrothers.com">grandbrothers</a><br>
+<a href="www.darwinschefinkensuchen.com">Katharina Hauke</a><br>
+<a href="www.jonashummel.de">Jonas Hummel</a><br>
+<a href="www.jansteinbach.de">Jan Steinbach</a><br>
+<a href="www.norasteiner.ch">Nora Steiner</a><br>
+<a href="www.editiontaube.de">Edition Taube</a><br>
+<a href="www.alitnani.com">Ali Tani</a><br>
+<a href="www.movingtype.net">Svenja Voss</a>
+</article>

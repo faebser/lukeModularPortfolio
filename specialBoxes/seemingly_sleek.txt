@@ -1,0 +1,3 @@
+<article id="seemingly_sleek" class="statement">
+<p>(tiny cracks that sum up to what we refer to as wall)</p>
+</article>

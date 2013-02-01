@@ -1,0 +1,18 @@
+<article id="bio" class="bio">
+	<p>Lukas Truniger,<br>
+	was born in Zürich in 1986. Since 2008, he studies at the <em>Institut Fuer Musik Und Medien</em> of the <em>Robert Schumann Hochschule Düsseldorf</em>. As a musician, sounddesigner and sound artist, his tasks includes live music, installations, creating new instruments and filmsound. Facinated by DIY, the use of selfmade code, hacked instruments and missused tools is crucial in his work.<br>
+	He is always searching for new sound in the environment as well as in the digital domain, confronted by the insufficiency of the even and therefore escape towards multisensorism and multidimensionalsim.<br>
+	Tipically he is working between different worlds, sonic and visual, experimental and club, classical and contemprary, eager to combine, rearrange and scramble thme.
+	<br>
+	// reverences
+	_2013 Projektstipendium Netzwerk ON - Neue Musik Köln
+	_2011/2012 Studienaufenthalt Cité International des Arts Paris
+	_2011Stipendiat Kolleg für Musik und Kunst Montepulciano (I)
+	_2012 Ausstellung Brèches d‘une Mechanique sonore, Objets-Son, Tunis, Tunesien
+	_2011 Ausstellung Paketzentrum47, Lange Nacht der Kölner Museen, raum13, Deutzer Zentralwerk der schönen Künste, Köln
+	_2011 Ausstellung Paketzentrum47, Festival for Applied Accustics, Köln
+	_Konzerte in unterschiedlichen Besetzungen in Paris, Birmingham, Berlin, Köln, Frankfurt, Düsseldorf<br>
+<br>
+<a href="matieral/bio_full.pdf">Full bio here.</a>
+	</p>
+</article>>
