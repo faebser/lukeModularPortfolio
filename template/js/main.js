@@ -68,6 +68,7 @@ var luke = {
 	articleContent : null,
 	articles : null,
 	mapArticles : null,
+	scroller : null,
 
 	//vars for endless scrolling
 	endlessScrollingVars : {
@@ -105,16 +106,18 @@ var luke = {
 		luke.articleContent = $("#articleContent");
 		luke.articles = $('#articleContent article');
 
-		luke.initMap();
-		luke.updateMap();
-
 		luke.articles.each(function (index, element) {
 			var max = 7, min = 1,
 			range = max - min,
 			shadow = Math.ceil(Math.random() * range),
 			color = Math.ceil(Math.random() * range);
 			$(element).addClass("backGroundColor-" + color).addClass("boxShadow-" + shadow);
+			console.log("backGroundColor: " + $(element).css("backgroundColor"));
 		});
+
+		luke.initMap();
+		luke.updateMap();
+
 
 		$('#menuMain').click(function(event) {
 			event.preventDefault();
@@ -124,8 +127,9 @@ var luke = {
 		$('#articleContent article').hover(luke.articleHoverZindexIn, luke.articleHoverZindexOut);
 		$('#menuSub a').click(luke.subMenuClick);
 
-		$("#scroller").mousedown(luke.onMouseDown);
-		$("#scroller").mouseup(luke.onMouseUp);
+		luke.scroller = $("#scroller");
+		luke.scroller.mousedown(luke.onMouseDown);
+		luke.scroller.mouseup(luke.onMouseUp);
 
 	},
 	articleHoverZindexIn : function (event) {
@@ -200,7 +204,7 @@ var luke = {
 		// console.log(returnPos);
 
 		return returnPos;
-	} ,
+	},
 	firstClickMess : function () {
 		// take all the articles and place them around the menu
 		// define some margin around the menu
@@ -230,11 +234,14 @@ var luke = {
 		luke.lastCssPos.y = luke.articleContent.offset().top;
 		luke.lastMenuPos.x = luke.menuContainer.offset().left;
 		luke.lastMenuPos.y = luke.menuContainer.offset().top;
+		luke.scroller.css("zIndex", 10000);
 		$(window).mousemove(luke.mouseMove);
 	},
 	onMouseUp : function (event) {
+		luke.scroller.css("zIndex", "");
 		$(window).unbind("mousemove", luke.mouseMove);
 		luke.updateMap();
+
 	},
 	mouseMove : function (event) {
 		luke.menuContainerX = luke.menuContainer.offset().left;
@@ -314,6 +321,7 @@ var luke = {
 		luke.mapVars.offsetY = 400 / luke.mapVars.heightRatio;
 		luke.map = Raphael("map", 1000, 1000);
 		luke.articles.each(function (index, element) {
+			console.log("backGroundColor in map.init: " + $(element).css("backgroundColor"));
 			luke.map.rect(1, 1, 1, 1).attr("fill", Raphael.color($(element).css("backgroundColor"))).attr("stroke", "none").id = $(element).attr("id");
 		});
 		luke.map.rect(luke.menuContainer.offset().left / luke.mapVars.widthRatio + luke.mapVars.offsetX, luke.menuContainer.offset().top / luke.mapVars.widthRatio + luke.mapVars.offsetY,

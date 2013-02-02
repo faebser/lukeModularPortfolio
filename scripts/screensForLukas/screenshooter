@@ -1,13 +1,13 @@
 #!/bin/bash
 
-i=32
+i=70
 file=00000001.png
 
 while true;
 do
 #echo 123
 sleep 30
-import -window root -delay 200 screen"$i".png
+import -window root screen"$i".png
 mplayer -vo png -frames 1 tv://
 mv "$file" pic"$i".png
 echo pic nr"$i" taken
