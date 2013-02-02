@@ -1,0 +1,13 @@
+<article id="contact" class="contact">
+<p>Lukas Truniger<br>
+lukas.truniger gmail.com<br>
+plus49 0163 317 0854<br>
+<br>
+Imprint:<br>
+see above<br>
+<br>
+Page Credits:<br>
+design _ Svenja Voss<br>
+text _ Katharina Hauke<br>
+programming _ Fabian Frei<br>
+</p></article>
