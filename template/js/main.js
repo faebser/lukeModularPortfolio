@@ -67,6 +67,8 @@ var luke = {
 	lastMenuPos : { x : null, y : null },
 	articleContent : null,
 	articles : null,
+	boxesContent : null,
+	boxes: null,
 	mapArticles : null,
 	scroller : null,
 
@@ -115,16 +117,34 @@ var luke = {
 			console.log("backGroundColor: " + $(element).css("backgroundColor"));
 		});
 
+		luke.boxesContent = $('#specialBoxes');
+		luke.boxes = $('#specialBoxes article');
+
+		luke.boxes.each(function (index, element) {
+			var max = 7, min = 1,
+			range = max - min,
+			shadow = Math.ceil(Math.random() * range),
+			color = Math.ceil(Math.random() * range);
+			$(element).addClass("backGroundColor-" + color).addClass("boxShadow-" + shadow);
+			console.log("backGroundColor: " + $(element).css("backgroundColor"));
+		});
+
+
 		luke.initMap();
 		luke.updateMap();
 
 
-		$('#menuMain').click(function(event) {
-			event.preventDefault();
-			luke.firstClickMess();
+		$('#menuMain li a').click(luke.mainMenuClick);
+
+		$('article a').click(function(event) {
+			if($(this).attr("href").indexOf("#") == 0) {
+				var offset = $(this).offset();
+				luke.displayOneArticle($(this).attr("href").substring(1), offset.left + $(this).outerWidth(), offset.top);
+			}
+			
 		});
 
-		$('#articleContent article').hover(luke.articleHoverZindexIn, luke.articleHoverZindexOut);
+		$('article').hover(luke.articleHoverZindexIn, luke.articleHoverZindexOut);
 		$('#menuSub a').click(luke.subMenuClick);
 
 		luke.scroller = $("#scroller");
@@ -248,6 +268,7 @@ var luke = {
 		luke.menuContainerY = luke.menuContainer.offset().top;
 		luke.menuContainer.offset({top : luke.lastMenuPos.y + (event.pageY - luke.lastMousePos.y), left : luke.lastMenuPos.x + (event.pageX - luke.lastMousePos.x) });
 		luke.articleContent.offset({top : luke.lastCssPos.y + (event.pageY - luke.lastMousePos.y), left : luke.lastCssPos.x + (event.pageX - luke.lastMousePos.x) });
+		luke.boxesContent.offset({top : luke.lastCssPos.y + (event.pageY - luke.lastMousePos.y), left : luke.lastCssPos.x + (event.pageX - luke.lastMousePos.x) });
 	},
 	rightArticlesOrder : function (articles) {
 		if(articles.length != 0) {
@@ -313,6 +334,47 @@ var luke = {
 		luke.wrongArticlesMess(wrongArticles);
 		luke.rightArticlesOrder(rightArticles);
 		luke.updateMap();
+	},
+	mainMenuClick : function (event) {
+		$("article").hide();
+		console.log("href: " + $(this).attr("href").substring(1));
+		var offset = luke.menuContainer.offset();
+		luke.displayOneArticle($(this).attr("href").substring(1), offset.left + luke.menuContainer.outerWidth(), offset.top);
+	},
+	// posX and posY are top left corner of the article
+	displayOneArticle : function (id, posX, posY) {
+		var article = luke.boxesContent.find("#" + id),
+		max = { x : 100, y : 100},
+		min = {x : 10, y : -100},
+		range = {
+			x : max.x - min.x,
+			y : max.y + (min.y * -1)
+		},
+		halfRange = {
+			x : range.x * 0.5,
+			y : range.y * 0.5
+		};
+		console.log(article);
+		if(article.length == 0) {
+			article = luke.articleContent.find("#" + id);
+		}
+		if(article.length == 0) {
+			console.error("found no article neither in luke.boxes nor in luke.articles");
+		}
+
+		console.log("input x: " + posX);
+		console.log("input y: " + posY);
+
+		var origin = new lukeVector(posX, posY),
+		movement = new lukeVector( Math.random() * range.x - halfRange.x, Math.random() * range.y - halfRange.y );
+		origin.add(movement);
+		console.log("origin.x: " + origin.pos.x);
+		console.log("origin.y: " +  origin.pos.y);
+		article.css({
+			top: origin.pos.y,
+			left: origin.pos.x,
+			display: "block"
+		});
 	},
 	initMap : function () {
 		luke.mapVars.heightRatio = 10;

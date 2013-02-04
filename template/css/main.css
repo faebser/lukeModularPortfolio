@@ -10,16 +10,16 @@ textarea{resize:vertical;}
 #scroller{position:absolute;width:100%;height:100%;}
 #map{position:absolute;width:200px;height:100px;top:0;left:0;z-index:-5;}
 body{overflow:hidden;font-family:'latoregular',sans-serif;font-size:0.8em;}body h1,body p{font-size:100%;padding:0px;margin:0px;}
-body article{display:none;width:400px;text-align:justify;position:absolute;}body article img{width:400px;}
+body article{display:none;width:400px;position:absolute;}body article img{width:400px;}
 body #endlessText{display:block;position:absolute;top:40px;right:40px;padding:5px;height:200px;}body #endlessText p{width:95%;}
 body #menuContainer{position:absolute;background-color:#000;}body #menuContainer .menuContainerInner{width:140px;}body #menuContainer .menuContainerInner .menu{margin:0px;padding:0px;list-style:none;}body #menuContainer .menuContainerInner .menu li{margin:0px;padding:0px;line-height:0.9;}body #menuContainer .menuContainerInner .menu li a{padding:2px 4px;color:#fff;text-decoration:none;display:inline-block;*display:inline;zoom:1;padding:1px;}body #menuContainer .menuContainerInner .menu li a:hover{color:#000;background-color:#8b8b8b;}
 body #menuContainer #menuMain{float:right;margin:3px 3px 15px 0px;}
-body #menuContainer #menuSub{float:left;margin:0px 0px 3px 3px;}
+body #menuContainer #menuSub{text-align:right;float:left;margin:0px 0px 3px 3px;}
 body #info{position:absolute;left:0px;bottom:0px;}body #info ul{list-style-type:none;color:#8b8b8b;padding:0;margin:1em;}body #info ul li{line-height:1.2;}
 body #info ul .dark{color:#000000;}
 body #controls{position:absolute;right:0px;bottom:0px;}
 body #endlessText{display:none;}body #endlessText p{margin-bottom:5%;}
-#articleContent{position:absolute;top:0;left:0;}
+#articleContent,#specialBoxes{position:absolute;top:0;left:0;}
 .ir{background-color:transparent;border:0;overflow:hidden;*text-indent:-9999px;}
 .ir:before{content:"";display:block;width:0;height:100%;}
 .hidden{display:none !important;visibility:hidden;}
