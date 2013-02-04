@@ -262,7 +262,7 @@ var luke = {
 	onMouseUp : function (event) {
 		luke.scroller.css("zIndex", "");
 		$(window).unbind("mousemove", luke.mouseMove);
-		luke.updateMap();
+		// luke.updateMap();
 
 	},
 	mouseMove : function (event) {
@@ -393,28 +393,36 @@ var luke = {
 			luke.menuContainer.outerWidth() / luke.mapVars.widthRatio, luke.menuContainer.outerHeight() / luke.mapVars.heightRatio
 			).attr("fill", Raphael.color(luke.menuContainer.css("backgroundColor"))).attr("stroke", "none").id = luke.menuContainer.attr("id");
 	},
+	// all in mappixels
 	updateMap : function () {
-		var elementIndex = 0;
+		var menuOffset = luke.menuContainer.offset(),
+		menuMapPos = luke.map.getById("menuContainer").attr(["x", "y"]),
+		elementIndex = 0;
+		console.log(menuMapPos);
 		luke.articles.each(function (index, element) {
-			console.log("index in map update: " + index);
-			var offset = $(element).offset();
 			if($(element).css("display") !== "none") {
+				var offset = $(element).offset(),
+				pos = { 
+					x : menuMapPos.x + ((offset.left - menuOffset.left) / luke.mapVars.widthRatio),
+					y : menuMapPos.y + ((offset.top - menuOffset.top) / luke.mapVars.heightRatio)
+				};
+				
 				luke.map.getById($(element).attr("id")).attr({ 
-					x : offset.left / luke.mapVars.widthRatio + luke.mapVars.offsetX,
-					y : offset.top / luke.mapVars.heightRatio + luke.mapVars.offsetY,
+					x : pos.x,
+					y : pos.y,
 					width : $(element).outerWidth() / luke.mapVars.widthRatio,
 					height : $(element).outerHeight() / luke.mapVars.heightRatio
 				});
 			}
 			elementIndex = index;
 		});
-		var offset = luke.menuContainer.offset();
-		luke.map.getById(luke.menuContainer.attr("id")).attr({ 
-			x : offset.left / luke.mapVars.widthRatio + luke.mapVars.offsetX,
-			y : offset.top / luke.mapVars.heightRatio + luke.mapVars.offsetY,
-			width : $(luke.menuContainer).outerWidth() / luke.mapVars.widthRatio,
-			height : $(luke.menuContainer).outerHeight() / luke.mapVars.heightRatio
-		});
+		// var offset = luke.menuContainer.offset();
+		// luke.map.getById(luke.menuContainer.attr("id")).attr({ 
+		// 	x : offset.left / luke.mapVars.widthRatio + luke.mapVars.offsetX,
+		// 	y : offset.top / luke.mapVars.heightRatio + luke.mapVars.offsetY,
+		// 	width : $(luke.menuContainer).outerWidth() / luke.mapVars.widthRatio,
+		// 	height : $(luke.menuContainer).outerHeight() / luke.mapVars.heightRatio
+		// });
 	}
 };
 
