@@ -114,7 +114,9 @@ var luke = {
 			shadow = Math.ceil(Math.random() * range),
 			color = Math.ceil(Math.random() * range);
 			$(element).addClass("backGroundColor-" + color).addClass("boxShadow-" + shadow);
-			console.log("backGroundColor: " + $(element).css("backgroundColor"));
+			if($(element).attr("id") === undefined) {
+				$(element).attr("id", Math.random() * 1000);
+			}
 		});
 
 		luke.boxesContent = $('#specialBoxes');
@@ -288,10 +290,6 @@ var luke = {
 				}
 			}
 
-			console.log(articles);
-			console.log("length: " + articles.length);
-			console.log("amountPerColumn: " + amountPerColumn);
-
 			var size = $(articles[0]).outerWidth();
 
 			console.log("size = " + size);
@@ -329,10 +327,15 @@ var luke = {
 	},
 	subMenuClick : function (event) {
 		event.preventDefault();
-		var rightArticles = $('#articleContent article.' + $(this).attr("href").substring(1)),
-		wrongArticles = $('#articleContent article').not("." +  $(this).attr("href").substring(1));
+		var rightArticles = luke.articleContent.find('article.' + $(this).attr("href").substring(1)),
+		wrongArticles = luke.articleContent.find('article').not("." +  $(this).attr("href").substring(1));
 		luke.wrongArticlesMess(wrongArticles);
 		luke.rightArticlesOrder(rightArticles);
+		if(!luke.articleContent.hasClass("showing")) {
+			luke.articles.show();
+			luke.articleContent.addClass("showing");
+		}
+		
 		luke.updateMap();
 	},
 	mainMenuClick : function (event) {
@@ -383,7 +386,7 @@ var luke = {
 		luke.mapVars.offsetY = 400 / luke.mapVars.heightRatio;
 		luke.map = Raphael("map", 1000, 1000);
 		luke.articles.each(function (index, element) {
-			console.log("backGroundColor in map.init: " + $(element).css("backgroundColor"));
+			// console.log("backGroundColor in map.init: " + $(element).css("backgroundColor"));
 			luke.map.rect(1, 1, 1, 1).attr("fill", Raphael.color($(element).css("backgroundColor"))).attr("stroke", "none").id = $(element).attr("id");
 		});
 		luke.map.rect(luke.menuContainer.offset().left / luke.mapVars.widthRatio + luke.mapVars.offsetX, luke.menuContainer.offset().top / luke.mapVars.widthRatio + luke.mapVars.offsetY,
@@ -393,6 +396,7 @@ var luke = {
 	updateMap : function () {
 		var elementIndex = 0;
 		luke.articles.each(function (index, element) {
+			console.log("index in map update: " + index);
 			var offset = $(element).offset();
 			if($(element).css("display") !== "none") {
 				luke.map.getById($(element).attr("id")).attr({ 
