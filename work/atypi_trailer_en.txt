@@ -1,6 +1,5 @@
-<article class="vertonung" lang="en">
+<article class="scorings current">
 <h1>AtypI Trailer (2012)</h1>
-<a href="https://vimeo.com/51858951">AtypI Trailer</a>
 <p>music/sound design</p>
 <br>
 <p>Fractal particles that do not match together. Sequences are following bluntly. Like the consequences of a story. Time brings elucidation, exchange and consistancy. Latin and Chinese script worlds blend into new forms and gestures. A notion?</p>

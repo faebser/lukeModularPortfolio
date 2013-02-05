@@ -1,6 +1,5 @@
-<article class="objekt" lang="en">
+<article class="objects current">
 <h1>Breaches in a sonic Mechanism (2012)</h1>
-<a href="https://vimeo.com/54603114">Breaches in a sonic Mechanism</a>
 <p>audiovisual installation</p>
 <br>
 <p>This installation is an absurd sonic machine. It is a machine with a body, living

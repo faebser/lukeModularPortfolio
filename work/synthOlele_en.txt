@@ -1,6 +1,8 @@
-<article class="objekt" lang="en">
+<article class="objects">
+	<video class="projekktor" width="400" height="225" poster="syntholele.jpg">
+  <source src="syntholele_web.mp4" />
+</video>
 <h1>synthOlele (2012)</h1>
-<a href="https://vimeo.com/39540396">synthOlele</a>
 <p>manufacturing of instrument and electronic live music</p>
 <br>
 <p>The synthOlele is a digital instrument. 

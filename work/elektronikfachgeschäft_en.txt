@@ -1,4 +1,4 @@
-<article class="live" lang="en">
+<article class="live music">
 <h1>Elektronikfachgesch&auml;ft (2009)</h1>
 <a href="http://www.elektronikfachgeschaeft.com/">Elektronikfachgesch&auml;ft</a>
 <p>live elektronics</p>

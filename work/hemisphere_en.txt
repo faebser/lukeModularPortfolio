@@ -1,6 +1,8 @@
-<article class="vertonung" lang="en">
+<article class="scorings">
+<video class="projekktor" width="400" height="153" poster="hemisphere.jpg">
+  <source src="hemisphere_web.mp4" />
+</video>
 <h1>Hemisphere (2011)</h1>
-<a href="https://vimeo.com/24955353">Hemisphere</a>
 <p>Musik/Sounddesign</p>
 <br>
 <p>Der Kurzfilm von Stephan Telaar setzt sich mit dem Konflikt zwischen Emotionen und logischem Denken auseinander. Grundlegendes Gestaltungsprinzip des Bildes, der goldenen Schnitt, wurde für das Sounddesign adaptiert. WAS BEDEUTET DAS FÜR DEN TON?</p>
