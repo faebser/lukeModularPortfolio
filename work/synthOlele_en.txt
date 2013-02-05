@@ -1,5 +1,5 @@
-<article class="object">
-	<video class="projekktor" width="640" height="360" poster="syntholele.jpg">
+<article class="objects">
+	<video class="projekktor" width="400" height="225" poster="syntholele.jpg">
   <source src="syntholele_web.mp4" />
 </video>
 <h1>synthOlele (2012)</h1>

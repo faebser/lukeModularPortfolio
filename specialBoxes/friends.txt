@@ -1,11 +1,11 @@
 <article id="friends" class="friends">
-<a href="???">Fabian Frei</a><br>
-<a href="www.bandcamp.grandbrothers.com">grandbrothers</a><br>
-<a href="www.darwinschefinkensuchen.com">Katharina Hauke</a><br>
-<a href="www.jonashummel.de">Jonas Hummel</a><br>
-<a href="www.jansteinbach.de">Jan Steinbach</a><br>
-<a href="www.norasteiner.ch">Nora Steiner</a><br>
-<a href="www.editiontaube.de">Edition Taube</a><br>
-<a href="www.alitnani.com">Ali Tani</a><br>
-<a href="www.movingtype.net">Svenja Voss</a>
+<a href="http://diplomhgkfhnw.ch/2012/hyperwerk/498">Fabian Frei</a><br>
+<a href="http://grandbrothers.bandcamp.com/">grandbrothers</a><br>
+<a href="http://darwinschefinkensuchen.de/">Katharina Hauke</a><br>
+<a href="http://jonashummel.de/">Jonas Hummel</a><br>
+<a href="http://www.jansteinbach.de/">Jan Steinbach</a><br>
+<a href="http://editiontaube.de/">Edition Taube</a><br>
+<a href="http://www.stephantelaar.com/">Stephan Telaar</a><br>
+<a href="http://alitnani.com/">Ali Tnani</a><br>
+<a href="http://www.bewegteschrift.de/">Svenja Voss</a>
 </article>

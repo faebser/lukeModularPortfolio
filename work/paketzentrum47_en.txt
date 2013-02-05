@@ -1,5 +1,5 @@
-<article class="object">
-<video class="projekktor" width="640" height="360" poster="paketzentrum.jpg">
+<article class="objects">
+<video class="projekktor" width="400" height="225" poster="paketzentrum.jpg">
   <source src="myvideo.mp4" />
 </video>
 <h1>Paketzentrum47 (2011)</h1>

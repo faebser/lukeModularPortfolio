@@ -1,4 +1,4 @@
-<article class="live" lang="en">
+<article class="live">
 <h1>Serious Sirius – Improvisation Game (2011)</h1>
 <a href="">Serious Sirius – Improvisation Game (2011)</a>
 <p>live elektronics</p>

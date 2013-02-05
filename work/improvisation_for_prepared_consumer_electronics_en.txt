@@ -1,4 +1,4 @@
-<article class="live" lang="en">
+<article class="live">
 <h1>Improvisation with Prepared Consumer Electronics (2012)</h1>
 <a href="https://vimeo.com/41116911">Improvisation with Prepared Consumer Electronics</a>
 <p>live elektronics</p>
