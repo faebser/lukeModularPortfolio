@@ -15,4 +15,4 @@
 <br>
 <a href="matieral/bio_full.pdf">Full bio here.</a>
 	</p>
-</article>>
+</article>
