@@ -1,7 +1,9 @@
-<article class="live" lang="en">
+<article class="live" "current">
+<video class="projekktor" width="640" height="360" poster="i_never_wrote_a_sound.jpg">
+  <source src="i_never_wrote_a_sound_web.mp4" />
+</video>
 <h1>I never wrote a sound (2012)</h1>
-<a href="https://vimeo.com/45126212">I never wrote a sound</a>
-<p>live Coding Music</p>
+<p>live coding music</p>
 <br>
 <p>Creating a dialog between an out-dated type writer and an up-to-date typing machine (computer), this sound performance brings together two machines for textual in- and output, thereby presenting their dependent relation regarding their derivation, extinction and resurrection.</p>
 <br>

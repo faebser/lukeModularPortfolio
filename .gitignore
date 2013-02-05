@@ -1,4 +1,6 @@
 # ignore compiled website
 website/
+# ignore av material
+av/
 #ignore working branch
 working/*
