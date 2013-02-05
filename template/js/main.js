@@ -71,6 +71,7 @@ var luke = {
 	boxes: null,
 	mapArticles : null,
 	scroller : null,
+	info : null,
 
 	//vars for endless scrolling
 	endlessScrollingVars : {
@@ -131,10 +132,14 @@ var luke = {
 			console.log("backGroundColor: " + $(element).css("backgroundColor"));
 		});
 
+		luke.info = $("#info");
 
 		luke.initMap();
+		luke.info.css({
+			left : luke.map.getById("menuContainer").attr("x"),
+			top : luke.menuContainer.offset().top * 0.5
+		});
 		luke.updateMap();
-
 
 		$('#menuMain li a').click(luke.mainMenuClick);
 
@@ -416,13 +421,6 @@ var luke = {
 			}
 			elementIndex = index;
 		});
-		// var offset = luke.menuContainer.offset();
-		// luke.map.getById(luke.menuContainer.attr("id")).attr({ 
-		// 	x : offset.left / luke.mapVars.widthRatio + luke.mapVars.offsetX,
-		// 	y : offset.top / luke.mapVars.heightRatio + luke.mapVars.offsetY,
-		// 	width : $(luke.menuContainer).outerWidth() / luke.mapVars.widthRatio,
-		// 	height : $(luke.menuContainer).outerHeight() / luke.mapVars.heightRatio
-		// });
 	}
 };
 
