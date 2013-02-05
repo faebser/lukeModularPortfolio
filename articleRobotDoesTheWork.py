@@ -10,23 +10,23 @@ workFolder = "work"
 targetFile = None
 boxesFolder = "specialBoxes"
 
-print "--------- checking paths ---------"
+print("--------- checking paths ---------")
 if path.exists("template"):
 	templatePath = "template"
 else:
-	print "templatePath not found, exiting"
+	print("templatePath not found, exiting")
 	exit()
 
 if path.exists("website"):
-	print "please remove website directory, exiting"
+	print("please remove website directory, exiting")
 	exit()
 else:
 	websiteFolder = "website"
 	copytree(templatePath, websiteFolder)
 	remove(path.join(websiteFolder, "index.html"))
 
-print "templatePath => " + templatePath
-print "Path for website folder => " + websiteFolder
+print("templatePath => ") + templatePath
+print("Path for website folder => ") + websiteFolder
 
 templateFile = open(path.join(templatePath, "index.html"), "r")
 targetHtml = soup(templateFile)
