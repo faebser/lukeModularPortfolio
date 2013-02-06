@@ -137,7 +137,6 @@ var luke = {
 			shadow = Math.ceil(Math.random() * range),
 			color = Math.ceil(Math.random() * range);
 			$(element).addClass("backGroundColor-" + color).addClass("boxShadow-" + shadow);
-			console.log("backGroundColor: " + $(element).css("backgroundColor"));
 		});
 
 		luke.info = $("#info");
@@ -289,9 +288,9 @@ var luke = {
 	rightArticlesOrder : function (articles, clickedLinkOffsetTop) {
 		if(articles.length != 0) {
 			var offset = luke.menuContainer.offset(),
-			startVec = new lukeVector(offset.left - 415, clickedLinkOffsetTop),
+			startVec = new lukeVector(offset.left - 417, clickedLinkOffsetTop),
 			tempVec = new lukeVector(startVec.pos.x, startVec.pos.y),
-			max = { x : -10, y : 15},
+			max = { x : -20, y : 35},
 			min = {x : 2, y : 10},
 			range = {
 				x : max.x - min.x,
@@ -301,7 +300,7 @@ var luke = {
 				x : range.x * 0.5,
 				y : range.y * 0.5
 			},
-			movement = new lukeVector(Math.random() * range.x - halfRange.x, Math.random() * range.y - halfRange.y),
+			movement = new lukeVector(Math.random() * range.x + halfRange.x, Math.random() * range.y),
 			amountPerColumn = 3;
 
 			console.log(movement);
@@ -316,16 +315,14 @@ var luke = {
 			var size = $(articles[0]).outerWidth();
 
 			$(articles).each(function (index, element) {
-				console.log("titel: " + $(element).find("h1").html());
 				cur = $(element);
-				if(size < cur.outerWidth()) {
-					size = cur.outerWidth();
-				}
 				cur.offset( {top : tempVec.pos.y, left : tempVec.pos.x} );
-				movement.set(Math.random() * range.x - halfRange.x, cur.outerHeight() + Math.random() * range.y - halfRange.y );
+				movement.set(Math.random() * range.x + halfRange.x, cur.outerHeight() + Math.random() * range.y);
+				console.log(movement.pos.x + " <-x , y -> " + movement.pos.y);
+				console.log("--");
 				tempVec.add(movement);
 				if(amountPerColumn % index === 0) {
-					startVec.addX((size + Math.random() * 15)*-1);
+					startVec.addX(-400 + movement.pos.x);
 					tempVec.set(startVec.pos.x, startVec.pos.y);
 					size = 0;
 				}
@@ -362,7 +359,6 @@ var luke = {
 	},
 	mainMenuClick : function (event) {
 		$("article").hide();
-		console.log("href: " + $(this).attr("href").substring(1));
 		var offset = luke.menuContainer.offset();
 		luke.displayOneArticle($(this).attr("href").substring(1), offset.left + luke.menuContainer.outerWidth(), offset.top);
 	},
@@ -420,7 +416,6 @@ var luke = {
 		var menuOffset = luke.menuContainer.offset(),
 		menuMapPos = luke.map.getById("menuContainer").attr(["x", "y"]),
 		elementIndex = 0;
-		console.log(menuMapPos);
 		luke.articles.each(function (index, element) {
 			if($(element).css("display") !== "none") {
 				var offset = $(element).offset(),
