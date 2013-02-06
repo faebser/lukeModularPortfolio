@@ -144,7 +144,7 @@ var luke = {
 		luke.initMap();
 		luke.info.css({
 			left : luke.map.getById("menuContainer").attr("x"),
-			top : luke.menuContainer.offset().top * 0.5
+			top : luke.map.getById("menuContainer").attr("y") * 2
 		});
 		luke.updateMap();
 
@@ -400,14 +400,14 @@ var luke = {
 	initMap : function () {
 		luke.mapVars.heightRatio = 10;
 		luke.mapVars.widthRatio = 10;
-		luke.mapVars.offsetX = 400 / luke.mapVars.widthRatio;
-		luke.mapVars.offsetY = 400 / luke.mapVars.heightRatio;
+		luke.mapVars.offsetX = 1400 / luke.mapVars.widthRatio;
+		luke.mapVars.offsetY = 1400 / luke.mapVars.heightRatio;
 		luke.map = Raphael("map", 1000, 1000);
 		luke.articles.each(function (index, element) {
 			// console.log("backGroundColor in map.init: " + $(element).css("backgroundColor"));
 			luke.map.rect(1, 1, 1, 1).attr("fill", Raphael.color($(element).css("backgroundColor"))).attr("stroke", "none").id = $(element).attr("id");
 		});
-		luke.map.rect(luke.menuContainer.offset().left / luke.mapVars.widthRatio + luke.mapVars.offsetX, luke.menuContainer.offset().top / luke.mapVars.widthRatio + luke.mapVars.offsetY,
+		luke.map.rect(luke.mapVars.offsetX, luke.mapVars.offsetY,
 			luke.menuContainer.outerWidth() / luke.mapVars.widthRatio, luke.menuContainer.outerHeight() / luke.mapVars.heightRatio
 			).attr("fill", Raphael.color(luke.menuContainer.css("backgroundColor"))).attr("stroke", "none").id = luke.menuContainer.attr("id");
 	},
@@ -437,5 +437,9 @@ var luke = {
 };
 
 $(document).ready(function () {
+	projekktor("video", {
+		playerFlashMP4: 'js/vendor/jarisplayer.swf',
+    	playerFlashMP3: 'js/vendor/jarisplayer.swf'
+    });
 	luke.init();
 });
