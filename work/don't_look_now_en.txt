@@ -1,4 +1,4 @@
-﻿<article class="scorings">
+﻿<article class="scorings current">
 <video class="projekktor" width="400" height="180" poster="av/don't_look_now.jpg">
   <source src="av/don't_look_now_web.mp4" />
 </video>
