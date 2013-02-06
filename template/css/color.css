@@ -23,23 +23,23 @@
 }
 /* different boxshadows */
 .boxShadow-1 {
-    box-shadow: 18px 18px 15px 0.5px #3A3A3A;
+    box-shadow: 18px 18px 15px 0.5px #000;
 }
 .boxShadow-2 {
-    box-shadow: 12px 12px 10px 0.5px #3A3A3A;
+    box-shadow: 12px 12px 10px 0.5px #000;
 }
 .boxShadow-3 {
-    box-shadow: 6px 6px 5px 0.25px #3A3A3A;
+    box-shadow: 6px 6px 5px 0.25px #000;
 }
 .boxShadow-4 {
-    box-shadow: 3px 3px 5px 0.25px #3A3A3A;
+    box-shadow: 3px 3px 5px 0.25px #000;
 }
 .boxShadow-5 {
-    box-shadow: -6px -6px 12px 0.7px #3A3A3A;
+    box-shadow: -6px -6px 12px 0.7px #000;
 }
 .boxShadow-6 {
-    box-shadow: -12px -12px 8px 0.6px #3A3A3A;
+    box-shadow: -12px -12px 8px 0.6px #000;
 }
 .boxShadow-7 {
-    box-shadow: -18px -18px 15px 0.5px #3A3A3A;
+    box-shadow: -18px -18px 15px 0.5px #000;
 }

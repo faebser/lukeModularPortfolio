@@ -1,5 +1,8 @@
 <article class="objects current">
-<h1>Breaches in a sonic Mechanism (2012)</h1>
+<video class="projekktor" width="400" height="225" poster="av/breches.jpg">
+  <source src="av/breches_web.mp4" />
+</video>
+<h1>Br&egrave;ches d'une mechanique sonore (cracks in a sonic mechanism, 2012)</h1>
 <p>audiovisual installation</p>
 <br>
 <p>This installation is an absurd sonic machine. It is a machine with a body, living

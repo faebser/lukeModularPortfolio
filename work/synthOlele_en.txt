@@ -1,6 +1,6 @@
 <article class="objects">
-	<video class="projekktor" width="400" height="225" poster="syntholele.jpg">
-  <source src="syntholele_web.mp4" />
+<video class="projekktor" width="400" height="225" poster="av/syntholele.jpg">
+  <source src="av/syntholele_web.mp4" />
 </video>
 <h1>synthOlele (2012)</h1>
 <p>manufacturing of instrument and electronic live music</p>

@@ -7,5 +7,5 @@
 <a href="http://editiontaube.de/">Edition Taube</a><br>
 <a href="http://www.stephantelaar.com/">Stephan Telaar</a><br>
 <a href="http://alitnani.com/">Ali Tnani</a><br>
-<a href="http://www.bewegteschrift.de/">Svenja Voss</a>
+<a href="http://www.bewegteschrift.de/">Svenja Voß</a>
 </article>

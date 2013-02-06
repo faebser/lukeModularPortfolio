@@ -1,6 +1,6 @@
 <article class="objects">
-<video class="projekktor" width="400" height="225" poster="paketzentrum.jpg">
-  <source src="myvideo.mp4" />
+<video class="projekktor" width="400" height="225" poster="av/paketzentrum47.jpg">
+  <source src="av/paketzentrum47.mp4" />
 </video>
 <h1>Paketzentrum47 (2011)</h1>
 <p>audiovisual installation</p>

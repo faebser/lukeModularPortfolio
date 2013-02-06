@@ -1,6 +1,6 @@
 <article class="scorings">
-<video class="projekktor" width="400" height="153" poster="hemisphere.jpg">
-  <source src="hemisphere_web.mp4" />
+<video class="projekktor" width="400" height="153" poster="av/hemisphere.jpg">
+  <source src="av/hemisphere_web.mp4" />
 </video>
 <h1>Hemisphere (2011)</h1>
 <p>Musik/Sounddesign</p>

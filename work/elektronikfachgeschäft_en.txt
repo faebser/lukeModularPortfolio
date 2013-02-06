@@ -1,10 +1,14 @@
 <article class="live music">
+<video class="projekktor" width="400" height="180" poster="av/elektronikfachgeschaeft.jpg">
+  <source src="av/elektronikfachgeschaeft.mp4" />
+</video>
 <h1>Elektronikfachgesch&auml;ft (2009)</h1>
-<a href="http://www.elektronikfachgeschaeft.com/">Elektronikfachgesch&auml;ft</a>
 <p>live elektronics</p>
 <br>
 <p>80ies trash, minimal techno and outdated club music band proudly performing since 2009.
-Collaboration with Florian Breuer and Michael Hohnstock. </p>
+Collaboration with Florian Breuer and Michael Hohnstock.<br>
+<a href="http://www.elektronikfachgeschaeft.com/">Elektronikfachgesch&auml;ft</a>
+</p>
 <br>
 <p>concerts:
 <br>
