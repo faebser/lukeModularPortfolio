@@ -40,6 +40,10 @@ function lukeVector(inputX, inputY) {
 			this.pos.x = externalX;
 			this.pos.y = externalY;
 		},
+		setFromVector: function (externalVector) {
+			this.pos.x = externalVector.pos.x;
+			this.pos.y = externalVector.pos.y;
+		},
 		addY : function (y) {
 			this.pos.y += y;
 		},
@@ -155,6 +159,7 @@ var luke = {
 			
 		});
 
+		luke.menuContainer.hover(luke.articleHoverZindexIn, luke.articleHoverZindexOut);
 		$('article').hover(luke.articleHoverZindexIn, luke.articleHoverZindexOut);
 		$('#menuSub a').click(luke.subMenuClick);
 
@@ -299,6 +304,8 @@ var luke = {
 			movement = new lukeVector(Math.random() * range.x - halfRange.x, Math.random() * range.y - halfRange.y),
 			amountPerColumn = 3;
 
+			console.log(movement);
+
 			for(var i = 6; i >= 2; i--) {
 				if(articles.length % i === 0 && articles.length != i) {
 					amountPerColumn = i;
@@ -327,13 +334,15 @@ var luke = {
 	},
 	wrongArticlesMess : function (articles) {
 		var offset = luke.menuContainer.offset(),
-		tempVec = new lukeVector(offset.left + 550, offset.top - 100),
-		max = 45, min = -45,
+		startVec = new lukeVector(offset.left + 550, offset.top - 100),
+		tempVec = new lukeVector(startVec.pos.x, startVec.pos.y),
+		max = 300, min = -300,
 		range = max + (min * -1),
 		movement = new lukeVector( Math.random() * range - (range * 0.5), Math.random() * range - (range * 0.5) );
 
 		$(articles).each(function (index, element) {
 			movement.set( Math.random() * range - (range * 0.5), Math.random() * range - (range * 0.5) );
+			tempVec.setFromVector(startVec);
 			tempVec.add(movement);
 			$(element).offset( {top : tempVec.pos.y, left : tempVec.pos.x} );
 		});
