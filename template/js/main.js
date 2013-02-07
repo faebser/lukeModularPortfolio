@@ -337,9 +337,9 @@ var luke = {
 	},
 	wrongArticlesMess : function (articles) {
 		var offset = luke.menuContainer.offset(),
-		startVec = new lukeVector(offset.left + 550, offset.top - 100),
+		startVec = new lukeVector(offset.left + 450, offset.top - 100),
 		tempVec = new lukeVector(startVec.pos.x, startVec.pos.y),
-		max = 300, min = -300,
+		max = 220, min = -220,
 		range = max + (min * -1),
 		movement = new lukeVector( Math.random() * range - (range * 0.5), Math.random() * range - (range * 0.5) );
 
