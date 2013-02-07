@@ -1,6 +1,7 @@
 <article class="scorings current">
 <video class="projekktor" width="400" height="330" poster="av/atypi_trailer.jpg">
   <source src="av/atypi_trailer_web.mp4" />
+  <source src="av/atypi_trailer_web.ogv" />
 </video>
 <h1>AtypI Trailer (2012)</h1>
 <p>music/sound design</p>

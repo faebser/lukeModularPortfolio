@@ -1,6 +1,7 @@
 <article class="live">
 <video class="projekktor" width="400" height="225" poster="av/serious_sirius.jpg">
   <source src="av/serious_sirius_web.mp4" />
+  <source src="av/serious_sirius_web.ogv" />
 </video>
 <h1>Serious Sirius – Improvisation Game (2011)</h1>
 <p>live elektronics</p>

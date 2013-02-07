@@ -1,6 +1,7 @@
 <article class="objects current">
 <video class="projekktor" width="400" height="225" poster="av/breches.jpg">
   <source src="av/breches_web.mp4" />
+  <source src="av/breches_web.ogv" />
 </video>
 <h1>Br&egrave;ches d'une mechanique sonore (cracks in a sonic mechanism, 2012)</h1>
 <p>audiovisual installation</p>
