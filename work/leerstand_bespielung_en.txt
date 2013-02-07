@@ -1,9 +1,9 @@
 ﻿<article class="live current">
 <video class="projekktor" width="400" height="225" poster="av/don't_look_now.jpg">
-  <source preload="metadata" src="av/leerraum_web.mp4" />
-  <source preload="metadata" src="av/leeraum_web.ogv" />
+  <source preload="metadata" src="av/leerstand_web.mp4" />
+  <source preload="metadata" src="av/leerstand_web.ogv" />
 </video>
-<h1>Leeraum Bespielung (2012)</h1>
+<h1>Leerstand Bespielung (2012)</h1>
 <p>Live</p>
 <br>
 <p>Seesion together with <em>raumzeipiraten</em> and Jan Ehlen. In 
