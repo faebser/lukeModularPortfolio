@@ -163,6 +163,7 @@ var luke = {
 		$('#menuSub a').click(luke.subMenuClick);
 
 		luke.scroller = $("#scroller");
+		luke.scroller.onselectstart = function() { return false; };
 		luke.scroller.mousedown(luke.onMouseDown);
 		luke.scroller.mouseup(luke.onMouseUp);
 
@@ -263,6 +264,7 @@ var luke = {
 		luke.updateMap();
 	},
 	onMouseDown : function (event) {
+		event.preventDefault();
 		luke.lastMousePos.x = event.pageX;
 		luke.lastMousePos.y = event.pageY;
 		luke.lastCssPos.x = luke.articleContent.offset().left;
@@ -270,15 +272,19 @@ var luke = {
 		luke.lastMenuPos.x = luke.menuContainer.offset().left;
 		luke.lastMenuPos.y = luke.menuContainer.offset().top;
 		luke.scroller.css("zIndex", 10000);
+		luke.scroller.addClass("inFront");
 		$(window).mousemove(luke.mouseMove);
 	},
 	onMouseUp : function (event) {
+		event.preventDefault();
 		luke.scroller.css("zIndex", "");
+		luke.scroller.removeClass("inFront");
 		$(window).unbind("mousemove", luke.mouseMove);
 		// luke.updateMap();
 
 	},
 	mouseMove : function (event) {
+		event.preventDefault();
 		luke.menuContainerX = luke.menuContainer.offset().left;
 		luke.menuContainerY = luke.menuContainer.offset().top;
 		luke.menuContainer.offset({top : luke.lastMenuPos.y + (event.pageY - luke.lastMousePos.y), left : luke.lastMenuPos.x + (event.pageX - luke.lastMousePos.x) });
@@ -405,7 +411,11 @@ var luke = {
 		luke.map = Raphael("map", 1000, 1000);
 		luke.articles.each(function (index, element) {
 			// console.log("backGroundColor in map.init: " + $(element).css("backgroundColor"));
-			luke.map.rect(1, 1, 1, 1).attr("fill", Raphael.color($(element).css("backgroundColor"))).attr("stroke", "none").id = $(element).attr("id");
+			luke.map.rect(1, 1, 0, 0).attr("fill", Raphael.color($(element).css("backgroundColor"))).attr("stroke", "none").id = $(element).attr("id");
+		});
+		luke.boxes.each(function (index, element) {
+			// console.log("backGroundColor in map.init: " + $(element).css("backgroundColor"));
+			luke.map.rect(1, 1, 0, 0).attr("fill", Raphael.color($(element).css("backgroundColor"))).attr("stroke", "none").id = $(element).attr("id");
 		});
 		luke.map.rect(luke.mapVars.offsetX, luke.mapVars.offsetY,
 			luke.menuContainer.outerWidth() / luke.mapVars.widthRatio, luke.menuContainer.outerHeight() / luke.mapVars.heightRatio
@@ -433,13 +443,17 @@ var luke = {
 			}
 			elementIndex = index;
 		});
+	},
+	toggleShowAndHideOfArticles : function () {
+
 	}
 };
 
 $(document).ready(function () {
+	luke.init();
 	projekktor("video", {
 		playerFlashMP4: 'js/vendor/jarisplayer.swf',
     	playerFlashMP3: 'js/vendor/jarisplayer.swf'
     });
-	luke.init();
+	
 });

@@ -31,7 +31,9 @@ font-weight: bold;
 .ppfsenter.inactive,
 .ppfsexit.inactive,
 .ppprev.inactive,
-.ppnext.inactive {
+.ppnext.inactive,
+.ppcontextmenu.inactive,
+.inactive {
 display: none;
 }
 
@@ -289,7 +291,4 @@ width: 80px;
 display: block;
 padding: 0px;
 background: url("start.png") no-repeat center center transparent;
-}
-.ppcontextmenu {
-	display: none;
 }

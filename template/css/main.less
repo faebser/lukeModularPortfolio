@@ -110,10 +110,26 @@ textarea {
 @schwarz: #000000;
 @schriftGrau: #8B8B8B;
 
+.ie #scoller {
+    cursor: url(https://mail.google.com/mail/images/2/openhand.cur), default !important;
+    &.inFront {
+            cursor: url(https://mail.google.com/mail/images/2/closedhand.cur), default !important;
+    }
+}
+
 #scroller {
     position: absolute;
     width: 100%;
     height: 100%;
+    cursor: hand;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    &.inFront {
+        cursor: grabbing;
+        cursor: -moz-grabbing;
+        cursor: -webkit-grabbing;
+    }
 }
 
 #map {
@@ -127,7 +143,7 @@ textarea {
 
 body {
     overflow: hidden;
-    font-family: 'latoregular', sans-serif;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 0.8em;
 	h1, p {
 		font-size: 100%;
@@ -138,9 +154,17 @@ body {
 		display: none;
 		width: 400px;
 		position: absolute;
+        line-height: 0.9;
 		img {
 			width: 400px;
 		}
+        a {
+            color: #000;
+            &:hover,
+            &:visited {
+                color: #646363;
+            }
+        }
 	}
     #endlessText {
         display: block;
@@ -152,6 +176,9 @@ body {
         p {
             width: 95%;
         }
+    }
+    .projekktor {
+        margin-bottom: 1px;
     }
 	#menuContainer {
 		position: absolute;
@@ -175,8 +202,8 @@ body {
                         zoom: 1;
                         padding: 1px;
                         &:hover {
-                            color: #000;
-                            background-color: @schriftGrau;
+                            color: @schriftGrau;
+                            background-color: #fff;
                         }
                     }
                 }
@@ -186,9 +213,9 @@ body {
 		#menuMain {
             float: right;
             margin: 3px 3px 15px 0px;
+            text-align: right;
 		}
         #menuSub {
-            text-align: right;
             float: left;
             margin: 0px 0px 3px 3px;
         }
@@ -228,6 +255,13 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+#specialBoxes {
+    #statement {
+        height: 300px;
+        overflow: auto;
+    }
 }
 
 /* ==========================================================================
