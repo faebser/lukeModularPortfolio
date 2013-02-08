@@ -1,6 +1,6 @@
 <article class="live music">
 <audio class="projekktor" width="400" height="180" poster="av/elektronikfachgeschaeft.jpg">
-  <source preload="metadata" src="av/elektronikfachgeschaeft.mp3" />
+  <source preload="metadata" src="av/elektronikfachgeschaeft_web.mp3" />
 </audio>
 <h1>Elektronikfachgesch&auml;ft (2009)</h1>
 <p>live elektronics</p>
