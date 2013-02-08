@@ -1,8 +1,7 @@
 <article class="live">
-<video class="projekktor" width="400" height="180" poster="av/die_theorie_des_himmels.jpg">
-  <source preload="metadata" src="av/die_theorie_des_himmels_web.mp4"/>
-  <source preload="metadata" src="av/die_theorie_des_himmels_web.ogv"/>
-</video>
+<audio class="projekktor" width="400" height="180" poster="av/die_theorie_des_himmels.jpg">
+  <source preload="metadata" src="av/die_theorie_des_himmels_web.mp3"/>
+</audio>
 <h1>Die Theorie des Himmels (2011)</h1>
 <p>Live Elektronik und Klangkonzept</p>
 <br>
