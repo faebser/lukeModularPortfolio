@@ -339,6 +339,54 @@ var luke = {
 			});
 		}
 	},
+	currentView : function (articles, clickedLinkOffsetTop) {
+		if(articles.length != 0) {
+			var offset = luke.menuContainer.offset(),
+			startVec = new lukeVector(offset.left + luke.menuContainer.outerWidth() + 30, clickedLinkOffsetTop),
+			tempVec = new lukeVector(startVec.pos.x, startVec.pos.y),
+			max = { x : 20, y : 35},
+			min = {x : 2, y : 10},
+			range = {
+				x : max.x - min.x,
+				y : max.y - min.y
+			},
+			halfRange = {
+				x : range.x * 0.5,
+				y : range.y * 0.5
+			},
+			columnYRange = {
+				max : 29,
+				min: 12
+			},
+			movement = new lukeVector(Math.random() * range.x + halfRange.x, Math.random() * range.y),
+			amountPerColumn = 3;
+			columnYRange.range = columnYRange.max - columnYRange.min;
+
+			console.log(movement);
+
+			for(var i = 6; i >= 2; i--) {
+				if(articles.length % i === 0 && articles.length != i) {
+					amountPerColumn = i;
+					break;
+				}
+			}
+
+			var size = $(articles[0]).outerWidth();
+
+			$(articles).each(function (index, element) {
+				cur = $(element);
+				cur.offset( {top : tempVec.pos.y, left : tempVec.pos.x} );
+				movement.set(Math.random() * range.x + halfRange.x, cur.outerHeight() + Math.random() * range.y + min.y);
+				tempVec.add(movement);
+				if(amountPerColumn % index === 0) {
+					startVec.addX(400 + (Math.random() * columnYRange.range + columnYRange.min));
+					tempVec.set(startVec.pos.x, startVec.pos.y);
+					size = 0;
+				}
+			});
+			articles.show();
+		}
+	},
 	wrongArticlesMess : function (articles) {
 		var offset = luke.menuContainer.offset(),
 		startVec = new lukeVector(offset.left + 450, offset.top - 100),
@@ -354,12 +402,18 @@ var luke = {
 			$(element).offset( {top : tempVec.pos.y, left : tempVec.pos.x} );
 		});
 	},
-	subMenuClick : function (event) {
+	subMenuClick : function (event, classy, offset) {
+		if( typeof classy == "undefined" ) {
+			classy = $(this).attr("href").substring(1);
+		}
+		if( typeof offset == "undefined" ) {
+			offset = $(this).offset().top;
+		}
 		event.preventDefault();
-		var rightArticles = luke.articleContent.find('article.' + $(this).attr("href").substring(1)),
-		wrongArticles = luke.articleContent.find('article').not("." +  $(this).attr("href").substring(1));
+		var rightArticles = luke.articleContent.find('article.' + classy),
+		wrongArticles = luke.articleContent.find('article').not("." +  classy);
 		luke.wrongArticlesMess(wrongArticles);
-		luke.rightArticlesOrder(rightArticles, $(this).offset().top);
+		luke.rightArticlesOrder(rightArticles, offset);
 		luke.articles.show();
 		luke.boxes.hide();
 		luke.updateMap();
@@ -368,7 +422,12 @@ var luke = {
 		luke.articles.hide();
 		luke.boxes.hide();
 		var offset = luke.menuContainer.offset();
-		luke.displayOneArticle($(this).attr("href").substring(1), offset.left + luke.menuContainer.outerWidth(), offset.top);
+		if($(this).attr("href").substring(1) != "current") {
+			luke.displayOneArticle($(this).attr("href").substring(1), offset.left + luke.menuContainer.outerWidth(), offset.top);
+		}
+		else if($(this).attr("href").substring(1) == "current") {
+			luke.currentView(luke.articleContent.find(".current"), $(this).offset().top);
+		}
 		luke.updateMap();
 	},
 	// posX and posY are top left corner of the article
@@ -390,17 +449,12 @@ var luke = {
 		if(theThing.length == 0) {
 			console.error("found no article neither in luke.boxes nor in luke.articles");
 		}
-		console.log(theThing);
-
-		console.log("input x: " + posX);
-		console.log("input y: " + posY);
 
 		var origin = new lukeVector(posX, posY),
 		movement = new lukeVector( Math.random() * range.x + min.x, Math.random() * range.y + min.y );
 
 		origin.add(movement);
-		console.log("origin.x: " + origin.pos.x);
-		console.log("origin.y: " +  origin.pos.y);
+
 		theThing.css({
 			top:  origin.pos.y,
 			left: origin.pos.x
@@ -489,8 +543,8 @@ var luke = {
 
 $(document).ready(function () {
 	luke.init();
-	// projekktor(".projekktor", {
-	// 	playerFlashMP4: 'js/vendor/jarisplayer.swf',
- //    	playerFlashMP3: 'js/vendor/jarisplayer.swf'
- //    });
+	projekktor(".projekktor", {
+		playerFlashMP4: 'js/vendor/jarisplayer.swf',
+    	playerFlashMP3: 'js/vendor/jarisplayer.swf'
+    });
 });
