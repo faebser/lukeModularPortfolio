@@ -1,11 +1,11 @@
 <article class="objects">
-<video class="projekktor" width="400" height="222" poster="av/opernabend1.jpg">
+<video class="projekktor" width="400" height="222" poster="av/opernabend1.jpg" controls>
   <source preload="metadata" src="av/opernabend_web1.mp4" />
   <source preload="metadata" src="av/opernabend_web1.ogv" />
 </video>
-<video class="projekktor" width="400" height="225" poster="av/opernabend2.jpg">
+<video class="projekktor" width="400" height="225" poster="av/opernabend2.jpg" controls>
   <source preload="metadata" src="av/opernabend_web2.mp4" />
-  <source preload="metadata" src="av/opernabend_web1.ogv" />
+  <source preload="metadata" src="av/opernabend_web2.ogv" />
 </video>
 <h1>Ein kurzes Leben: Zwei Frauenschicksale, ein Opernabend (2011)</h1>
 <a href="">Ein kurzes Leben: Zwei Frauenschicksale, ein Opernabend</a>

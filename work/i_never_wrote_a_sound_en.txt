@@ -1,5 +1,5 @@
 <article class="live">
-<video class="projekktor" width="400" height="225" poster="av/i_never_wrote_a_sound.jpg">
+<video class="projekktor" width="400" height="225" poster="av/i_never_wrote_a_sound.jpg" controls>
   <source preload="metadata" src="av/i_never_wrote_a_sound_web.mp4" />
   <source preload="metadata" src="av/i_never_wrote_a_sound_web.ogv" />
 </video>
