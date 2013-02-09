@@ -144,7 +144,7 @@ var luke = {
 		luke.initMap();
 		luke.info.css({
 			left : luke.map.getById("menuContainer").attr("x"),
-			top : luke.map.getById("menuContainer").attr("y") * 2
+			top : luke.map.getById("menuContainer").attr("y") + 140
 		});
 		luke.updateMap();
 
@@ -362,7 +362,10 @@ var luke = {
 			amountPerColumn = 3;
 			columnYRange.range = columnYRange.max - columnYRange.min;
 
-			console.log(movement);
+			articles.css({
+				top: 0,
+				left: 0
+			});
 
 			for(var i = 6; i >= 2; i--) {
 				if(articles.length % i === 0 && articles.length != i) {
@@ -371,12 +374,13 @@ var luke = {
 				}
 			}
 
-			var size = $(articles[0]).outerWidth();
-
 			$(articles).each(function (index, element) {
 				cur = $(element);
-				cur.offset( {top : tempVec.pos.y, left : tempVec.pos.x} );
-				movement.set(Math.random() * range.x + halfRange.x, cur.outerHeight() + Math.random() * range.y + min.y);
+				cur.offset({
+					top : tempVec.pos.y,
+					left : tempVec.pos.x
+				});
+				movement.set(Math.random() * range.x + halfRange.x, cur.outerHeight() + (Math.random() * range.y + min.y));
 				tempVec.add(movement);
 				if(amountPerColumn % index === 0) {
 					startVec.addX(400 + (Math.random() * columnYRange.range + columnYRange.min));
@@ -466,7 +470,7 @@ var luke = {
 		luke.mapVars.heightRatio = 10;
 		luke.mapVars.widthRatio = 10;
 		luke.mapVars.offsetX = 1400 / luke.mapVars.widthRatio;
-		luke.mapVars.offsetY = 1400 / luke.mapVars.heightRatio;
+		luke.mapVars.offsetY = 800 / luke.mapVars.heightRatio;
 		luke.map = Raphael("map", 1000, 1000);
 		luke.articles.each(function (index, element) {
 			// console.log("backGroundColor in map.init: " + $(element).css("backgroundColor"));
