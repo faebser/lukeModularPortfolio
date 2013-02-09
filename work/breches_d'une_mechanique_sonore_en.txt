@@ -1,5 +1,5 @@
 <article class="objects current">
-<video class="projekktor" width="400" height="225" poster="av/breches.jpg">
+<video class="projekktor" width="400" height="225" poster="av/breches.jpg" controls>
   <source preload="metadata" src="av/breches_web.mp4" />
   <source preload="metadata" src="av/breches_web.ogv" />
 </video>

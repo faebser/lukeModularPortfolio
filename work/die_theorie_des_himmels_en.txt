@@ -1,5 +1,5 @@
 <article class="live">
-<audio class="projekktor" width="400" height="180" poster="av/die_theorie_des_himmels.jpg">
+<audio class="projekktor" width="400" height="180" poster="av/die_theorie_des_himmels.jpg" controls>
   <source preload="metadata" src="av/die_theorie_des_himmels_web.mp3"/>
 </audio>
 <h1>Die Theorie des Himmels (2011)</h1>

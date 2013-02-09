@@ -1,5 +1,5 @@
 <article class="scorings">
-<video class="projekktor" width="400" height="153" poster="av/hemisphere.jpg">
+<video class="projekktor" width="400" height="153" poster="av/hemisphere.jpg" controls>
   <source preload="metadata" src="av/hemisphere_web.mp4" />
   <source preload="metadata" src="av/hemisphere_web.ogv" />
 </video>

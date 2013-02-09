@@ -1,5 +1,5 @@
 <article class="objects">
-<video class="projekktor" width="400" height="225" poster="av/syntholele.jpg">
+<video class="projekktor" width="400" height="225" poster="av/syntholele.jpg" controls>
   <source preload="metadata" src="av/syntholele_web.mp4" />
   <source preload="metadata" src="av/syntholele_web.ogv" />
 </video>

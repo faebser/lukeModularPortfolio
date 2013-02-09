@@ -1,5 +1,5 @@
 <article class="live music">
-<video class="projekktor" width="400" height="225" poster="av/rundfunkorchester.jpg">
+<video class="projekktor" width="400" height="225" poster="av/rundfunkorchester.jpg" controls>
   <source preload="metadata" src="av/rundfunkorchester_web.mp4" />
   <source preload="metadata" src="av/rundfunkorchester_web.ogv" />
 </video>

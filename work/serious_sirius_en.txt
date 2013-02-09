@@ -1,5 +1,5 @@
 <article class="live">
-<video class="projekktor" width="400" height="225" poster="av/serious_sirius.jpg">
+<video class="projekktor" width="400" height="225" poster="av/serious_sirius.jpg" controls>
   <source preload="metadata" src="av/serious_sirius_web.mp4" />
   <source preload="metadata" src="av/serious_sirius_web.ogv" />
 </video>

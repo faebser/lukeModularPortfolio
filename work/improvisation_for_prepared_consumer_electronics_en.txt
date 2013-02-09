@@ -1,5 +1,5 @@
 <article class="live">
-<video class="projekktor" width="400" height="225" poster="av/improvisation_for_prepared.jpg">
+<video class="projekktor" width="400" height="225" poster="av/improvisation_for_prepared.jpg" controls>
   <source preload="metadata" src="av/improvisation_for_prepared_web.mp4" />
   <source preload="metadata" src="av/improvisation_for_prepared_web.ogv" />
 </video>
