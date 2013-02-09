@@ -1,7 +1,7 @@
 <article class="objects">
 <video class="projekktor" width="400" height="225" poster="av/paketzentrum47.jpg">
-  <source src="av/paketzentrum47.mp4" />
-  <source src="av/paketzentrum47.ogv" />
+  <source preload="metadata" src="av/paketzentrum47_web.mp4" />
+  <source preload="metadata" src="av/paketzentrum47_web.ogv" />
 </video>
 <h1>Paketzentrum47 (2011)</h1>
 <p>audiovisual installation</p>

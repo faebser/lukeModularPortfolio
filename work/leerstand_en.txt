@@ -1,0 +1,11 @@
+﻿<article class="live current">
+<video class="projekktor" width="400" height="225" poster="av/leerstand.jpg">
+  <source preload="metadata" src="av/leerstand_web.mp4" />
+  <source preload="metadata" src="av/leerstand_web.ogv" />
+</video>
+<h1>Leerstand Bespielung (2012)</h1>
+<p>Live</p>
+<br>
+<p>Seesion together with <em>raumzeipiraten</em> and Jan Ehlen. In 
+<em>KitEV</em>, a Kunstverein in the old the water tower of the main station of Oberhausen.</p>
+</article>
