@@ -82,11 +82,10 @@ var luke = {
 	info : null,
 
 	//vars for endless scrolling
-	endlessScrollingVars : {
+	scrollingVars : {
 		origin : null, // the original p-element
-		scrollHeight : null, // how much the user has to scroll down
 		endlessArticle : null, // the parent
-		originHeight: null
+		onTotalScrollOffset : 150
 	},
 	mapVars : {
 		mapElement: null,
@@ -108,7 +107,6 @@ var luke = {
 		luke.currentVector.pos.y = $("#menuContainer").offset().top;
 		
 		luke.updateVector();
-		luke.endlessScrolling();
 		luke.menuContainerX = luke.currentVector.pos.x;
 		luke.menuContainerY = luke.currentVector.pos.y;
 		luke.menuContainerWidth = luke.menuContainer.outerWidth();
@@ -116,6 +114,10 @@ var luke = {
 
 		luke.articleContent = $("#articleContent");
 		luke.articles = $('#articleContent article');
+
+		var tempString = $("#statement p").html();
+		luke.scrollingVars.origin = " " + tempString.charAt(0).toLowerCase() + tempString.slice(1);
+		luke.scrollingVars.endlessText = $("#statement p");
 
 		luke.articles.each(function (index, element) {
 			var max = 7, min = 1,
@@ -193,20 +195,8 @@ var luke = {
 		luke.directionVector.set(x, y);
 	},
 	endlessScrolling : function () {
-		// set up vars and attach eventhandler for endless scrolling
-		var vars = luke.endlessScrollingVars;
-
-		vars.endlessArticle = $("#endlessText");
-		vars.origin = vars.endlessArticle.find("#origin");
-		vars.originHeight = vars.origin.outerHeight() - vars.endlessArticle.outerHeight();
-		vars.scrollHeight = vars.originHeight;
-
-		vars.endlessArticle.scroll(function() {
-			if($(this).scrollTop() >= vars.scrollHeight) {
-				$(this).append(vars.origin.clone().attr("id", ''));
-				vars.scrollHeight = ($(this).find("p").length * vars.originHeight);
-			}
-		});
+		luke.scrollingVars.endlessText.append(luke.scrollingVars.origin);
+		$('#statement').mCustomScrollbar("update");
 	},
 	returnMessyVector : function (articleHeight, articleWidth, margin) {
 		// siehe skizze1
@@ -431,6 +421,16 @@ var luke = {
 		}
 		else if($(this).attr("href").substring(1) == "current") {
 			luke.currentView(luke.articleContent.find(".current"), $(this).offset().top);
+		}
+		if($(this).attr("href").substring(1) == "statement") {
+			$("#statement").mCustomScrollbar({
+				callbacks:{
+					onTotalScroll : function() {
+						luke.endlessScrolling();
+					},
+					onTotalScrollOffset : luke.scrollingVars.onTotalScrollOffset
+				}
+			});
 		}
 		luke.updateMap();
 	},
