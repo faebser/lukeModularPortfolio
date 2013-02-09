@@ -295,7 +295,7 @@ var luke = {
 	rightArticlesOrder : function (articles, clickedLinkOffsetTop) {
 		if(articles.length != 0) {
 			var offset = luke.menuContainer.offset(),
-			startVec = new lukeVector(offset.left - 417, clickedLinkOffsetTop),
+			startVec = new lukeVector(offset.left - 430, clickedLinkOffsetTop),
 			tempVec = new lukeVector(startVec.pos.x, startVec.pos.y),
 			max = { x : -20, y : 35},
 			min = {x : 2, y : 10},
@@ -308,8 +308,8 @@ var luke = {
 				y : range.y * 0.5
 			},
 			columnYRange = {
-				max : 25,
-				min: 10
+				max : 29,
+				min: 12
 			},
 			movement = new lukeVector(Math.random() * range.x + halfRange.x, Math.random() * range.y),
 			amountPerColumn = 3;
@@ -330,8 +330,6 @@ var luke = {
 				cur = $(element);
 				cur.offset( {top : tempVec.pos.y, left : tempVec.pos.x} );
 				movement.set(Math.random() * range.x + halfRange.x, cur.outerHeight() + Math.random() * range.y + min.y);
-				// console.log(movement.pos.x + " <-x , y -> " + movement.pos.y);
-				// console.log("--");
 				tempVec.add(movement);
 				if(amountPerColumn % index === 0) {
 					startVec.addX(-400 - (Math.random() * columnYRange.range + columnYRange.min));
@@ -345,7 +343,7 @@ var luke = {
 		var offset = luke.menuContainer.offset(),
 		startVec = new lukeVector(offset.left + 450, offset.top - 100),
 		tempVec = new lukeVector(startVec.pos.x, startVec.pos.y),
-		max = 220, min = -220,
+		max = 199, min = -199,
 		range = max + (min * -1),
 		movement = new lukeVector( Math.random() * range - (range * 0.5), Math.random() * range - (range * 0.5) );
 
@@ -363,16 +361,19 @@ var luke = {
 		luke.wrongArticlesMess(wrongArticles);
 		luke.rightArticlesOrder(rightArticles, $(this).offset().top);
 		luke.articles.show();
+		luke.boxes.hide();
 		luke.updateMap();
 	},
 	mainMenuClick : function (event) {
-		$("article").hide();
+		luke.articles.hide();
+		luke.boxes.hide();
 		var offset = luke.menuContainer.offset();
 		luke.displayOneArticle($(this).attr("href").substring(1), offset.left + luke.menuContainer.outerWidth(), offset.top);
+		luke.updateMap();
 	},
 	// posX and posY are top left corner of the article
 	displayOneArticle : function (id, posX, posY) {
-		var article = luke.boxesContent.find("#" + id),
+		var theThing = $("#" + id),
 		max = { x : 100, y : 100},
 		min = {x : 10, y : -100},
 		range = {
@@ -383,26 +384,29 @@ var luke = {
 			x : range.x * 0.5,
 			y : range.y * 0.5
 		};
-		if(article.length == 0) {
+		if(theThing.length == 0) {
 			article = luke.articleContent.find("#" + id);
 		}
-		if(article.length == 0) {
+		if(theThing.length == 0) {
 			console.error("found no article neither in luke.boxes nor in luke.articles");
 		}
+		console.log(theThing);
 
 		console.log("input x: " + posX);
 		console.log("input y: " + posY);
 
 		var origin = new lukeVector(posX, posY),
-		movement = new lukeVector( Math.random() * range.x - halfRange.x, Math.random() * range.y - halfRange.y );
+		movement = new lukeVector( Math.random() * range.x + min.x, Math.random() * range.y + min.y );
+
 		origin.add(movement);
 		console.log("origin.x: " + origin.pos.x);
 		console.log("origin.y: " +  origin.pos.y);
-		article.css({
-			top: origin.pos.y,
-			left: origin.pos.x
+		theThing.css({
+			top: 140, //origin.pos.y
+			left: 800 //origin.pos.x
 		});
-		article.show();
+		theThing.show();
+		
 	},
 	initMap : function () {
 		luke.mapVars.heightRatio = 10;
@@ -443,7 +447,37 @@ var luke = {
 					height : $(element).outerHeight() / luke.mapVars.heightRatio
 				});
 			}
+			// console.log("width: " + mapElement.attr("width"));
+			// console.log("display of el: " +$(element).css("display"));
 			if($(element).css("display") === "none" && mapElement.attr("width") != 0) {
+				console.log("if clause entered");
+				mapElement.attr({
+					width: 0,
+					height: 0
+				})
+			}
+		});
+		luke.boxes.each(function (index, element) {
+			var element = $(element),
+			mapElement = luke.map.getById($(element).attr("id"));
+			if(element.css("display") !== "none") {
+				var offset = element.offset(),
+				pos = { 
+					x : menuMapPos.x + ((offset.left - menuOffset.left) / luke.mapVars.widthRatio),
+					y : menuMapPos.y + ((offset.top - menuOffset.top) / luke.mapVars.heightRatio)
+				};
+				
+				mapElement.attr({ 
+					x : pos.x,
+					y : pos.y,
+					width : $(element).outerWidth() / luke.mapVars.widthRatio,
+					height : $(element).outerHeight() / luke.mapVars.heightRatio
+				});
+			}
+			// console.log("width: " + mapElement.attr("width"));
+			// console.log("display of el: " +$(element).css("display"));
+			if($(element).css("display") === "none" && mapElement.attr("width") != 0) {
+				console.log("if clause entered");
 				mapElement.attr({
 					width: 0,
 					height: 0
@@ -455,8 +489,8 @@ var luke = {
 
 $(document).ready(function () {
 	luke.init();
-	projekktor(".projekktor", {
-		playerFlashMP4: 'js/vendor/jarisplayer.swf',
-    	playerFlashMP3: 'js/vendor/jarisplayer.swf'
-    });
+	// projekktor(".projekktor", {
+	// 	playerFlashMP4: 'js/vendor/jarisplayer.swf',
+ //    	playerFlashMP3: 'js/vendor/jarisplayer.swf'
+ //    });
 });
