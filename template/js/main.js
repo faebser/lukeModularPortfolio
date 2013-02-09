@@ -402,8 +402,8 @@ var luke = {
 		console.log("origin.x: " + origin.pos.x);
 		console.log("origin.y: " +  origin.pos.y);
 		theThing.css({
-			top: 140, //origin.pos.y
-			left: 800 //origin.pos.x
+			top:  origin.pos.y,
+			left: origin.pos.x
 		});
 		theThing.show();
 		
