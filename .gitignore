@@ -1,6 +1,6 @@
 # ignore compiled website
 website/
 # ignore video material
-template/av/video
+template/av/*
 #ignore working branch
 working/*

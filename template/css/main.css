@@ -18,8 +18,8 @@ body .projekktor{margin-bottom:1px;}
 body #menuContainer{position:absolute;background-color:#000;}body #menuContainer .menuContainerInner{width:140px;}body #menuContainer .menuContainerInner .menu{margin:0px;padding:0px;list-style:none;}body #menuContainer .menuContainerInner .menu li{margin:0px;padding:0px;line-height:0.9;}body #menuContainer .menuContainerInner .menu li a{padding:2px 4px;color:#fff;text-decoration:none;display:inline-block;*display:inline;zoom:1;padding:1px;}body #menuContainer .menuContainerInner .menu li a:hover{color:#8b8b8b;background-color:#fff;}
 body #menuContainer #menuMain{float:right;margin:3px 3px 15px 0px;}
 body #menuContainer #menuSub{float:left;margin:0px 0px 3px 3px;text-align:right;}
-body #info{position:absolute;left:0px;bottom:0px;z-index:-5;}body #info ul{list-style-type:none;color:#8b8b8b;padding:0;margin:0;}body #info ul li{line-height:1.2;}
-body #info ul .dark{color:#000000;}
+body #info{position:absolute;left:0px;bottom:0px;z-index:1;}body #info ul{list-style-type:none;padding:0;margin:0;}body #info ul li{line-height:1.2;}body #info ul li a{color:#8b8b8b;text-decoration:none;}body #info ul li a:hover{text-decoration:underline;}
+body #info ul .dark a{color:#000000;}
 body #controls{position:absolute;right:0px;bottom:0px;}
 body #endlessText{display:none;}body #endlessText p{margin-bottom:5%;}
 #articleContent,#specialBoxes{position:absolute;top:0;left:0;}
