@@ -307,8 +307,13 @@ var luke = {
 				x : range.x * 0.5,
 				y : range.y * 0.5
 			},
+			columnYRange = {
+				max : 25,
+				min: 10
+			},
 			movement = new lukeVector(Math.random() * range.x + halfRange.x, Math.random() * range.y),
 			amountPerColumn = 3;
+			columnYRange.range = columnYRange.max - columnYRange.min;
 
 			console.log(movement);
 
@@ -324,12 +329,12 @@ var luke = {
 			$(articles).each(function (index, element) {
 				cur = $(element);
 				cur.offset( {top : tempVec.pos.y, left : tempVec.pos.x} );
-				movement.set(Math.random() * range.x + halfRange.x, cur.outerHeight() + Math.random() * range.y);
-				console.log(movement.pos.x + " <-x , y -> " + movement.pos.y);
-				console.log("--");
+				movement.set(Math.random() * range.x + halfRange.x, cur.outerHeight() + Math.random() * range.y + min.y);
+				// console.log(movement.pos.x + " <-x , y -> " + movement.pos.y);
+				// console.log("--");
 				tempVec.add(movement);
 				if(amountPerColumn % index === 0) {
-					startVec.addX(-400 + movement.pos.x);
+					startVec.addX(-400 - (Math.random() * columnYRange.range + columnYRange.min));
 					tempVec.set(startVec.pos.x, startVec.pos.y);
 					size = 0;
 				}
