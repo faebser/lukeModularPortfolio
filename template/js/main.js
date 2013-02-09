@@ -154,6 +154,7 @@ var luke = {
 			if($(this).attr("href").indexOf("#") == 0) {
 				var offset = $(this).offset();
 				luke.displayOneArticle($(this).attr("href").substring(1), offset.left + $(this).outerWidth(), offset.top);
+				luke.updateMap();
 			}
 			
 		});
@@ -357,10 +358,6 @@ var luke = {
 		luke.wrongArticlesMess(wrongArticles);
 		luke.rightArticlesOrder(rightArticles, $(this).offset().top);
 		luke.articles.show();
-		// if(!luke.articleContent.hasClass("showing")) {
-		// 	
-		// 	luke.articleContent.addClass("showing");
-		// }
 		luke.updateMap();
 	},
 	mainMenuClick : function (event) {
@@ -381,7 +378,6 @@ var luke = {
 			x : range.x * 0.5,
 			y : range.y * 0.5
 		};
-		console.log(article);
 		if(article.length == 0) {
 			article = luke.articleContent.find("#" + id);
 		}
@@ -399,9 +395,9 @@ var luke = {
 		console.log("origin.y: " +  origin.pos.y);
 		article.css({
 			top: origin.pos.y,
-			left: origin.pos.x,
-			display: "block"
+			left: origin.pos.x
 		});
+		article.show();
 	},
 	initMap : function () {
 		luke.mapVars.heightRatio = 10;
@@ -421,39 +417,41 @@ var luke = {
 			luke.menuContainer.outerWidth() / luke.mapVars.widthRatio, luke.menuContainer.outerHeight() / luke.mapVars.heightRatio
 			).attr("fill", Raphael.color(luke.menuContainer.css("backgroundColor"))).attr("stroke", "none").id = luke.menuContainer.attr("id");
 	},
-	// all in mappixels
 	updateMap : function () {
 		var menuOffset = luke.menuContainer.offset(),
-		menuMapPos = luke.map.getById("menuContainer").attr(["x", "y"]),
-		elementIndex = 0;
+		menuMapPos = luke.map.getById("menuContainer").attr(["x", "y"]);
+
 		luke.articles.each(function (index, element) {
-			if($(element).css("display") !== "none") {
-				var offset = $(element).offset(),
+			var element = $(element),
+			mapElement = luke.map.getById($(element).attr("id"));
+			if(element.css("display") !== "none") {
+				var offset = element.offset(),
 				pos = { 
 					x : menuMapPos.x + ((offset.left - menuOffset.left) / luke.mapVars.widthRatio),
 					y : menuMapPos.y + ((offset.top - menuOffset.top) / luke.mapVars.heightRatio)
 				};
 				
-				luke.map.getById($(element).attr("id")).attr({ 
+				mapElement.attr({ 
 					x : pos.x,
 					y : pos.y,
 					width : $(element).outerWidth() / luke.mapVars.widthRatio,
 					height : $(element).outerHeight() / luke.mapVars.heightRatio
 				});
 			}
-			elementIndex = index;
+			if($(element).css("display") === "none" && mapElement.attr("width") != 0) {
+				mapElement.attr({
+					width: 0,
+					height: 0
+				})
+			}
 		});
-	},
-	toggleShowAndHideOfArticles : function () {
-
 	}
 };
 
 $(document).ready(function () {
 	luke.init();
-	projekktor("video", {
+	projekktor(".projekktor", {
 		playerFlashMP4: 'js/vendor/jarisplayer.swf',
     	playerFlashMP3: 'js/vendor/jarisplayer.swf'
     });
-	
 });
