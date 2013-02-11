@@ -4,18 +4,20 @@
   <source preload="metadata" src="av/rundfunkorchester_web.ogv" />
 </video>
 <h1>Translokales Rundfunkorchester (since 2010)</h1>
-<p>live electronics</p>
+<p>Live electronics</p>
 <br>
-<p>This is an experimental ensemble for manipulated radios. Trough the search of a new voice for the old fashioned medium the radio program becomes an instrument. We combine media techniques from two centuries: radiophonic information transfer and state of the art digital media technologies.<br>
-The Translocal Rundfunk Orchestra was founded in 2009 in the Music Informatics major at Institut Fuer Musik Und Medien.<br>
+<p>An experimental ensemble for manipulated radios. Through the search for a new voice for an old fashioned medium, the radio program becomes an instrument. We combine media techniques from two centuries: radiophonic information transfer and state of the art digital media technologies.<br>
+The Translocal Rundfunk Orchestra was founded in 2009 in the Music Informatics major at Institut Fuer Musik Und Medien and plays in various orchestrations.<br>
 <a href="http://rundfunkorchester.blogsport.eu/">Translokales Rundfunkorchester</a>
-</p>
 <br>
-<p><b>Members</b><br>
+<b>Members</b><br>
 Jonas Hummel, Maurice Braun, Hannes H&ouml;lzl, Julius Hochstrate, Lukas Truniger. Additionally there is a changing cast of guests.
 </p>
 <br>
-<p>Concerts
-<br>
-01/2011</p>
+<h1>Concerts</h1>
+<p>_03/2013 <em>now &amp; next</em>, Tanzhaus NRW, D&uuml;sseldorf<br>
+_10/2012 Konzertabend In The Cage, Robert Schumann Hochschule D&uuml;sseldorf<br>
+_02/2012 Network Music Festival, Birmingham (GB)<br>
+_06/2011 Salon des Amateurs, D&uuml;sseldorf<br>
+_09/2010 Supercollider Symposium, Berlin</p>
 </article>

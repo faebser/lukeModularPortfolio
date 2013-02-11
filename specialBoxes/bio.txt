@@ -1,18 +1,18 @@
 <article id="bio" class="bio">
-	<p>Lukas Truniger,<br>
-	was born in Zürich in 1986. Since 2008, he studies at the <em>Institut Fuer Musik Und Medien</em> of the <em>Robert Schumann Hochschule Düsseldorf</em>. As a musician, sounddesigner and sound artist, his tasks includes live music, installations, creating new instruments and filmsound. Facinated by DIY, the use of selfmade code, hacked instruments and missused tools is crucial in his work.<br>
-	He is always searching for new sound in the environment as well as in the digital domain, confronted by the insufficiency of the even and he therefore epands his search on multisensorism and multidimensionalsim.<br>
-	Tipically he is working between different worlds, sonic and visual, experimental and club-context, amient and peak-time, diy and manufactured, contemprary and classical, ambitious to combine, rearrange and scramble these worlds.
-	<br>
-	// reverences
-	_2013 project scolarship Netzwerk ON - Neue Musik Köln
-	_2012 exhibition Brèches d‘une Mechanique sonore, Objets-Son, Tunis (TU)
-	_2011/2012 recidency Cité International des Arts Paris (F)
-	_2011 exhibition Paketzentrum47, Lange Nacht der Kölner Museen, raum13, Deutzer Zentralwerk der schönen Künste, Köln
-	_2011 recidency Kolleg für Musik und Kunst Montepulciano (I)
-	_2011 exhibition Paketzentrum47, Festival for Applied Accustics, Köln
-	_concerts with different projects in Paris (F), Birmingham (GB), Berlin, Köln, Frankfurt, Düsseldorf<br>
+<p>Lukas Truniger is a musician, sound designer and sound artist.
+Born in Z&uuml;rich in 1986, he has studied at <em>Institue For Music And Media</em> at the <em>Robert Schumann School of Music</em>, D&uuml;sseldorf since 2008.<br>
+He works in the areas of live music, installations, film sound and the creation of new instruments. Characteristic of his work is an alteration between different worlds and the ambition to confront, combine, scramble and rearrange them: experimental music and club-context, DIY and pre-manufactured, sound and image, contemporary and classical, ambient and peak-time, field recordings and digital sound generation&hellip;
+Fascinated by self-made code and circuits, hacked instruments, misused tools, network processes and concepts of multi-dimensionalism; these components have become crucial to his work. </p>
+<p>
+<h1>References</h1>
+_2013 project scholarship <em>ON - Netzwerk Neue Musik</em><br>
+_2012 group exhibition with <em>Br&egrave;ches d&lsquo;une Mechanique sonore</em>, <em>Objets-Son</em>, Tunis (TU)<br>
+_2011/2012 residency <em>Cit&eacute; International des Arts</em>, Paris (F)<br>
+_2011 group exhibition with <em>Paketzentrum47</em>, <em>Lange Nacht der K&ouml;lner Museen</em>, K&ouml;ln<br>
+_2011 residency <em>Kolleg f&uuml;r Musik und Kunst</em>, Montepulciano (I)<br>
+_2011 group exhibition with <em>Paketzentrum47</em>, Festival for Applied Acoustics, K&ouml;ln<br>
+_concerts with different projects in Paris (F), Birmingham (GB), Berlin, K&ouml;ln, Frankfurt, Oberhausen, D&uuml;sseldorf<br>
 <br>
-<a href="matieral/bio_full.pdf">Full bio here.</a>
-	</p>
+<a href="matieral/bio_full.pdf" target="_blank">Full bio here.</a>
+</p>
 </article>

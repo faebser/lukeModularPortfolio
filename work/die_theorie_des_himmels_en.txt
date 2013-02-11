@@ -2,14 +2,13 @@
 <audio class="projekktor" width="400" height="180" poster="av/die_theorie_des_himmels.jpg" controls>
   <source preload="metadata" src="av/die_theorie_des_himmels_web.mp3"/>
 </audio>
-<h1>Die Theorie des Himmels (2011)</h1>
-<p>Live Elektronik und Klangkonzept</p>
+<h1>Die Theorie des Himmels (The Theory of the Sky, 2011)</h1>
+<p>Live electronics/Sonic concept</p>
 <br>
-<p>Die Musikperformance arbeitet mit dem Klang der klassischen Instrumente und der Elektronik innerhalb der r&auml;umlichen und materiellen Gegebenheiten des KIT (Kunst im Tunnel), dem neubelebten Relikts eines Stra&szlig;entunnels.</p>
+<p>This sound performance works with the sounds of classical instruments as well as with electronic noises inside the spatial conditions of the KIT (Kunst im Tunnel, an exhibition space in D&uuml;sseldorf), which happens to be the relict of a highway tunnel.<br>
+The performance is composed as a piece for two violins, cello, harp and electronics. The piece was developed by Mischa Tangian for the exhibition.
+</p>
 <br>
-<p>Aufgef&uuml;hrt wurde die Sonate des Himmels, ein St&uuml;ck f&uuml;r zwei Geigen, Cello, Harfe und Elektronik. Das St&uuml;ck wurde von Mischa Tangian f&uuml;r die Ausstellung entwickelt.</p>
-<br>
-<p>Konzert:
-<br>
-01/2011 Er&ouml;ffnung der Ausstellung &quot;Theorie des Himmels&quot;, KIT (Kunst im Tunnel), D&uuml;sseldorf</p>
+<h1>Concert</h1>
+<p>01/2011 Er&ouml;ffnung der Ausstellung &quot;Theorie des Himmels&quot;, KIT (Kunst im Tunnel), D&uuml;sseldorf</p>
 </article>

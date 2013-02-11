@@ -8,9 +8,9 @@
   <source preload="metadata" src="av/bewegte_schrift_web2.ogv" />
 </video>
 <h1>Bewegte Schrift (Moving Type, 2012)</h1>
-<p>music/sound design</p>
+<p>Music/Sound design</p>
 <br>
-<p>Scoring of  33 abstract short films showing experimental animation of typography. Sound and  image work on different concepts and non-concepts processing a great variety of analog/manual and digital techniques and materials. The sound design is based on the image using a wide range of approaches such as: associative scoring of the videos, use of hazardous material, on-camera recordings, data extracted from the pictures by measuring or approximation, converted directly into sound... The compositions are built up of live-recorded instruments both real and virtual alongside generated noises and field-recordings.<br>
-The videos were developed by Svenja Voß as her bachelor-thesis. Svenja lives and works as a designer in D&uuml;sseldorf.<br>
+<p>Scoring of thirty-three abstract short films showing experimental animation of typography. Sound and image work on various concepts and non-concepts processing a great variety of analog/manual and digital techniques and materials. The sound design is based on the image by using a wide range of approaches such as: associative scoring of the videos, use of hazardous material, on-camera recordings, data extraction from the pictures by measuring or approximation, conversion from video into sound... The compositions are built up of live-recorded instruments both real and virtual alongside generated noises and field-recordings.<br>
+The videos were developed by Svenja Vo&szlig; as her bachelor-thesis.<br>
 <a href="http://www.bewegteschrift.de/">Website</a></p>
 </article>

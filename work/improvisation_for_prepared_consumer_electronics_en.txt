@@ -4,13 +4,13 @@
   <source preload="metadata" src="av/improvisation_for_prepared_web.ogv" />
 </video>
 <h1>Improvisation with Prepared Consumer Electronics (2012)</h1>
-<p>live elektronics</p>
+<p>Live elektronics</p>
 <br>
-<p>For this performance electrical goods produced for entertainment purposes are found, prepared and used as instruments. The Lo-Fi-technology allows a kind of improvisation that can be themed &bdquo;bugs are features&ldquo;. The contrastive clean visuals based on graphic algorithms are created by Jan Steinbach.</p>
+<p>For this performance, electrical goods produced for entertainment purposes are found, prepared and used as instruments. The lo-fi-technology allows a kind of improvisation that can be themed &quot;bugs are features&quot;.<br>
+The visuals contrast with clean graphic algorithms, which use rough and reused code. They are created by Jan Steinbach.</p>
 <br>
-<p>Performances:
-<br>
-02/2012 Cit&eacute; International des Arts, Paris
-<br>
-03/2012 Dimanche Rouge, Divan du Monde, Paris</p>
+<h1>Performances</h1>
+<p>
+03/2012 <em>Dimanche Rouge</em>, Divan du Monde, Paris<br>
+02/2012 Cit&eacute; International des Arts, Paris</p>
 </article>

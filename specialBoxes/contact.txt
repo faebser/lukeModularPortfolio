@@ -1,13 +1,18 @@
 <article id="contact" class="contact">
-<p>Lukas Truniger<br>
-lukas.truniger gmail.com<br>
+<p><b>Lukas Truniger</b><br>
+lukas dot truniger at gmail dot com<br>
 plus49 0163 317 0854<br>
 <br>
-Imprint:<br>
-see above<br>
+<b>Credits</b><br>
+Design: <a href="http://www.bewegteschrift.de/" target="_blank">Svenja Vo&szlig;</a><br>
+Texts: Katharina Hauke<br>
+Text revision: Annie Goh<br>
+Programming: Fabian Frei<br>
 <br>
-Page Credits:<br>
-design _ Svenja Voss<br>
-text _ Katharina Hauke<br>
-programming _ Fabian Frei<br>
+<b>Imprint</b><br>
+Lukas Trunier<br>
+Langerstr. 14<br>
+40233 D&uuml;sseldorf<br>
+lukas dot truniger at gmail dot com<br>
+plus49 0163 317 0854<br>
 </p></article>

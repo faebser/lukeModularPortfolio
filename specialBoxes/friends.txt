@@ -1,11 +1,12 @@
 <article id="friends" class="friends">
-<a href="http://diplomhgkfhnw.ch/2012/hyperwerk/498">Fabian Frei</a><br>
-<a href="http://grandbrothers.bandcamp.com/">grandbrothers</a><br>
-<a href="http://darwinschefinkensuchen.de/">Katharina Hauke</a><br>
-<a href="http://jonashummel.de/">Jonas Hummel</a><br>
-<a href="http://www.jansteinbach.de/">Jan Steinbach</a><br>
-<a href="http://editiontaube.de/">Edition Taube</a><br>
-<a href="http://www.stephantelaar.com/">Stephan Telaar</a><br>
-<a href="http://alitnani.com/">Ali Tnani</a><br>
-<a href="http://www.bewegteschrift.de/">Svenja Voß</a>
+<a href="http://diplomhgkfhnw.ch/2012/hyperwerk/498" target="_blank">Fabian Frei</a><br>
+<a href="http://grandbrothers.bandcamp.com/" target="_blank">grandbrothers</a><br>
+<a href="http://darwinschefinkensuchen.de/" target="_blank">Katharina Hauke</a><br>
+<a href="http://jonashummel.de/" target="_blank">Jonas Hummel</a><br>
+<a href="http://www.raumzeitpiraten.de/" target="_blank">Raumzeitpiraten</a><br>
+<a href="http://www.jansteinbach.de/" target="_blank">Jan Steinbach</a><br>
+<a href="http://editiontaube.de/" target="_blank">Edition Taube</a><br>
+<a href="http://www.stephantelaar.com/" target="_blank">Stephan Telaar</a><br>
+<a href="http://alitnani.com/" target="_blank">Ali Tnani</a><br>
+<a href="http://www.bewegteschrift.de/" target="_blank">Svenja Vo&szlig;</a>
 </article>

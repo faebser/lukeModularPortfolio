@@ -1,6 +1,6 @@
 <article id="cause_and_purpose" class="statement">
-<p>Urban areas are full of possibilities to disperse sound such as their own.&lt;br&gt;
-The following experiment would be worth a try: Record urban sonic phenomena. Play the recordings back to the city trough various materials, structures and forms using sound transducers. The balustrades, glass-fronts and drain pipes playing their own sounds will amplify themselves and start resonating. Soon the whole city will build up a feedback, reverberating its own score.<br>
-A possible aim of this trial could be to plant a simple algorithm into the city. A small software encoded as a rhythmic sequence of sound, open for the cities' changes (since it is exposed to them). The permanent alteration would constantly trigger the self-organization of a network that organizes itself in and through alteration. A flexible future information network such as this evolves from its own crises.</p>
+<p>Urban areas make sound and are full of possibilities to disperse sound - not forgetting their own.<br>
+Consider the following experiment: record urban sonic phenomena. Play the recordings back to the city using sound transducers through various materials, structures and forms. The balustrades, glass-fronts and drain pipes playing their own sounds will amplify themselves and start resonating. Soon the whole city will build up a feedback, reverberating its own score.<br>
+A possible aim of this investigation could be to bring a simple algorithm into the city; a software encoded as a rhythmic sequence of sound, open for the city's changes (since it is exposed to them). A flexible future information network such as this evolves from its own crises: the permanent alteration would constantly trigger the self-organization of a network that organizes itself in and through alteration.</p>
 </article>
 
