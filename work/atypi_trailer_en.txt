@@ -4,9 +4,9 @@
   <source preload="metadata" src="av/atypi_trailer_web.ogv" />
 </video>
 <h1>AtypI Trailer (2012)</h1>
-<p>Music/Sounddesign</p>
+<p>Music/Sound design</p>
 <br>
 <p>Latin and Chinese letters blend into new forms and shapes. A notion?
 This clip was developed as the opening trailer for the <em>AtypI Conference 2012</em> in Hong Kong.<br>
-Animation by Svenja Voss.</p>
+Animation by <a href="http://www.bewegteschrift.de/" target="_blank">Svenja Vo&szlig;</a>.</p>
 </article>

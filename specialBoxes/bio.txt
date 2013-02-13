@@ -1,18 +1,18 @@
 <article id="bio" class="bio">
-<p>Lukas Truniger is a musician, sound designer and sound artist.
-Born in Z&uuml;rich in 1986, he has studied at <em>Institue For Music And Media</em> at the <em>Robert Schumann School of Music</em>, D&uuml;sseldorf since 2008.<br>
-He works in the areas of live music, installations, film sound and the creation of new instruments. Characteristic of his work is an alteration between different worlds and the ambition to confront, combine, scramble and rearrange them: experimental music and club-context, DIY and pre-manufactured, sound and image, contemporary and classical, ambient and peak-time, field recordings and digital sound generation&hellip;
+<h1>Lukas Truniger</h1>
+<p>is a musician, sound designer and sound artist.
+Born in Z&uuml;rich(CH) in 1986, he has studied at <em>Institue For Music And Media</em> at the <em>Robert Schumann School of Music and Media</em>, D&uuml;sseldorf since 2008.<br>
+He works in the areas of live music, installations, film sound and the creation of new instruments. Characteristic of his work is an alteration between different worlds and the ambition to confront, combine, scramble and rearrange them: experimental music and club-context, DIY and pre-manufactured, sound and image, contemporary and classical, ambient and peak-time, field recordings and digital sound generation...<br>
 Fascinated by self-made code and circuits, hacked instruments, misused tools, network processes and concepts of multi-dimensionalism; these components have become crucial to his work. </p>
-<p>
 <h1>References</h1>
-_2013 project scholarship <em>ON - Netzwerk Neue Musik</em><br>
-_2012 group exhibition with <em>Br&egrave;ches d&lsquo;une Mechanique sonore</em>, <em>Objets-Son</em>, Tunis (TU)<br>
-_2011/2012 residency <em>Cit&eacute; International des Arts</em>, Paris (F)<br>
-_2011 group exhibition with <em>Paketzentrum47</em>, <em>Lange Nacht der K&ouml;lner Museen</em>, K&ouml;ln<br>
-_2011 residency <em>Kolleg f&uuml;r Musik und Kunst</em>, Montepulciano (I)<br>
-_2011 group exhibition with <em>Paketzentrum47</em>, Festival for Applied Acoustics, K&ouml;ln<br>
-_concerts with different projects in Paris (F), Birmingham (GB), Berlin, K&ouml;ln, Frankfurt, Oberhausen, D&uuml;sseldorf<br>
+<p>2013 project scholarship <em>ON - Netzwerk Neue Musik</em><br>
+2012 group exhibition with <em>Br&egrave;ches d&lsquo;une Mechanique sonore</em>, <em>Objets-Son</em>, Tunis (TU)<br>
+2011/2012 residency <em>Cit&eacute; International des Arts</em>, Paris (F)<br>
+2011 group exhibition with <em>Paketzentrum47</em>, <em>Lange Nacht der K&ouml;lner Museen</em>, Cologne<br>
+2011 residency <em>Kolleg f&uuml;r Musik und Kunst</em>, Montepulciano (I)<br>
+2011 group exhibition with <em>Paketzentrum47</em>, <em>festival for applied acustics</em>, Cologne<br>
+Concerts with different projects in Paris (F), Birmingham (GB), Berlin, Cologne, Frankfurt, Oberhausen, D&uuml;sseldorf<br>
 <br>
-<a href="matieral/bio_full.pdf" target="_blank">Full bio here.</a>
+<a href="av/bio_lukas_truniger.pdf" target="_blank">Full bio here.</a>
 </p>
 </article>

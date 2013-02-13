@@ -3,11 +3,11 @@
   <source preload="metadata" src="av/i_never_wrote_a_sound_web.mp4" />
   <source preload="metadata" src="av/i_never_wrote_a_sound_web.ogv" />
 </video>
-<h1>I never wrote a sound (2012)</h1>
+<h1>I never wrote a Sound (2012)</h1>
 <p>Live-coding sound performance</p>
 <br>
 <p>Creating a dialog between an outdated typewriter and an up-to-date typing machine (a computer), this sound performance brings together two machines for textual in- and output, thereby presenting their dependent relation regarding their derivation, extinction and resurrection.<br>
-A collaboration with Ali Tnani, Tunisian painter and sound artist.</p>
+A collaboration with <a href="http://alitnani.com/" target="_blank">Ali Tnani</a>.</p>
 <br>
 <h1>Debut performance</h1>
 <p>03/2012 Cit&eacute; International des Arts, Paris</p>

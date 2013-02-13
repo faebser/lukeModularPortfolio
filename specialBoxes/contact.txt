@@ -1,16 +1,17 @@
 <article id="contact" class="contact">
-<p><b>Lukas Truniger</b><br>
+<h1>Lukas Truniger</h1>
+<p>
 lukas dot truniger at gmail dot com<br>
-plus49 0163 317 0854<br>
+plus 49 0163 317 0854<br>
 <br>
 <b>Credits</b><br>
 Design: <a href="http://www.bewegteschrift.de/" target="_blank">Svenja Vo&szlig;</a><br>
-Texts: Katharina Hauke<br>
+Texts: <a href="http://darwinschefinkensuchen.de/" target="_blank">Katharina Hauke</a><br>
 Text revision: Annie Goh<br>
-Programming: Fabian Frei<br>
+Programming: <a href="http://diplomhgkfhnw.ch/2012/hyperwerk/498" target="_blank">Fabian Frei</a><br>
 <br>
 <b>Imprint</b><br>
-Lukas Trunier<br>
+Lukas Truniger<br>
 Langerstr. 14<br>
 40233 D&uuml;sseldorf<br>
 lukas dot truniger at gmail dot com<br>

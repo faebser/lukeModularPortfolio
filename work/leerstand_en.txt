@@ -3,11 +3,11 @@
   <source preload="metadata" src="av/leerstand_web.mp4" />
   <source preload="metadata" src="av/leerstand_web.ogv" />
 </video>
-<h1>Leerstand Bespielung (2012)</h1>
-<p>Live</p>
+<h1>Leerstand (vacancy, 2012)</h1>
+<p>Live electronics/Open lab</p>
 <br>
-<p>Seesion together with <em>raumzeipiraten</em> and Jan Ehlen. It was held in
-<em>KitEV</em>, a Kunstverein located in the old the water tower of the train station of Oberhausen.</p><br>
+<p>Open lab/nursery/session organized by <a href="http://shinytoys.eu/" target="_blank">Shiny Toys</a>. With: <a href="http://www.raumzeitpiraten.de/" target="_blank">raumzeipiraten</a> and <a href="http://www.janehlen.de/" target="_blank">Jan Ehlen</a>.<br>
+It was held in <a href="http://kitev.de/" target="_blank">KitEV</a>, a Kunstverein located in the old water tower of the train station of Oberhausen.</p><br>
 <h1>Concert</h1>
 <p>12/2012 <em>KitEV</em>, Oberhausen</p>
 </article>

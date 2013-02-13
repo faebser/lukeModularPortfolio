@@ -3,21 +3,17 @@
   <source preload="metadata" src="av/rundfunkorchester_web.mp4" />
   <source preload="metadata" src="av/rundfunkorchester_web.ogv" />
 </video>
-<h1>Translokales Rundfunkorchester (since 2010)</h1>
+<h1>Das Translokales Rundfunkorchester (since 2010)</h1>
 <p>Live electronics</p>
 <br>
 <p>An experimental ensemble for manipulated radios. Through the search for a new voice for an old fashioned medium, the radio program becomes an instrument. We combine media techniques from two centuries: radiophonic information transfer and state of the art digital media technologies.<br>
 The Translocal Rundfunk Orchestra was founded in 2009 in the Music Informatics major at Institut Fuer Musik Und Medien and plays in various orchestrations.<br>
-<a href="http://rundfunkorchester.blogsport.eu/">Translokales Rundfunkorchester</a>
-<br>
-<b>Members</b><br>
-Jonas Hummel, Maurice Braun, Hannes H&ouml;lzl, Julius Hochstrate, Lukas Truniger. Additionally there is a changing cast of guests.
-</p>
+<a href="http://rundfunkorchester.blogsport.eu/">Homepage</a></p>
 <br>
 <h1>Concerts</h1>
-<p>_03/2013 <em>now &amp; next</em>, Tanzhaus NRW, D&uuml;sseldorf<br>
-_10/2012 Konzertabend In The Cage, Robert Schumann Hochschule D&uuml;sseldorf<br>
-_02/2012 Network Music Festival, Birmingham (GB)<br>
-_06/2011 Salon des Amateurs, D&uuml;sseldorf<br>
-_09/2010 Supercollider Symposium, Berlin</p>
+<p>03/2013 <em>now &amp; next</em>, Tanzhaus NRW, D&uuml;sseldorf<br>
+10/2012 <em>In The Cage</em>, Robert Schumann Hochschule D&uuml;sseldorf<br>
+02/2012 <em>Network Music Festival</em>, Birmingham (GB)<br>
+06/2011 Salon des Amateurs, D&uuml;sseldorf<br>
+09/2010 <em>Supercollider Symposium</em>, Berlin</p>
 </article>

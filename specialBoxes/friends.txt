@@ -1,5 +1,6 @@
 <article id="friends" class="friends">
-<a href="http://diplomhgkfhnw.ch/2012/hyperwerk/498" target="_blank">Fabian Frei</a><br>
+<h1>Friends</h1>
+<p><a href="http://diplomhgkfhnw.ch/2012/hyperwerk/498" target="_blank">Fabian Frei</a><br>
 <a href="http://grandbrothers.bandcamp.com/" target="_blank">grandbrothers</a><br>
 <a href="http://darwinschefinkensuchen.de/" target="_blank">Katharina Hauke</a><br>
 <a href="http://jonashummel.de/" target="_blank">Jonas Hummel</a><br>
@@ -9,4 +10,4 @@
 <a href="http://www.stephantelaar.com/" target="_blank">Stephan Telaar</a><br>
 <a href="http://alitnani.com/" target="_blank">Ali Tnani</a><br>
 <a href="http://www.bewegteschrift.de/" target="_blank">Svenja Vo&szlig;</a>
-</article>
+</p></article>

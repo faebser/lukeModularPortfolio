@@ -11,6 +11,6 @@
 <p>Music/Sound design</p>
 <br>
 <p>Scoring of thirty-three abstract short films showing experimental animation of typography. Sound and image work on various concepts and non-concepts processing a great variety of analog/manual and digital techniques and materials. The sound design is based on the image by using a wide range of approaches such as: associative scoring of the videos, use of hazardous material, on-camera recordings, data extraction from the pictures by measuring or approximation, conversion from video into sound... The compositions are built up of live-recorded instruments both real and virtual alongside generated noises and field-recordings.<br>
-The videos were developed by Svenja Vo&szlig; as her bachelor-thesis.<br>
-<a href="http://www.bewegteschrift.de/">Website</a></p>
+The videos were developed by <a href="http://www.bewegteschrift.de/" target="_blank">Svenja Vo&szlig;</a> as her bachelor-thesis.<br>
+<a href="http://www.bewegteschrift.de/" target="_blank">Watch all clips here.</a></p>
 </article>

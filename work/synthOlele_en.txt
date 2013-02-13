@@ -6,11 +6,11 @@
 <h1>synthOlele (2012)</h1>
 <p>Development of instrument/Live electronics</p>
 <br>
-<p>The synthOlele is a digital instrument. It combines several elements for the control of synthesized sound hence working as an interface. There is a certain resemblance to a traditional ukulele. This is not a coincidence but strict plagiarism aiming for the synthOlele to become the ukuleles' electronic cover-version.<br>
+<p>The <em>synthOlele</em> is a digital instrument. It combines several elements for the control of synthesized sound hence working as an interface. There is a certain resemblance to a traditional ukulele. This is not a coincidence but strict plagiarism aiming for the synthOlele to become the ukuleles' electronic cover-version.<br>
 The synthOlele was developed in collaboration with industrial designer Dominik Noli.</p>
 <br>
 <h1>Concerts</h1>
-<p>02/2012 <em>Monkey's Club</em>, D&uuml;sseldorf (club version) 
-<br>
-02/2012 <em>Cit&eacute; International des Arts</em>, Paris (experimental version) </p>
+<p>02/2012 Cit&eacute; International des Arts, Paris (experimental version)<br>
+02/2012 Monkey's Club, D&uuml;sseldorf (club version) 
+</p>
 </article>
