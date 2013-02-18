@@ -6,5 +6,5 @@
 <h1>Hemisphere (2011)</h1>
 <p>Music/Sound design</p>
 <br>
-<p>This short movie by <a href="http://www.stephantelaar.com/" target="_blank">Stephan Telaar</a> approaches the conflict between raw emotions and rational thinking. Both for the image and the music, the golden ratio is used as the formal principle for the video. For example it is a mathematical base for the generation of sound clusters.</p>
+<p>This short movie by <a href="http://www.stephantelaar.com/" target="_blank">Stephan Telaar</a> approaches the conflict between raw emotions and rational thinking. Both for the image and the music, the golden ratio is used as the formal principle. It is the mathematical base for the generation of sound clusters for exemple.</p>
 </article>
