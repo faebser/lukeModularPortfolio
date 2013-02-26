@@ -1,4 +1,3 @@
 <article id="can_be_shared" class="statement">
-<p>&quot;Music happens when being shared with other people.&quot;&lt;br&gt;
-Matias Aguayo, in a talk</p>
+<p>&quot;Music happens when being shared with other people.&quot; Matias Aguayo, in a lecture</p>
 </article>

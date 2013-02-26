@@ -1,4 +1,4 @@
 <article id="ever_tried" class="statement">
-<p>All of old. Nothing else ever. Ever tried. Ever failed. No matter. Try again. Fail again. Fail better.<br>
-Samuel Beckett, Worstward Ho </p>
+<p>&quot;All of old. Nothing else ever. Ever tried. Ever failed. No matter. Try again. Fail again. Fail better.&quot;<br>
+Samuel Beckett, Worstward Ho</p>
 </article> 

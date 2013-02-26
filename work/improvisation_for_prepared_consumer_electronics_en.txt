@@ -1,16 +1,16 @@
 <article class="live">
 <video class="projekktor" width="400" height="225" poster="av/improvisation_for_prepared.jpg" controls>
-  <source preload="metadata" src="av/improvisation_for_prepared_web.mp4" />
-  <source preload="metadata" src="av/improvisation_for_prepared_web.ogv" />
+  <source preload="metadata" src="av/improvisation_with_prepared_web.mp4" />
+  <source preload="metadata" src="av/improvisation_with_prepared_web.ogv" />
 </video>
 <h1>Improvisation with Prepared Consumer Electronics (2012)</h1>
-<p>live elektronics</p>
+<p>Live elektronics</p>
 <br>
-<p>For this performance electrical goods produced for entertainment purposes are found, prepared and used as instruments. The Lo-Fi-technology allows a kind of improvisation that can be themed &bdquo;bugs are features&ldquo;. The contrastive clean visuals based on graphic algorithms are created by Jan Steinbach.</p>
+<p>For this performance, electrical goods produced for entertainment purposes are prepared and used as instruments. The lo-fi-technology allows a kind of improvisation that can be themed &quot;bugs are features&quot;.<br>
+The visuals contrast with clean graphic algorithms, which use rough and reused code. They are created by <a href="http://www.jansteinbach.de/" target="_blank">Jan Steinbach</a>.</p>
 <br>
-<p>Performances:
-<br>
-02/2012 Cit&eacute; International des Arts, Paris
-<br>
-03/2012 Dimanche Rouge, Divan du Monde, Paris</p>
+<h1>Performances</h1>
+<p>
+03/2012 <em>Dimanche Rouge</em>, Divan du Monde, Paris<br>
+02/2012 Cit&eacute; International des Arts, Paris</p>
 </article>

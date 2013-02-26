@@ -10,7 +10,7 @@ textarea{resize:vertical;}
 .ie #scroller{cursor:url(https://mail.google.com/mail/images/2/openhand.cur),default !important;}.ie #scroller.inFront{cursor:url(https://mail.google.com/mail/images/2/closedhand.cur),default !important;}
 #scroller{position:absolute;width:100%;height:100%;cursor:hand;cursor:grab;cursor:-moz-grab;cursor:-webkit-grab;}#scroller.inFront{cursor:grabbing;cursor:-moz-grabbing;cursor:-webkit-grabbing;}
 #map{position:absolute;width:200px;height:100px;top:0;left:0;z-index:-2;}
-body{overflow:hidden;font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;font-size:0.8em;}body h1,body p{font-size:100%;padding:3px;margin:0px;}
+body{overflow:hidden;font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;font-size:0.8em;}body h1{font-size:100%;padding:3px 3px 0px 3px;margin:0px;}body p{font-size:100%;padding:0px 3px 3px 3px;margin:0px;}
 body article{display:none;width:400px;position:absolute;line-height:1.1;}body article img{width:400px;}
 body article a{color:#000;}body article a:hover,body article a:visited{color:#646363;}
 body #endlessText{display:block;position:absolute;top:40px;right:40px;padding:5px;height:200px;}body #endlessText p{width:95%;}

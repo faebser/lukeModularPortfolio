@@ -3,20 +3,13 @@
   <source preload="metadata" src="av/breches_web.mp4" />
   <source preload="metadata" src="av/breches_web.ogv" />
 </video>
-<h1>Br&egrave;ches d'une mechanique sonore (cracks in a sonic mechanism, 2012)</h1>
-<p>audiovisual installation</p>
+<h1>Br&egrave;ches d'une Mechanique sonore (cracks in a sonic mechanism, 2012)</h1>
+<p>Audiovisual Installation</p>
 <br>
-<p>This installation is an absurd sonic machine. It is a machine with a body, living
-thanks to programmed rules, a life of function and production. The machine
-produces different kinds of information: sonic, visual, digital and textual, passing
-them between its organs. And it discharges them through its different
-outputs. In this stream of information, it generates errors. It is an efficient error-machine with a
-desire for errors. The machine is a desiring machine.</p>
+<p>This absurd sonic machine has a body and is living a life of tasks and production, due to programmed rules. The machine manufactures different kinds of information: sonic, visual, digital and textual, passing them between its organs and discharging them through its different outputs. Within this stream of information, it generates errors so that it can also be referred to as an efficient error-machine.<br>
+The installation was developed together with <a href="http://alitnani.com/" target="_blank">Ali Tnani</a>.</p>
 <br>
-<p>The installation was developped together with Ali Tnani (TU).</p>
-<br>
-<p>Exhibition:
-<br>
-11/2012 Objets son, e-fest exhibition, Palais Ebdellia, La Marsa, Tunisia
+<h1>Exhibition</h1>
+<p>11/2012 <em>Objets son</em>, e-fest exhibition, Palais Ebdellia, La Marsa, Tunisia
 </p>
 </article>

@@ -7,16 +7,13 @@
   <source preload="metadata" src="av/opernabend_web2.mp4" />
   <source preload="metadata" src="av/opernabend_web2.ogv" />
 </video>
-<h1>Ein kurzes Leben: Zwei Frauenschicksale, ein Opernabend (2011)</h1>
-<a href="">Ein kurzes Leben: Zwei Frauenschicksale, ein Opernabend</a>
-<p>3D-Videomaterial, Projektions-Mapping</p>
+<h1>Opera Evening: Ein kurzes Leben (a short life, 2011)</h1>
+<p>3d-video material/Projection mapping</p>
 <br>
-<p>Entwicklung eines multimedialen Bühnenbilds zur zeitgenössischen Inszenierung der Opern Suor Angelica und La vida breve in einem 4-köpfigen Team des Instituts für Musik und Medien. Der Opernabend der Robert-Schumann-Hochschule Düsseldorf versetzt die Stücke in einen modernen Kontext.
+<p>Multimedia stage design for the staging of the operas Suor Angelica (Puccini) and La vida breve (de Falla). A team from Institut Fuer Musik Und Medien set the operas in a modern context.<br>
+Video direction by <a href="http://www.stephantelaar.com/" target="_blank">Stephan Telaar</a>.</p>
 <br>
-Video-Regie führt Stephan Telaar.</p>
-<br>
-<p>Premiere:
-<br>
-04/2011 RSH-Düsseldorf
+<h1>Premiere</h1>
+<p>04/2011 Robert Schmann Music School D&uuml;sseldorf
 </p>
 </article>
