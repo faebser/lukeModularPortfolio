@@ -1,7 +1,11 @@
-<article class="objects">
+<article class="objects current">
 <video class="projekktor" width="400" height="225" poster="av/paketzentrum47.jpg" controls>
   <source preload="metadata" src="av/paketzentrum47_web.mp4" />
   <source preload="metadata" src="av/paketzentrum47_web.ogv" />
+</video>
+<video class="projekktor" width="400" height="225" poster="av/paketzentrum472.jpg" controls>
+  <source preload="metadata" src="av/paketzentrum47_web2.mp4" />
+  <source preload="metadata" src="av/paketzentrum47_web2.ogv" />
 </video>
 <h1>Paketzentrum47 (2011)</h1>
 <p>Audiovisual installation</p>

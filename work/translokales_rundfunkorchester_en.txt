@@ -1,4 +1,4 @@
-<article class="live music">
+<article class="live music current">
 <video class="projekktor" width="400" height="225" poster="av/rundfunkorchester.jpg" controls>
   <source preload="metadata" src="av/rundfunkorchester_web.mp4" />
   <source preload="metadata" src="av/rundfunkorchester_web.ogv" />
