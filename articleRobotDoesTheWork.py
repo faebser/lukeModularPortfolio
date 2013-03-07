@@ -4,7 +4,6 @@ from shutil import copytree
 
 
 templatePath = None
-# germanPath = None
 websiteFolder = None
 workFolder = "work"
 targetFile = None
@@ -35,9 +34,9 @@ boxesTag = targetHtml.find("div", id = "specialBoxes")
 
 
 for pathName, directories, files in walk(workFolder):
-    for filename in files:
-        articleToAdd = soup(open(path.join(pathName, filename)))
-        articleTag.append(articleToAdd)
+	for filename in files:
+		articleToAdd = soup(open(path.join(pathName, filename)))
+		articleTag.append(articleToAdd)
 
 for pathName, directories, files in walk(boxesFolder):
 	for filename in files:
