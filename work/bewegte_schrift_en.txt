@@ -1,4 +1,4 @@
-﻿<article class="scorings">
+﻿<article class="scorings current">
 <video class="projekktor" width="400" height="250" poster="av/bewegte_schrift1.jpg" controls>
   <source preload="metadata" src="av/bewegte_schrift_web1.mp4" />
   <source preload="metadata" src="av/bewegte_schrift_web1.ogv" />
@@ -6,6 +6,10 @@
 <video class="projekktor" width="400" height="250" poster="av/bewegte_schrift2.jpg" controls>
   <source preload="metadata" src="av/bewegte_schrift_web2.mp4" />
   <source preload="metadata" src="av/bewegte_schrift_web2.ogv" />
+</video>
+<video class="projekktor" width="400" height="250" poster="av/bewegte_schrift3.jpg" controls>
+  <source preload="metadata" src="av/bewegte_schrift_web3.mp4" />
+  <source preload="metadata" src="av/bewegte_schrift_web3.ogv" />
 </video>
 <h1>Bewegte Schrift (Moving Type, 2012)</h1>
 <p>Music/Sound design</p>

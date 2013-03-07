@@ -1,4 +1,4 @@
-<article class="scorings current">
+<article class="scorings">
 <video class="projekktor" width="400" height="330" poster="av/atypi_trailer.jpg" controls>
   <source preload="metadata" src="av/atypi_trailer_web.mp4" />
   <source preload="metadata" src="av/atypi_trailer_web.ogv" />

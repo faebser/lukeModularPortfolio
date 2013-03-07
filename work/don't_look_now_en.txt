@@ -1,4 +1,4 @@
-﻿<article class="scorings music current">
+﻿<article class="scorings music">
 <audio class="projekktor" width="400" height="180" poster="av/don't_look_now.jpg" controls>
   <source preload="metadata" src="av/don't_look_now_web.mp3" />
 </audio>

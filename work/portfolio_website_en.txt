@@ -1,0 +1,8 @@
+<article class="objects current">
+<video width="400" height="225" poster="av/portfolio_website.jpg">
+</video>
+<h1>Portfolio Website (2013)</h1>
+<p>Virtual object</p>
+<br>
+<p>My portfolio website was made by Svenja Voﬂ (design), Katharina Hauke (text) and Fabian Frei (programming). We worked with different concepts: the content is visually organized on a map; there are feedback loops and a lot of cross reverences in the text; the programmation is very slick and home brewed.</p>
+</article>
