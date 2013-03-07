@@ -94,6 +94,10 @@ var luke = {
 		offsetY : null,
 		offsetX : null
 	},
+	templates : {
+		video : null,
+		source : null
+	},
 
 	/*
 	 * The init function gets called after dom.ready and is used
@@ -164,6 +168,56 @@ var luke = {
 		luke.menuContainer.hover(luke.articleHoverZindexIn, luke.articleHoverZindexOut);
 		$('article').hover(luke.articleHoverZindexIn, luke.articleHoverZindexOut);
 		$('#menuSub a').click(luke.subMenuClick);
+
+		luke.templates.video = $('#templates video');
+		luke.templates.source = $("#templates source");
+
+
+		$("div.video").each(function(index, element){
+			var el = $(element),
+				w = el.outerWidth() * 0.5,
+				h = el.outerHeight() * 0.5;
+
+			el.find(".button").each(function(i, e){
+				var size = $(e).height();
+				$(e).css({
+					top: h - size,
+					left: w - size
+				})
+			});
+			el.click(function(event){
+				event.preventDefault();
+				var video = luke.templates.video.clone(),
+				src = video.find("source");
+				video.attr({
+					height: h * 2,
+					width: w * 2,
+					poster: el.find('.poster').attr("src"),
+				});
+				el.find("p.src").each(function(index, element) {
+					var newSrc = null;
+
+					if(index > 0) {
+						newSrc = src.clone().appendTo(video);
+					}
+					else {
+						newSrc = src;
+					}
+					console.log($(element).html());
+					newSrc.attr("src", $(element).html());
+					$(element).remove();
+				});
+				el.find(".poster").remove();
+				el.find(".button").remove();
+				el.append(video);
+				el.unbind("click");
+				projekktor(video, {
+					autoplay: true,
+					playerFlashMP4: 'js/vendor/jarisplayer.swf',
+			    	playerFlashMP3: 'js/vendor/jarisplayer.swf'
+			    });
+			});
+		});
 
 		luke.scroller = $("#scroller");
 		luke.scroller.onselectstart = function() { return false; };
@@ -508,7 +562,6 @@ var luke = {
 			// console.log("width: " + mapElement.attr("width"));
 			// console.log("display of el: " +$(element).css("display"));
 			if($(element).css("display") === "none" && mapElement.attr("width") != 0) {
-				console.log("if clause entered");
 				mapElement.attr({
 					width: 0,
 					height: 0
@@ -535,7 +588,6 @@ var luke = {
 			// console.log("width: " + mapElement.attr("width"));
 			// console.log("display of el: " +$(element).css("display"));
 			if($(element).css("display") === "none" && mapElement.attr("width") != 0) {
-				console.log("if clause entered");
 				mapElement.attr({
 					width: 0,
 					height: 0
