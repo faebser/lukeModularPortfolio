@@ -10,15 +10,16 @@ textarea{resize:vertical;}
 .ie #scroller{cursor:url(https://mail.google.com/mail/images/2/openhand.cur),default !important;}.ie #scroller.inFront{cursor:url(https://mail.google.com/mail/images/2/closedhand.cur),default !important;}
 #scroller{position:absolute;width:100%;height:100%;cursor:hand;cursor:grab;cursor:-moz-grab;cursor:-webkit-grab;}#scroller.inFront{cursor:grabbing;cursor:-moz-grabbing;cursor:-webkit-grabbing;}
 #map{position:absolute;width:200px;height:100px;top:0;left:0;z-index:-2;}
-body{overflow:hidden;font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;font-size:0.8em;}body h1{font-size:100%;padding:3px 3px 0px 3px;margin:0px;}body p{font-size:100%;padding:0px 3px 3px 3px;margin:0px;}
+body{overflow:hidden;font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;font-size:0.8em;}body h1,body p{font-size:100%;padding:3px;margin:0px;}
 body article{display:none;width:400px;position:absolute;line-height:1.1;}body article img{width:400px;}
 body article a{color:#000;}body article a:hover,body article a:visited{color:#646363;}
+body article div.video p.src{display:none;}
 body #endlessText{display:block;position:absolute;top:40px;right:40px;padding:5px;height:200px;}body #endlessText p{width:95%;}
 body .projekktor{margin-bottom:1px;}
 body #menuContainer{position:absolute;background-color:#000;}body #menuContainer .menuContainerInner{width:140px;}body #menuContainer .menuContainerInner .menu{margin:0px;padding:0px;list-style:none;}body #menuContainer .menuContainerInner .menu li{margin:0px;padding:0px;line-height:0.9;}body #menuContainer .menuContainerInner .menu li a{padding:2px 4px;color:#fff;text-decoration:none;display:inline-block;*display:inline;zoom:1;padding:1px;}body #menuContainer .menuContainerInner .menu li a:hover{color:#8b8b8b;background-color:#fff;}
 body #menuContainer #menuMain{float:right;margin:3px 3px 15px 0px;}
 body #menuContainer #menuSub{float:left;margin:0px 0px 3px 3px;text-align:right;}
-body #info{position:absolute;left:0px;bottom:0px;z-index:1;}body #info ul{list-style-type:none;padding:0;margin:0;}body #info ul li{line-height:1.2;}body #info ul li a{color:#8b8b8b;text-decoration:none;}body #info ul li a:hover{text-decoration:underline;}
+body #info{position:absolute;left:0px;bottom:0px;z-index:-1;}body #info ul{list-style-type:none;padding:0;margin:0;}body #info ul li{line-height:1.2;}body #info ul li a{color:#8b8b8b;text-decoration:none;}body #info ul li a:hover{text-decoration:underline;}
 body #info ul .dark a{color:#000000;}
 body #controls{position:absolute;right:0px;bottom:0px;}
 body #endlessText{display:none;}body #endlessText p{margin-bottom:5%;}
