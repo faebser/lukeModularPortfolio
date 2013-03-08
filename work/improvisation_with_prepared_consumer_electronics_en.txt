@@ -3,10 +3,9 @@
   <source preload="metadata" src="av/improvisation_with_prepared_web.mp4" />
   <source preload="metadata" src="av/improvisation_with_prepared_web.ogv" />
 </video> -->
-<div class="video" style="width: 400px; height: 255px;">
+<div class="video" style="width: 400px; height: 225px;">
 	<img class="poster" src="av/bewegte_schrift2.jpg" alt="posterimage">
 	<img class="play button" height="80" width="80" src="css/minimum/start.png" alt="play button">
-	<img class="load button" height="31" width="31" src="css/minimum/buffering.gif" alt="load button">
 	<p class="src">av/improvisation_with_prepared_web.mp4</p>
 	<p class="src">av/improvisation_with_prepared_web.ogv</p>
 </div>
