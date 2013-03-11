@@ -173,51 +173,7 @@ var luke = {
 		luke.templates.source = $("#templates source");
 
 
-		$("div.video").each(function(index, element){
-			var el = $(element),
-				w = el.outerWidth() * 0.5,
-				h = el.outerHeight() * 0.5;
-
-			el.find(".button").each(function(i, e){
-				var size = $(e).height()* 0.5;
-				$(e).css({
-					top: h - size,
-					left: w - size
-				})
-			});
-			el.click(function(event){
-				event.preventDefault();
-				var video = luke.templates.video.clone(),
-				src = video.find("source");
-				video.attr({
-					height: h * 2,
-					width: w * 2,
-					poster: el.find('.poster').attr("src"),
-				});
-				el.find("p.src").each(function(index, element) {
-					var newSrc = null;
-
-					if(index > 0) {
-						newSrc = src.clone().appendTo(video);
-					}
-					else {
-						newSrc = src;
-					}
-					console.log($(element).html());
-					newSrc.attr("src", $(element).html());
-					$(element).remove();
-				});
-				el.find(".poster").remove();
-				el.find(".button").remove();
-				el.append(video);
-				el.unbind("click");
-				projekktor(video, {
-					autoplay: true,
-					playerFlashMP4: 'js/vendor/jarisplayer.swf',
-			    	playerFlashMP3: 'js/vendor/jarisplayer.swf'
-			    });
-			});
-		});
+		$("div.video").each(luke.videoLoader);
 
 		luke.scroller = $("#scroller");
 		luke.scroller.onselectstart = function() { return false; };
@@ -537,6 +493,51 @@ var luke = {
 		luke.map.rect(luke.mapVars.offsetX, luke.mapVars.offsetY,
 			luke.menuContainer.outerWidth() / luke.mapVars.widthRatio, luke.menuContainer.outerHeight() / luke.mapVars.heightRatio
 			).attr("fill", Raphael.color(luke.menuContainer.css("backgroundColor"))).attr("stroke", "none").id = luke.menuContainer.attr("id");
+	},
+	videoLoader : function (index, element) {
+		var el = $(element),
+			w = el.outerWidth() * 0.5,
+			h = el.outerHeight() * 0.5;
+
+		el.find(".button").each(function(i, e){
+			var size = $(e).height()* 0.5;
+			$(e).css({
+				top: h - size,
+				left: w - size
+			})
+		});
+		el.click(function(event){
+			event.preventDefault();
+			var video = luke.templates.video.clone(),
+			src = video.find("source");
+			video.attr({
+				height: h * 2,
+				width: w * 2,
+				poster: el.find('.poster').attr("src"),
+			});
+			el.find("p.src").each(function(index, element) {
+				var newSrc = null;
+
+				if(index > 0) {
+					newSrc = src.clone().appendTo(video);
+				}
+				else {
+					newSrc = src;
+				}
+				console.log($(element).html());
+				newSrc.attr("src", $(element).html());
+				$(element).remove();
+			});
+			el.find(".poster").remove();
+			el.find(".button").remove();
+			el.append(video);
+			el.unbind("click");
+			projekktor(video, {
+				autoplay: true,
+				playerFlashMP4: 'js/vendor/jarisplayer.swf',
+		    	playerFlashMP3: 'js/vendor/jarisplayer.swf'
+		    });
+		});
 	},
 	updateMap : function () {
 		var menuOffset = luke.menuContainer.offset(),
