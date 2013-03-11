@@ -179,7 +179,7 @@ var luke = {
 				h = el.outerHeight() * 0.5;
 
 			el.find(".button").each(function(i, e){
-				var size = $(e).height();
+				var size = $(e).height()* 0.5;
 				$(e).css({
 					top: h - size,
 					left: w - size
