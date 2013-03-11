@@ -179,7 +179,12 @@ var luke = {
 		luke.scroller.onselectstart = function() { return false; };
 		luke.scroller.mousedown(luke.onMouseDown);
 		luke.scroller.mouseup(luke.onMouseUp);
-
+		$(window).mouseleave(luke.onMouseLeaveWindow);
+	},
+	onMouseLeaveWindow : function (event) {
+		if(luke.scroller.hasClass("inFront")) {
+				luke.onMouseUp(event);				
+			}
 	},
 	articleHoverZindexIn : function (event) {
 		$(this).css({ "z-index" : 10 });
