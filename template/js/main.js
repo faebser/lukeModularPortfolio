@@ -237,14 +237,6 @@ var luke = {
 		else {
 			returnPos.y = luke.menuContainerY + ((returnVector.pos.y * articleHeight) - margin - articleHeight);
 		}
-		// console.log("X -> " + returnVector.pos.x);
-		// console.log("articleWidth -> " + articleWidth);
-		// console.log("menuContainerX -> " + luke.menuContainerX);
-		// console.log("Y -> " + returnVector.pos.y);
-		// console.log("articleHeight -> " + articleHeight);
-		// console.log("menuContainerY -> " + luke.menuContainerY); 
-		// console.log(returnPos);
-
 		return returnPos;
 	},
 	firstClickMess : function () {
@@ -320,7 +312,6 @@ var luke = {
 			amountPerColumn = 3;
 			columnYRange.range = columnYRange.max - columnYRange.min;
 
-			console.log(movement);
 
 			for(var i = 6; i >= 2; i--) {
 				if(articles.length % i === 0 && articles.length != i) {
@@ -529,7 +520,6 @@ var luke = {
 				else {
 					newSrc = src;
 				}
-				console.log($(element).html());
 				newSrc.attr("src", $(element).html());
 				$(element).remove();
 			});
