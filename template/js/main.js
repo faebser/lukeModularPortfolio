@@ -518,7 +518,7 @@ var luke = {
 			video.attr({
 				height: h * 2,
 				width: w * 2,
-				poster: el.find('.poster').attr("src"),
+				poster: el.find('.poster').attr("src")
 			});
 			el.find("p.src").each(function(index, element) {
 				var newSrc = null;
