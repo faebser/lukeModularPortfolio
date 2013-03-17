@@ -157,6 +157,7 @@ var luke = {
 		$('#menuMain li a').click(luke.mainMenuClick);
 
 		$('article a').click(function(event) {
+			event.preventDefault();
 			if($(this).attr("href").indexOf("#") == 0) {
 				var offset = $(this).offset();
 				luke.displayOneArticle($(this).attr("href").substring(1), offset.left + $(this).outerWidth(), offset.top);
@@ -419,6 +420,7 @@ var luke = {
 		luke.updateMap();
 	},
 	mainMenuClick : function (event) {
+		event.preventDefault();
 		luke.articles.hide();
 		luke.boxes.hide();
 		var offset = luke.menuContainer.offset();
