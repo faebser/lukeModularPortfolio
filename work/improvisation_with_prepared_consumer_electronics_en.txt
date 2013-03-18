@@ -1,10 +1,10 @@
 <article class="live">
-<!-- <video class="projekktor" width="400" height="225" poster="av/improvisation_for_prepared.jpg" controls>
+<!-- <video class="projekktor" width="400" height="225" poster="av/improvisation_with_prepared.jpg" controls>
   <source preload="metadata" src="av/improvisation_with_prepared_web.mp4" />
   <source preload="metadata" src="av/improvisation_with_prepared_web.ogv" />
 </video> -->
 <div class="video" style="width: 400px; height: 225px;">
-	<img class="poster" src="av/improvisation_for_prepared.jpg" alt="posterimage">
+	<img class="poster" src="av/improvisation_with_prepared.jpg" alt="posterimage">
 	<img class="play button" height="80" width="80" src="css/minimum/start.png" alt="play button">
 	<p class="src">av/improvisation_with_prepared_web.mp4</p>
 	<p class="src">av/improvisation_with_prepared_web.ogv</p>
