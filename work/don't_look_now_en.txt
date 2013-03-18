@@ -1,9 +1,11 @@
 ﻿<article class="scorings music current">
-<audio class="projekktor" width="400" height="180" poster="av/don't_look_now.jpg" controls>
-  <source preload="metadata" src="av/don't_look_now_web.mp3" />
-</audio>
+<div class="audio" style="width: 400px; height: 180px;">
+	<img class="poster" src="av/don't_look_now.jpg" alt="posterimage">
+	<img class="play button" height="80" width="80" src="css/minimum/start.png" alt="play button">
+	<p class="src">av/don't_look_now_web.mp3</p>
+</div>
 <h1>Don't look now (2012)</h1>
 <p>Music</p>
 <br>
-<p><em>Don't look now</em> is a book installation by <a href="http://editiontaube.de/" target="_blank">Edition Taube</a>. I developped a grainy loop for it, witch keeps the positive attitude of the installation.</p>
+<p><em>Don't look now</em> is a book installation by <a href="http://editiontaube.de/" target="_blank">Edition Taube</a>. I developped a grainy loop for it.</p>
 </article>

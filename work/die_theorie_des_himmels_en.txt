@@ -1,7 +1,9 @@
 <article class="live">
-<audio class="projekktor" width="400" height="180" poster="av/die_theorie_des_himmels.jpg" controls>
-  <source preload="metadata" src="av/die_theorie_des_himmels_web.mp3"/>
-</audio>
+<div class="audio" style="width: 400px; height: 180px;">
+	<img class="poster" src="av/die_theorie_des_himmels.jpg" alt="posterimage">
+	<img class="play button" height="80" width="80" src="css/minimum/start.png" alt="play button">
+	<p class="src">av/die_theorie_des_himmels_web.mp3</p>
+</div>
 <h1>Die Theorie des Himmels (The Theory of the Sky, 2011)</h1>
 <p>Live electronics/Sonic concept</p>
 <br>

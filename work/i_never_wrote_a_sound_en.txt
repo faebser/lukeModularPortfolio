@@ -1,8 +1,10 @@
 <article class="live">
-<video class="projekktor" width="400" height="225" poster="av/i_never_wrote_a_sound.jpg" controls>
-  <source preload="metadata" src="av/i_never_wrote_a_sound_web.mp4" />
-  <source preload="metadata" src="av/i_never_wrote_a_sound_web.ogv" />
-</video>
+<div class="video" style="width: 400px; height: 225px;">
+	<img class="poster" src="av/i_never_wrote_a_sound.jpg" alt="posterimage">
+	<img class="play button" height="80" width="80" src="css/minimum/start.png" alt="play button">
+	<p class="src">av/i_never_wrote_a_sound_web.mp4</p>
+	<p class="src">av/i_never_wrote_a_sound_web.ogv</p>
+</div>
 <h1>I never wrote a Sound (2012)</h1>
 <p>Live-coding sound performance</p>
 <br>
