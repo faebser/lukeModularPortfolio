@@ -1,12 +1,16 @@
-<article class="objects current">
-<video class="projekktor" width="400" height="222" poster="av/opernabend1.jpg" controls>
-  <source preload="metadata" src="av/opernabend_web1.mp4" />
-  <source preload="metadata" src="av/opernabend_web1.ogv" />
-</video>
-<video class="projekktor" width="400" height="225" poster="av/opernabend2.jpg" controls>
-  <source preload="metadata" src="av/opernabend_web2.mp4" />
-  <source preload="metadata" src="av/opernabend_web2.ogv" />
-</video>
+<article class="objects">
+<div class="video" style="width: 400px; height: 225px;">
+	<img class="poster" src="av/opernabend1.jpg" alt="posterimage">
+	<img class="play button" height="80" width="80" src="css/minimum/start.png" alt="play button">
+	<p class="src">av/opernabend_web1.mp4</p>
+	<p class="src">av/opernabend_web1.ogv</p>
+</div>
+<div class="video" style="width: 400px; height: 225px;">
+	<img class="poster" src="av/opernabend2.jpg" alt="posterimage">
+	<img class="play button" height="80" width="80" src="css/minimum/start.png" alt="play button">
+	<p class="src">av/opernabend_web2.mp4</p>
+	<p class="src">av/opernabend_web2.ogv</p>
+</div>
 <h1>Opera Evening: Ein kurzes Leben (a short life, 2011)</h1>
 <p>3d-video material/Projection mapping</p>
 <br>

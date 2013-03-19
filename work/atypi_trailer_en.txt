@@ -1,8 +1,10 @@
-<article class="scorings">
-<video class="projekktor" width="400" height="330" poster="av/atypi_trailer.jpg" controls>
-  <source preload="metadata" src="av/atypi_trailer_web.mp4" />
-  <source preload="metadata" src="av/atypi_trailer_web.ogv" />
-</video>
+<article class="scorings current">
+<div class="video" style="width: 400px; height: 330px;">
+	<img class="poster" src="av/atypi_trailer.jpg" alt="posterimage">
+	<img class="play button" height="80" width="80" src="css/minimum/start.png" alt="play button">
+	<p class="src">av/atypi_trailer_web.mp4</p>
+	<p class="src">av/atypi_trailer_web.ogv</p>
+</div>
 <h1>AtypI Trailer (2012)</h1>
 <p>Music/Sound design</p>
 <br>

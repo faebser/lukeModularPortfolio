@@ -1,12 +1,16 @@
-<article class="objects current">
-<video class="projekktor" width="400" height="225" poster="av/paketzentrum47.jpg" controls>
-  <source preload="metadata" src="av/paketzentrum47_web.mp4" />
-  <source preload="metadata" src="av/paketzentrum47_web.ogv" />
-</video>
-<video class="projekktor" width="400" height="225" poster="av/paketzentrum472.jpg" controls>
-  <source preload="metadata" src="av/paketzentrum47_web2.mp4" />
-  <source preload="metadata" src="av/paketzentrum47_web2.ogv" />
-</video>
+<article class="objects">
+<div class="video" style="width: 400px; height: 225px;">
+	<img class="poster" src="av/paketzentrum47.jpg" alt="posterimage">
+	<img class="play button" height="80" width="80" src="css/minimum/start.png" alt="play button">
+	<p class="src">av/paketzentrum47_web.mp4</p>
+	<p class="src">av/paketzentrum47_web.ogv</p>
+</div>
+<div class="video" style="width: 400px; height: 225px;">
+	<img class="poster" src="av/paketzentrum472.jpg" alt="posterimage">
+	<img class="play button" height="80" width="80" src="css/minimum/start.png" alt="play button">
+	<p class="src">av/paketzentrum47_web2.mp4</p>
+	<p class="src">av/paketzentrum47_web2.ogv</p>
+</div>
 <h1>Paketzentrum47 (2011)</h1>
 <p>Audiovisual installation</p>
 <br>

@@ -1,8 +1,10 @@
-﻿<article class="live">
-<video class="projekktor" width="400" height="225" poster="av/leerstand.jpg" controls>
-  <source preload="metadata" src="av/leerstand_web.mp4" />
-  <source preload="metadata" src="av/leerstand_web.ogv" />
-</video>
+﻿<article class="live current">
+<div class="video" style="width: 400px; height: 225px;">
+	<img class="poster" src="av/leerstand.jpg" alt="posterimage">
+	<img class="play button" height="80" width="80" src="css/minimum/start.png" alt="play button">
+	<p class="src">av/leerstand_web.mp4</p>
+	<p class="src">av/leerstand_web.ogv</p>
+</div>
 <h1>Leerstand (vacancy, 2012)</h1>
 <p>Live electronics/Open lab</p>
 <br>

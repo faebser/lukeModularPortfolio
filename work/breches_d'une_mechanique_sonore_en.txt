@@ -1,8 +1,10 @@
-<article class="objects">
-<video class="projekktor" width="400" height="225" poster="av/breches.jpg" controls>
-  <source preload="metadata" src="av/breches_web.mp4" />
-  <source preload="metadata" src="av/breches_web.ogv" />
-</video>
+<article class="objects curent">
+<div class="video" style="width: 400px; height: 225px;">
+	<img class="poster" src="av/breches.jpg" alt="posterimage">
+	<img class="play button" height="80" width="80" src="css/minimum/start.png" alt="play button">
+	<p class="src">av/breches_web.mp4</p>
+	<p class="src">av/breches_web.ogv</p>
+</div>
 <h1>Br&egrave;ches d'une Mechanique sonore (cracks in a sonic mechanism, 2012)</h1>
 <p>Audiovisual Installation</p>
 <br>
