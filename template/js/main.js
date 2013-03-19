@@ -157,13 +157,12 @@ var luke = {
 		$('#menuMain li a').click(luke.mainMenuClick);
 
 		$('article a').click(function(event) {
-			event.preventDefault();
 			if($(this).attr("href").indexOf("#") == 0) {
+				event.preventDefault();
 				var offset = $(this).offset();
 				luke.displayOneArticle($(this).attr("href").substring(1), offset.left + $(this).outerWidth(), offset.top);
 				luke.updateMap();
 			}
-			
 		});
 
 		luke.menuContainer.hover(luke.articleHoverZindexIn, luke.articleHoverZindexOut);
@@ -181,6 +180,7 @@ var luke = {
 		luke.scroller.mousedown(luke.onMouseDown);
 		luke.scroller.mouseup(luke.onMouseUp);
 		$(window).mouseleave(luke.onMouseLeaveWindow);
+
 	},
 	onMouseLeaveWindow : function (event) {
 		if(luke.scroller.hasClass("inFront")) {
