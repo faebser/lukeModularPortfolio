@@ -423,22 +423,25 @@ var luke = {
 		event.preventDefault();
 		luke.articles.hide();
 		luke.boxes.hide();
-		var offset = luke.menuContainer.offset();
-		if($(this).attr("href").substring(1) != "current") {
+		var offset = luke.menuContainer.offset(),
+			href = $(this).attr("href").substring(1);
+		if(href != "current") {
 			luke.displayOneArticle($(this).attr("href").substring(1), offset.left + luke.menuContainer.outerWidth(), offset.top);
 		}
-		else if($(this).attr("href").substring(1) == "current") {
+		else if(href == "current") {
 			luke.currentView(luke.articleContent.find(".current"), $(this).offset().top);
 		}
-		if($(this).attr("href").substring(1) == "statement") {
-			$("#statement").mCustomScrollbar({
-				callbacks:{
-					onTotalScroll : function() {
-						luke.endlessScrolling();
-					},
-					onTotalScrollOffset : luke.scrollingVars.onTotalScrollOffset
-				}
-			});
+		if(href == "statement") {
+			if(!$('#statement').hasClass("scroll")) {
+				$("#statement").mCustomScrollbar({
+					callbacks:{
+						onTotalScroll : function() {
+							luke.endlessScrolling();
+						},
+						onTotalScrollOffset : luke.scrollingVars.onTotalScrollOffset
+					}
+				}).addClass("scroll");
+			}
 		}
 		luke.updateMap();
 	},
