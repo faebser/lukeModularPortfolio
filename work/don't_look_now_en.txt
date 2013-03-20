@@ -1,4 +1,4 @@
-﻿<article class="scorings music current">
+﻿<article class="scorings music current" id="don't_look_now">
 <div class="audio" style="width: 400px; height: 180px;">
 	<img class="poster" src="av/don't_look_now.jpg" alt="posterimage">
 	<img class="play button" height="80" width="80" src="css/minimum/start.png" alt="play button">

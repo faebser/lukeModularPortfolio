@@ -1,4 +1,4 @@
-<article class="live">
+<article class="live" id="die_theorie_des_himmels">
 <div class="audio" style="width: 400px; height: 180px;">
 	<img class="poster" src="av/die_theorie_des_himmels.jpg" alt="posterimage">
 	<img class="play button" height="80" width="80" src="css/minimum/start.png" alt="play button">

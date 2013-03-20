@@ -1,4 +1,4 @@
-﻿<article class="scorings">
+﻿<article class="scorings" id="bewegte_schrift">
 <div class="video" style="width: 400px; height: 250px;">
 	<img class="poster" src="av/bewegte_schrift1.jpg" alt="posterimage">
 	<img class="play button" height="80" width="80" src="css/minimum/start.png" alt="play button">

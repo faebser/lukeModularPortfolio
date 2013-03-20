@@ -1,4 +1,4 @@
-﻿<article class="live current">
+﻿<article class="live current" id="leerstand">
 <div class="video" style="width: 400px; height: 225px;">
 	<img class="poster" src="av/leerstand.jpg" alt="posterimage">
 	<img class="play button" height="80" width="80" src="css/minimum/start.png" alt="play button">

@@ -1,4 +1,4 @@
-<article class="scorings current">
+<article class="scorings current" id="atypi_trailer">
 <div class="video" style="width: 400px; height: 330px;">
 	<img class="poster" src="av/atypi_trailer.jpg" alt="posterimage">
 	<img class="play button" height="80" width="80" src="css/minimum/start.png" alt="play button">

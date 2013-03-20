@@ -1,4 +1,4 @@
-<article class="live music">
+<article class="live music" id="translokales_rundfunkorchester">
 <div class="video" style="width: 400px; height: 225px;">
 	<img class="poster" src="av/rundfunkorchester.jpg" alt="posterimage">
 	<img class="play button" height="80" width="80" src="css/minimum/start.png" alt="play button">
