@@ -12,10 +12,11 @@ textarea{resize:vertical;}
 #map{position:absolute;width:200px;height:100px;top:0;left:0;z-index:-2;}
 body{overflow:hidden;font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;font-size:0.8em;}body h1,body p{font-size:100%;padding:3px;margin:0px;}
 body article{display:none;width:400px;position:absolute;line-height:1.1;}body article img{width:400px;}
-body article a{color:#000;}body article a:hover,body article a:visited{color:#646363;}
-body article div.video{position:relative;}body article div.video .button{position:absolute;width:auto;}
-body article div.video .load{display:none;}
-body article div.video p.src{display:none;}
+body article a{color:#000;}body article a:hover{color:#646363;}
+body article a:visited{color:#000;}
+body article div.video,body article div.audio{position:relative;}body article div.video .button,body article div.audio .button{position:absolute;width:auto;}
+body article div.video .load,body article div.audio .load{display:none;}
+body article div.video p.src,body article div.audio p.src{display:none;}
 body #endlessText{display:block;position:absolute;top:40px;right:40px;padding:5px;height:200px;}body #endlessText p{width:95%;}
 body .projekktor{margin-bottom:1px;}
 body #menuContainer{position:absolute;z-index:2;background-color:#000;}body #menuContainer .menuContainerInner{width:140px;}body #menuContainer .menuContainerInner .menu{margin:0px;padding:0px;list-style:none;}body #menuContainer .menuContainerInner .menu li{margin:0px;padding:0px;line-height:0.9;}body #menuContainer .menuContainerInner .menu li a{padding:2px 4px;color:#fff;text-decoration:none;display:inline-block;*display:inline;zoom:1;padding:1px;}body #menuContainer .menuContainerInner .menu li a:hover{color:#8b8b8b;background-color:#fff;}

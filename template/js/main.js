@@ -159,6 +159,7 @@ var luke = {
 		$('article a').click(function(event) {
 			if($(this).attr("href").indexOf("#") == 0) {
 				event.preventDefault();
+				console.dir($(this).attr("href").substring(1));
 				var offset = $(this).offset();
 				luke.displayOneArticle($(this).attr("href").substring(1), offset.left + $(this).outerWidth(), offset.top);
 				luke.updateMap();
@@ -171,9 +172,8 @@ var luke = {
 
 		luke.templates.video = $('#templates video');
 		luke.templates.source = $("#templates source");
-
-
-		$("div.video").each(luke.videoLoader);
+		luke.templates.audio = $('#templates audio');
+		$("div.video, div.audio").each(luke.videoLoader);
 
 		luke.scroller = $("#scroller");
 		luke.scroller.onselectstart = function() { return false; };
@@ -498,7 +498,9 @@ var luke = {
 	videoLoader : function (index, element) {
 		var el = $(element),
 			w = el.outerWidth() * 0.5,
-			h = el.outerHeight() * 0.5;
+			h = el.outerHeight() * 0.5,
+			template = null,
+			src = luke.templates.source.clone();
 
 		el.find(".button").each(function(i, e){
 			var size = $(e).height()* 0.5;
@@ -507,11 +509,15 @@ var luke = {
 				left: w - size
 			})
 		});
+		if(el.is("audio")) {
+			template = luke.templates.audio.clone();
+		}
+		else {
+			template = luke.templates.video.clone();
+		}
 		el.click(function(event){
 			event.preventDefault();
-			var video = luke.templates.video.clone(),
-			src = video.find("source");
-			video.attr({
+			template.attr({
 				height: h * 2,
 				width: w * 2,
 				poster: el.find('.poster').attr("src")
@@ -520,7 +526,7 @@ var luke = {
 				var newSrc = null;
 
 				if(index > 0) {
-					newSrc = src.clone().appendTo(video);
+					newSrc = src.clone().appendTo(template);
 				}
 				else {
 					newSrc = src;
@@ -530,9 +536,9 @@ var luke = {
 			});
 			el.find(".poster").remove();
 			el.find(".button").remove();
-			el.append(video);
+			el.append(template);
 			el.unbind("click");
-			projekktor(video, {
+			projekktor(template, {
 				autoplay: true,
 				playerFlashMP4: 'js/vendor/jarisplayer.swf',
 		    	playerFlashMP3: 'js/vendor/jarisplayer.swf'
