@@ -338,8 +338,11 @@ var luke = {
 	},
 	currentView : function (articles, clickedLinkOffsetTop) {
 		if(articles.length != 0) {
-			var offset = luke.menuContainer.offset(),
-			startVec = new lukeVector(offset.left + luke.menuContainer.outerWidth() + 30, clickedLinkOffsetTop),
+			var offset = luke.menuContainer.offset();
+			offset.left = offset.left - (luke.articleContent.offset().left);
+			clickedLinkOffsetTop = clickedLinkOffsetTop - luke.articleContent.offset().top;
+
+			var startVec = new lukeVector(offset.left + luke.menuContainer.outerWidth() + 30, clickedLinkOffsetTop),
 			tempVec = new lukeVector(startVec.pos.x, startVec.pos.y),
 			max = { x : 20, y : 35},
 			min = {x : 2, y : 10},
@@ -358,6 +361,8 @@ var luke = {
 			movement = new lukeVector(Math.random() * range.x + halfRange.x, Math.random() * range.y),
 			amountPerColumn = 3;
 			columnYRange.range = columnYRange.max - columnYRange.min;
+
+			
 
 			articles.css({
 				top: 0,
@@ -425,6 +430,9 @@ var luke = {
 		luke.boxes.hide();
 		var offset = luke.menuContainer.offset(),
 			href = $(this).attr("href").substring(1);
+
+		offset.left = offset.left - (luke.articleContent.offset().left);
+		offset.top = offset.top - (luke.articleContent.offset().top);
 		if(href != "current") {
 			luke.displayOneArticle($(this).attr("href").substring(1), offset.left + luke.menuContainer.outerWidth(), offset.top);
 		}
@@ -449,7 +457,7 @@ var luke = {
 	displayOneArticle : function (id, posX, posY) {
 		var theThing = $("#" + id),
 		max = { x : 100, y : 100},
-		min = {x : 10, y : -100},
+		min = {x : 10, y : 0},
 		range = {
 			x : max.x - min.x,
 			y : max.y + (min.y * -1)
@@ -459,11 +467,13 @@ var luke = {
 			y : range.y * 0.5
 		};
 		if(theThing.length == 0) {
-			article = luke.articleContent.find("#" + id);
+			theThing = luke.articleContent.find("#" + id);
 		}
 		if(theThing.length == 0) {
 			console.error("found no article neither in luke.boxes nor in luke.articles");
 		}
+		console.log("posX: " + posX);
+		console.log("posY: " + posY);
 
 		var origin = new lukeVector(posX, posY),
 		movement = new lukeVector( Math.random() * range.x + min.x, Math.random() * range.y + min.y );
