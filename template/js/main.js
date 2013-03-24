@@ -313,6 +313,12 @@ var luke = {
 			amountPerColumn = 3;
 			columnYRange.range = columnYRange.max - columnYRange.min;
 
+			console.dir(offset);
+			// console.dir(movement.pos);
+			// console.dir(range);
+			// console.dir(max);
+			// console.dir(min);
+
 
 			for(var i = 6; i >= 2; i--) {
 				if(articles.length % i === 0 && articles.length != i) {
@@ -325,7 +331,8 @@ var luke = {
 
 			$(articles).each(function (index, element) {
 				cur = $(element);
-				cur.offset( {top : tempVec.pos.y, left : tempVec.pos.x} );
+				cur.css( {top : tempVec.pos.y, left : tempVec.pos.x} );
+				console.dir(cur.offset());
 				movement.set(Math.random() * range.x + halfRange.x, cur.outerHeight() + Math.random() * range.y + min.y);
 				tempVec.add(movement);
 				if(amountPerColumn % index === 0) {
@@ -361,8 +368,6 @@ var luke = {
 			movement = new lukeVector(Math.random() * range.x + halfRange.x, Math.random() * range.y),
 			amountPerColumn = 3;
 			columnYRange.range = columnYRange.max - columnYRange.min;
-
-			
 
 			articles.css({
 				top: 0,
@@ -405,7 +410,7 @@ var luke = {
 			movement.set( Math.random() * range - (range * 0.5), Math.random() * range - (range * 0.5) );
 			tempVec.setFromVector(startVec);
 			tempVec.add(movement);
-			$(element).offset( {top : tempVec.pos.y, left : tempVec.pos.x} );
+			$(element).css( {top : tempVec.pos.y, left : tempVec.pos.x} );
 		});
 	},
 	subMenuClick : function (event, classy, offset) {
@@ -418,8 +423,8 @@ var luke = {
 		event.preventDefault();
 		var rightArticles = luke.articleContent.find('article.' + classy),
 		wrongArticles = luke.articleContent.find('article').not("." +  classy);
-		luke.wrongArticlesMess(wrongArticles);
 		luke.rightArticlesOrder(rightArticles, offset);
+		luke.wrongArticlesMess(wrongArticles);
 		luke.articles.show();
 		luke.boxes.hide();
 		luke.updateMap();
@@ -525,6 +530,7 @@ var luke = {
 		else {
 			template = luke.templates.video.clone();
 		}
+
 		el.click(function(event){
 			event.preventDefault();
 			template.attr({
