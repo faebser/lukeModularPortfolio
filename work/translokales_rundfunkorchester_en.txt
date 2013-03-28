@@ -5,10 +5,6 @@
 	<p class="src">av/rundfunkorchester_web.mp4</p>
 	<p class="src">av/rundfunkorchester_web.ogv</p>
 </div>	
-<video class="projekktor" width="400" height="225" poster="av/rundfunkorchester.jpg" controls>
-  <source preload="metadata" src="av/rundfunkorchester_web.mp4" />
-  <source preload="metadata" src="av/rundfunkorchester_web.ogv" />
-</video>
 <h1>Das Translokales Rundfunkorchester (since 2010)</h1>
 <p>Live electronics</p>
 <br>
