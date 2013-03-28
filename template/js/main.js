@@ -292,8 +292,11 @@ var luke = {
 	},
 	rightArticlesOrder : function (articles, clickedLinkOffsetTop) {
 		if(articles.length != 0) {
-			var offset = luke.menuContainer.offset(),
-			startVec = new lukeVector(offset.left - 430, clickedLinkOffsetTop),
+			var offset = luke.menuContainer.offset();
+			offset.left = offset.left - luke.articleContent.offset().left;
+			clickedLinkOffsetTop = clickedLinkOffsetTop - luke.articleContent.offset().top;
+
+			var startVec = new lukeVector(offset.left - 430, clickedLinkOffsetTop),
 			tempVec = new lukeVector(startVec.pos.x, startVec.pos.y),
 			max = { x : -20, y : 35},
 			min = {x : 2, y : 10},
@@ -346,7 +349,7 @@ var luke = {
 	currentView : function (articles, clickedLinkOffsetTop) {
 		if(articles.length != 0) {
 			var offset = luke.menuContainer.offset();
-			offset.left = offset.left - (luke.articleContent.offset().left);
+			offset.left = offset.left - luke.articleContent.offset().left;
 			clickedLinkOffsetTop = clickedLinkOffsetTop - luke.articleContent.offset().top;
 
 			var startVec = new lukeVector(offset.left + luke.menuContainer.outerWidth() + 30, clickedLinkOffsetTop),
@@ -399,8 +402,11 @@ var luke = {
 		}
 	},
 	wrongArticlesMess : function (articles) {
-		var offset = luke.menuContainer.offset(),
-		startVec = new lukeVector(offset.left + 450, offset.top - 100),
+		var offset = luke.menuContainer.offset();
+			offset.left = offset.left - luke.articleContent.offset().left;
+			offset.top = offset.top - luke.articleContent.offset().top;
+
+		var startVec = new lukeVector(offset.left + 450, offset.top - 100),
 		tempVec = new lukeVector(startVec.pos.x, startVec.pos.y),
 		max = 199, min = -199,
 		range = max + (min * -1),
