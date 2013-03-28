@@ -96,7 +96,8 @@ var luke = {
 	},
 	templates : {
 		video : null,
-		source : null
+		source : null,
+		audio: null
 	},
 
 	/*
@@ -159,7 +160,6 @@ var luke = {
 		$('article a').click(function(event) {
 			if($(this).attr("href").indexOf("#") == 0) {
 				event.preventDefault();
-				console.dir($(this).attr("href").substring(1));
 				var offset = $(this).offset();
 				luke.displayOneArticle($(this).attr("href").substring(1), offset.left + $(this).outerWidth(), offset.top);
 				luke.updateMap();
@@ -316,13 +316,6 @@ var luke = {
 			amountPerColumn = 3;
 			columnYRange.range = columnYRange.max - columnYRange.min;
 
-			console.dir(offset);
-			// console.dir(movement.pos);
-			// console.dir(range);
-			// console.dir(max);
-			// console.dir(min);
-
-
 			for(var i = 6; i >= 2; i--) {
 				if(articles.length % i === 0 && articles.length != i) {
 					amountPerColumn = i;
@@ -335,7 +328,6 @@ var luke = {
 			$(articles).each(function (index, element) {
 				cur = $(element);
 				cur.css( {top : tempVec.pos.y, left : tempVec.pos.x} );
-				console.dir(cur.offset());
 				movement.set(Math.random() * range.x + halfRange.x, cur.outerHeight() + Math.random() * range.y + min.y);
 				tempVec.add(movement);
 				if(amountPerColumn % index === 0) {
@@ -483,8 +475,6 @@ var luke = {
 		if(theThing.length == 0) {
 			console.error("found no article neither in luke.boxes nor in luke.articles");
 		}
-		console.log("posX: " + posX);
-		console.log("posY: " + posY);
 
 		var origin = new lukeVector(posX, posY),
 		movement = new lukeVector( Math.random() * range.x + min.x, Math.random() * range.y + min.y );
@@ -523,6 +513,8 @@ var luke = {
 			template = null,
 			src = luke.templates.source.clone();
 
+			console.log(src);
+
 		el.find(".button").each(function(i, e){
 			var size = $(e).height()* 0.5;
 			$(e).css({
@@ -530,10 +522,12 @@ var luke = {
 				left: w - size
 			})
 		});
-		if(el.is("audio")) {
+		if(el.is(".audio")) {
+			console.log("audio");
 			template = luke.templates.audio.clone();
 		}
 		else {
+			console.log("video");
 			template = luke.templates.video.clone();
 		}
 
@@ -545,15 +539,8 @@ var luke = {
 				poster: el.find('.poster').attr("src")
 			});
 			el.find("p.src").each(function(index, element) {
-				var newSrc = null;
-
-				if(index > 0) {
-					newSrc = src.clone().appendTo(template);
-				}
-				else {
-					newSrc = src;
-				}
-				newSrc.attr("src", $(element).html());
+				var newSrc = luke.templates.source.clone();
+				newSrc.attr("src", $(element).html()).appendTo(template);
 				$(element).remove();
 			});
 			el.find(".poster").remove();
@@ -588,8 +575,6 @@ var luke = {
 					height : $(element).outerHeight() / luke.mapVars.heightRatio
 				});
 			}
-			// console.log("width: " + mapElement.attr("width"));
-			// console.log("display of el: " +$(element).css("display"));
 			if($(element).css("display") === "none" && mapElement.attr("width") != 0) {
 				mapElement.attr({
 					width: 0,
@@ -614,8 +599,6 @@ var luke = {
 					height : $(element).outerHeight() / luke.mapVars.heightRatio
 				});
 			}
-			// console.log("width: " + mapElement.attr("width"));
-			// console.log("display of el: " +$(element).css("display"));
 			if($(element).css("display") === "none" && mapElement.attr("width") != 0) {
 				mapElement.attr({
 					width: 0,
