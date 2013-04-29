@@ -422,8 +422,8 @@ var luke = {
 		var rightArticles = luke.articleContent.find('article.' + classy),
 		wrongArticles = luke.articleContent.find('article').not("." +  classy);
 		luke.rightArticlesOrder(rightArticles, offset);
-		luke.wrongArticlesMess(wrongArticles);
-		luke.articles.show();
+		rightArticles.show();
+		wrongArticles.hide();
 		luke.boxes.hide();
 		luke.updateMap();
 	},
@@ -513,7 +513,6 @@ var luke = {
 			template = null,
 			src = luke.templates.source.clone();
 
-			console.log(src);
 
 		el.find(".button").each(function(i, e){
 			var size = $(e).height()* 0.5;
@@ -523,11 +522,9 @@ var luke = {
 			})
 		});
 		if(el.is(".audio")) {
-			console.log("audio");
 			template = luke.templates.audio.clone();
 		}
 		else {
-			console.log("video");
 			template = luke.templates.video.clone();
 		}
 
