@@ -1,11 +1,12 @@
 ﻿<article class="scorings music current" id="don't_look_now">
-<div class="audio" style="width: 400px; height: 180px;">
+<div class="video" style="width: 400px; height: 180px;">
 	<img class="poster" src="av/don't_look_now.jpg" alt="posterimage">
 	<img class="play button" height="80" width="80" src="css/minimum/start.png" alt="play button">
-	<p class="src">av/don't_look_now_web.mp3</p>
+	<p class="src">av/don't_look_now_web.mp4</p>
+	<p class="src">av/don't_look_now_web.ogv</p>
 </div>
 <h1>Don't look now (2012)</h1>
-<p>Music</p>
+<p>Music/Sound design</p>
 <br>
-<p><em>Don't look now</em> is a book installation by <a href="http://editiontaube.de/" target="_blank">Edition Taube</a>. I developped a grainy loop for it.</p>
+<p><em>Don't look now</em> is a book installation by <a href="http://editiontaube.de/" target="_blank">Edition Taube</a>. A grainy audio loop, working with sounds produced by books, creates the sonic ambiance.</p>
 </article>
