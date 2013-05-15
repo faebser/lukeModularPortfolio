@@ -80,6 +80,7 @@ var luke = {
 	mapArticles : null,
 	scroller : null,
 	info : null,
+	videoList : new Array(),
 
 	//vars for endless scrolling
 	scrollingVars : {
@@ -544,12 +545,21 @@ var luke = {
 			el.find(".button").remove();
 			el.append(template);
 			el.unbind("click");
-			projekktor(template, {
+			luke.stopAllVideos();
+			var player = projekktor(template, {
 				autoplay: true,
 				playerFlashMP4: 'js/vendor/jarisplayer.swf',
 		    	playerFlashMP3: 'js/vendor/jarisplayer.swf'
 		    });
+		    luke.videoList.push(el.find(".projekktor").attr("id"));
 		});
+	},
+	stopAllVideos : function () {
+		for (var i = luke.videoList.length - 1; i >= 0; i--) {
+			console.log(luke.videoList[i]);
+			projekktor("#" + luke.videoList[i]).setStop();
+		};
+		luke.videoList = new Array();
 	},
 	updateMap : function () {
 		var menuOffset = luke.menuContainer.offset(),
