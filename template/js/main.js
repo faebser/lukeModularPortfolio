@@ -551,7 +551,9 @@ var luke = {
 				playerFlashMP4: 'js/vendor/jarisplayer.swf',
 		    	playerFlashMP3: 'js/vendor/jarisplayer.swf'
 		    });
-		    luke.videoList.push(el.find(".projekktor").attr("id"));
+		    var playerId = el.find(".projekktor").attr("id");
+		    projekktor("#" + playerId).addListener("start", luke.stopAllVideos);
+		    luke.videoList.push(playerId);
 		});
 	},
 	stopAllVideos : function () {
